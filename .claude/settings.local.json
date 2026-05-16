@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(pip install *)",
-      "Bash(Get-ChildItem -Recurse -Directory)",
-      "Bash(Select-Object FullName)"
-    ]
-  }
-}
