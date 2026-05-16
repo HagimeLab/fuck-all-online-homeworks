@@ -1,100 +1,30 @@
-# ======================================
-#  Python 项目核心配置
-# ======================================
-# 字节码文件
+# Python 相关
+*.pyc
+*.pyo
+*.pyd
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# 虚拟环境
 venv/
 env/
-ENV/
-.venv/
-.env/
-env.bak/
-venv.bak/
+*.egg-info/
+build/
+dist/
 
-# Jupyter Notebook 检查点
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# mypy 类型检查缓存
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# ======================================
-#  编辑器 / IDE 文件
-# ======================================
-# VS Code
-.vscode/
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
-
-# PyCharm / JetBrains
-.idea/
-*.iml
-*.iws
-*.ipr
-
-# Sublime Text
-*.sublime-project
-*.sublime-workspace
-
-# ======================================
-#  系统生成文件
-# ======================================
-.DS_Store
-Thumbs.db
-ehthumbs.db
-*.swp
-*.swo
-*~
-
-# ======================================
-#  日志、临时文件、配置
-# ======================================
-*.log
-logs/
-*.tmp
-*.temp
-*.bak
-*.swp
-.env
-.env.*
-!.env.example
-
-# ======================================
-#  干扰 GitHub 语言统计的 HTML 文件
-# ======================================
-# 自动生成的 HTML 报告/页面（比如日志、导出的网页）
+# 干扰语言统计的 HTML 文件
 *.html
 *.htm
 *.xhtml
-!README.html  # 如果你有必须保留的 HTML 文件，单独用 ! 取消忽略
-!index.html
+!README.md  # 只保留 README.md，所有其他 HTML 全屏蔽
+!index.html # 如果你有必须保留的 HTML，单独加一行 !文件名
+
+# 日志、临时文件
+*.log
+logs/
+*.tmp
+.env
+.env.*
+
+# 编辑器/系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
