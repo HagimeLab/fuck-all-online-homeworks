@@ -1,0 +1,181 @@
+2026-05-13 23:40:45.207 | INFO | Main:main | 答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/exrnZkmx/5JXbZ0Aw/1000011088/1847/0
+2026-05-13 23:40:46.333 | INFO | webdriverConfig:_load_cookies | 准备从 D:\desktop\工具\auto-zhihuishu\tools\edgedriver_win64\cookies.json 加载 Cookie，目标域：https://onlineweb.zhihuishu.com/
+2026-05-13 23:40:58.450 | INFO | webdriverConfig:_load_cookies | 已加载 10/10 条 Cookie，刷新页面以应用登录态。
+2026-05-13 23:41:00.152 | INFO | DeepSeek:__init__ | DeepSeek 初始化完成，模型：deepseek-chat
+2026-05-13 23:41:02.033 | INFO | WebEdgeService:run_exam | 已打开答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/exrnZkmx/5JXbZ0Aw/1000011088/1847/0
+2026-05-13 23:41:04.040 | INFO | WebEdgeService:_handle_login | 已登录，继续。
+2026-05-13 23:41:09.047 | INFO | WebEdgeService:run_exam | 开始答题流程...
+2026-05-13 23:41:09.047 | INFO | WebEdgeService:run_exam | --- 第 1 题 ---
+2026-05-13 23:41:09.058 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:09.059 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:09.059 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:09.997 | DEBUG | SolutionService:ocr_text | OCR提取38行
+2026-05-13 23:41:09.998 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:1023456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A。单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:09.999 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:1023456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A。单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:11.598 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='57a49067-19ec-4036-b340-a7bdd926679b', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778686873, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=279, total_tokens=286, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=151))
+2026-05-13 23:41:11.599 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:41:11.600 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:11.600 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:11.605 | ERROR | SolutionService:_click_exam_options | 未找到标记的选项元素，尝试通用查找。
+2026-05-13 23:41:11.611 | INFO | SolutionService:_click_options_fallback | 回退方案找到 26 个选项
+2026-05-13 23:41:11.618 | INFO | SolutionService:_click_options_fallback | 回退点击选项 A
+2026-05-13 23:41:11.669 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:41:13.175 | INFO | WebEdgeService:run_exam | --- 第 2 题 ---
+2026-05-13 23:41:13.184 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:13.185 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:13.185 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:13.897 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-13 23:41:13.897 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:13.898 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:14.453 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='57d20004-d94f-4649-a841-b50ffe3be306', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778686876, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=279, total_tokens=286, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=151))
+2026-05-13 23:41:14.453 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:41:14.454 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:14.454 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:14.458 | ERROR | SolutionService:_click_exam_options | 未找到标记的选项元素，尝试通用查找。
+2026-05-13 23:41:14.464 | INFO | SolutionService:_click_options_fallback | 回退方案找到 26 个选项
+2026-05-13 23:41:14.468 | INFO | SolutionService:_click_options_fallback | 回退点击选项 A
+2026-05-13 23:41:14.516 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:41:16.021 | INFO | WebEdgeService:run_exam | --- 第 3 题 ---
+2026-05-13 23:41:16.030 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:16.030 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:16.030 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:16.787 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-13 23:41:16.788 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:16.788 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:17.398 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='02eb765b-23d0-41b6-ac1f-aab703d24d08', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778686879, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=279, total_tokens=286, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=256), prompt_cache_hit_tokens=256, prompt_cache_miss_tokens=23))
+2026-05-13 23:41:17.398 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:41:17.399 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:17.399 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:17.404 | ERROR | SolutionService:_click_exam_options | 未找到标记的选项元素，尝试通用查找。
+2026-05-13 23:41:17.409 | INFO | SolutionService:_click_options_fallback | 回退方案找到 26 个选项
+2026-05-13 23:41:17.414 | INFO | SolutionService:_click_options_fallback | 回退点击选项 A
+2026-05-13 23:41:17.464 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:41:18.969 | INFO | WebEdgeService:run_exam | --- 第 4 题 ---
+2026-05-13 23:41:18.976 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:18.977 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:18.977 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:19.749 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-13 23:41:19.750 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:19.751 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:20.298 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='44293339-944d-486b-83a4-1182dd9b6c44', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778686882, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=279, total_tokens=286, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=151))
+2026-05-13 23:41:20.299 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:41:20.300 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:20.300 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:20.305 | ERROR | SolutionService:_click_exam_options | 未找到标记的选项元素，尝试通用查找。
+2026-05-13 23:41:20.310 | INFO | SolutionService:_click_options_fallback | 回退方案找到 26 个选项
+2026-05-13 23:41:20.315 | INFO | SolutionService:_click_options_fallback | 回退点击选项 A
+2026-05-13 23:41:20.377 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:41:21.881 | INFO | WebEdgeService:run_exam | --- 第 5 题 ---
+2026-05-13 23:41:21.887 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:21.888 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:21.888 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:22.639 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-13 23:41:22.640 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:22.640 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:23.248 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='4f912fec-680f-4a2b-9061-010856a4644b', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778686885, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=279, total_tokens=286, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=256), prompt_cache_hit_tokens=256, prompt_cache_miss_tokens=23))
+2026-05-13 23:41:23.248 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:41:23.249 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:23.249 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:23.254 | ERROR | SolutionService:_click_exam_options | 未找到标记的选项元素，尝试通用查找。
+2026-05-13 23:41:23.259 | INFO | SolutionService:_click_options_fallback | 回退方案找到 26 个选项
+2026-05-13 23:41:23.263 | INFO | SolutionService:_click_options_fallback | 回退点击选项 A
+2026-05-13 23:41:23.308 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:41:24.812 | INFO | WebEdgeService:run_exam | --- 第 6 题 ---
+2026-05-13 23:41:24.820 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:24.820 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:24.821 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:25.601 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-13 23:41:25.602 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:25.603 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:26.155 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='310af006-80d7-4ec2-8153-4220c35d664c', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778686888, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=279, total_tokens=286, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=256), prompt_cache_hit_tokens=256, prompt_cache_miss_tokens=23))
+2026-05-13 23:41:26.155 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:41:26.156 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:26.156 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:26.159 | ERROR | SolutionService:_click_exam_options | 未找到标记的选项元素，尝试通用查找。
+2026-05-13 23:41:26.164 | INFO | SolutionService:_click_options_fallback | 回退方案找到 26 个选项
+2026-05-13 23:41:26.167 | INFO | SolutionService:_click_options_fallback | 回退点击选项 A
+2026-05-13 23:41:26.230 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:41:27.735 | INFO | WebEdgeService:run_exam | --- 第 7 题 ---
+2026-05-13 23:41:27.742 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:27.743 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:27.743 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:28.514 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-13 23:41:28.514 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:28.514 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:29.301 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='df42f4f3-3f0c-48f8-b692-64d9b51a2f39', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778686890, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=279, total_tokens=286, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=256), prompt_cache_hit_tokens=256, prompt_cache_miss_tokens=23))
+2026-05-13 23:41:29.302 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:41:29.302 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:29.302 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:29.307 | ERROR | SolutionService:_click_exam_options | 未找到标记的选项元素，尝试通用查找。
+2026-05-13 23:41:29.312 | INFO | SolutionService:_click_options_fallback | 回退方案找到 26 个选项
+2026-05-13 23:41:29.316 | INFO | SolutionService:_click_options_fallback | 回退点击选项 A
+2026-05-13 23:41:29.359 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:41:30.863 | INFO | WebEdgeService:run_exam | --- 第 8 题 ---
+2026-05-13 23:41:30.872 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:30.873 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:30.873 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:31.648 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-13 23:41:31.648 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:31.649 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:32.380 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='41ad1e83-4b32-4a36-b5d9-7c620cccaf0e', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778686894, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=279, total_tokens=286, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=256), prompt_cache_hit_tokens=256, prompt_cache_miss_tokens=23))
+2026-05-13 23:41:32.381 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:41:32.381 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:32.382 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:32.387 | ERROR | SolutionService:_click_exam_options | 未找到标记的选项元素，尝试通用查找。
+2026-05-13 23:41:32.393 | INFO | SolutionService:_click_options_fallback | 回退方案找到 26 个选项
+2026-05-13 23:41:32.398 | INFO | SolutionService:_click_options_fallback | 回退点击选项 A
+2026-05-13 23:41:32.441 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:41:33.947 | INFO | WebEdgeService:run_exam | --- 第 9 题 ---
+2026-05-13 23:41:33.952 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:33.954 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:33.954 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:34.673 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-13 23:41:34.673 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:34.675 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:35.459 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='e4793012-83d8-47d1-b0d8-c2279fcfebf5', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778686897, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=279, total_tokens=286, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=256), prompt_cache_hit_tokens=256, prompt_cache_miss_tokens=23))
+2026-05-13 23:41:35.459 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:41:35.460 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:35.460 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:35.464 | ERROR | SolutionService:_click_exam_options | 未找到标记的选项元素，尝试通用查找。
+2026-05-13 23:41:35.470 | INFO | SolutionService:_click_options_fallback | 回退方案找到 26 个选项
+2026-05-13 23:41:35.476 | INFO | SolutionService:_click_options_fallback | 回退点击选项 A
+2026-05-13 23:41:35.517 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:41:37.024 | INFO | WebEdgeService:run_exam | --- 第 10 题 ---
+2026-05-13 23:41:37.030 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:37.031 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:37.031 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:37.774 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-13 23:41:37.774 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:37.774 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:38.420 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='6def2d0a-bc63-45c5-8bf8-45d2e94863ac', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778686900, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=279, total_tokens=286, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=256), prompt_cache_hit_tokens=256, prompt_cache_miss_tokens=23))
+2026-05-13 23:41:38.420 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:41:38.420 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:38.420 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:38.424 | ERROR | SolutionService:_click_exam_options | 未找到标记的选项元素，尝试通用查找。
+2026-05-13 23:41:38.431 | INFO | SolutionService:_click_options_fallback | 回退方案找到 26 个选项
+2026-05-13 23:41:38.436 | INFO | SolutionService:_click_options_fallback | 回退点击选项 A
+2026-05-13 23:41:38.490 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:41:39.996 | INFO | WebEdgeService:run_exam | --- 第 11 题 ---
+2026-05-13 23:41:40.004 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:40.005 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:40.006 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:40.808 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-13 23:41:40.808 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:40.809 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:41.848 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='78741ab7-cd3f-4206-82b4-1132176aa858', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778686903, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=279, total_tokens=286, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=256), prompt_cache_hit_tokens=256, prompt_cache_miss_tokens=23))
+2026-05-13 23:41:41.848 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:41:41.849 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:41.849 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:41:41.852 | ERROR | SolutionService:_click_exam_options | 未找到标记的选项元素，尝试通用查找。
+2026-05-13 23:41:41.857 | INFO | SolutionService:_click_options_fallback | 回退方案找到 26 个选项
+2026-05-13 23:41:41.862 | INFO | SolutionService:_click_options_fallback | 回退点击选项 A
+2026-05-13 23:41:41.899 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:41:43.405 | INFO | WebEdgeService:run_exam | --- 第 12 题 ---
+2026-05-13 23:41:43.413 | DEBUG | SolutionService:solve_exam_question | DOM 提取题干: ...
+2026-05-13 23:41:43.413 | DEBUG | SolutionService:solve_exam_question | DOM 提取选项数: 0
+2026-05-13 23:41:43.414 | WARNING | SolutionService:solve_exam_question | DOM 提取文本不足，回退到截图 OCR。
+2026-05-13 23:41:44.117 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-13 23:41:44.118 | DEBUG | SolutionService:solve_exam_question | 最终题目文本: 智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:44.119 | INFO | DeepSeek:answer_question | 问题：智慧树「Teenity人工智能原理第二章单元测试暂存作业提交作业名称人工智能原理对应章节第二章成绩类型百分制剩余时间截止时间2026-05-19 23:59:59题目数10总分数216天00时18分说明完成率0%提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准第1部分第1部分总题数:10123456789101.【单选题】（2分）从推出结论的途径来划分，推理可分为三种推理方式，以下哪种不属于。A.单调推理B.演绎推理C.缺省推理D.归纳推理题
+2026-05-13 23:41:44.656 | INFO | WebEdgeService:shutdown | 触发服务关闭：准备先保存 Cookie
+2026-05-13 23:42:13.224 | INFO | WebEdgeService:shutdown | 浏览器已关闭，退出程序。

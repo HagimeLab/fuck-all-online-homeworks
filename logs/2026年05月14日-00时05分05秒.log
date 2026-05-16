@@ -1,0 +1,924 @@
+2026-05-14 00:05:08.184 | INFO | Main:main | 答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/exrnZkmx/5JXbZ0Aw/1000011088/1847/0
+2026-05-14 00:05:09.439 | INFO | webdriverConfig:_load_cookies | 准备从 D:\desktop\工具\auto-zhihuishu\tools\edgedriver_win64\cookies.json 加载 Cookie，目标域：https://onlineweb.zhihuishu.com/
+2026-05-14 00:05:22.241 | INFO | webdriverConfig:_load_cookies | 已加载 10/10 条 Cookie，刷新页面以应用登录态。
+2026-05-14 00:05:23.582 | INFO | DeepSeek:__init__ | DeepSeek 初始化完成，模型：deepseek-chat
+2026-05-14 00:05:25.988 | INFO | WebEdgeService:run_exam | 已打开答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/exrnZkmx/5JXbZ0Aw/1000011088/1847/0
+2026-05-14 00:05:28.109 | INFO | WebEdgeService:_handle_login | 已登录，继续。
+2026-05-14 00:05:33.117 | INFO | WebEdgeService:run_exam | 开始答题流程...
+2026-05-14 00:05:33.117 | INFO | WebEdgeService:run_exam | --- 第 1 题 ---
+2026-05-14 00:05:33.129 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:05:34.333 | DEBUG | SolutionService:ocr_text | OCR提取38行
+2026-05-14 00:05:34.334 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:05:34.339 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:34.340 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:35.538 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='33894d3b-32b0-44ca-9413-f41ffef4fa89', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688337, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:05:35.538 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:05:35.539 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:05:35.539 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:05:35.546 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:05:35.546 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:05:35.558 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:05:35.579 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:05:37.087 | INFO | WebEdgeService:run_exam | --- 第 2 题 ---
+2026-05-14 00:05:37.098 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:05:38.323 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:05:38.325 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:05:38.330 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:38.331 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:39.047 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='f020617a-1e06-4ac1-985f-859b1e8e905a', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688340, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:05:39.047 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:05:39.048 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:05:39.048 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:05:39.051 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:05:39.051 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:05:39.056 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:05:39.064 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:05:40.569 | INFO | WebEdgeService:run_exam | --- 第 3 题 ---
+2026-05-14 00:05:40.575 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:05:41.513 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:05:41.516 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:05:41.520 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:41.521 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:42.479 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='fdec4535-35ab-4c7c-8a1b-64ea1f6e212c', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688344, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:05:42.480 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:05:42.480 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:05:42.480 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:05:42.487 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:05:42.487 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:05:42.492 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:05:42.504 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:05:44.010 | INFO | WebEdgeService:run_exam | --- 第 4 题 ---
+2026-05-14 00:05:44.017 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:05:45.171 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:05:45.175 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:05:45.180 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:45.180 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:45.888 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='bab110c7-6894-4c9a-b5ed-073e9751974d', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688347, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:05:45.888 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:05:45.888 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:05:45.888 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:05:45.892 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:05:45.893 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:05:45.896 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:05:45.903 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:05:47.409 | INFO | WebEdgeService:run_exam | --- 第 5 题 ---
+2026-05-14 00:05:47.416 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:05:48.408 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:05:48.409 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:05:48.416 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:48.416 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:49.221 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='27910a1b-dd5a-47b8-bfe2-0aacd4e88d4c', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688350, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:05:49.222 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:05:49.222 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:05:49.222 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:05:49.226 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:05:49.227 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:05:49.231 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:05:49.239 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:05:50.743 | INFO | WebEdgeService:run_exam | --- 第 6 题 ---
+2026-05-14 00:05:50.750 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:05:51.699 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:05:51.700 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:05:51.704 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:51.704 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:52.326 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='53df670c-6652-41f5-8cb9-54232b82120a', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688354, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:05:52.326 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-14 00:05:52.326 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-14 00:05:52.326 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A']
+2026-05-14 00:05:52.331 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A']
+2026-05-14 00:05:52.331 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:05:52.338 | INFO | SolutionService:_click_exam_options | 点击 A: 
+2026-05-14 00:05:52.349 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:05:53.855 | INFO | WebEdgeService:run_exam | --- 第 7 题 ---
+2026-05-14 00:05:53.862 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:05:55.275 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-14 00:05:55.276 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:05:55.282 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:55.283 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:56.122 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='96b36a75-f757-4e0e-aebb-9b733d228c35', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688357, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:05:56.122 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:05:56.123 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:05:56.123 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:05:56.129 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:05:56.129 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:05:56.136 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:05:56.153 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:05:57.660 | INFO | WebEdgeService:run_exam | --- 第 8 题 ---
+2026-05-14 00:05:57.670 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:05:58.592 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:05:58.592 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:05:58.598 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:58.598 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:05:59.159 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='8595183a-9b87-4594-a2b3-2965a8c4930b', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688361, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:05:59.160 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:05:59.160 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:05:59.161 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:05:59.167 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:05:59.168 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:05:59.173 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:05:59.184 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:00.691 | INFO | WebEdgeService:run_exam | --- 第 9 题 ---
+2026-05-14 00:06:00.702 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:01.767 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:06:01.767 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:01.771 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:01.771 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:02.555 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='635fcf4a-450e-4aec-bf13-4360bfd42e71', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688364, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:02.556 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:06:02.556 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:06:02.556 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:06:02.562 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:06:02.562 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:02.566 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:06:02.577 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:04.082 | INFO | WebEdgeService:run_exam | --- 第 10 题 ---
+2026-05-14 00:06:04.088 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:04.994 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:06:04.995 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:05.003 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:05.004 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:05.688 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='dc1189e3-a03f-4c42-b4e4-6531d244c58e', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688367, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:05.688 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:06:05.688 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:06:05.688 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:06:05.693 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:06:05.693 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:05.697 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:06:05.704 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:07.210 | INFO | WebEdgeService:run_exam | --- 第 11 题 ---
+2026-05-14 00:06:07.217 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:08.060 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:06:08.061 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:08.066 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:08.066 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:08.880 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='9030cfd3-d7ab-43e2-a7db-54a1df34c6c1', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688370, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:08.881 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-14 00:06:08.881 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-14 00:06:08.881 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A']
+2026-05-14 00:06:08.885 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A']
+2026-05-14 00:06:08.885 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:08.889 | INFO | SolutionService:_click_exam_options | 点击 A: 
+2026-05-14 00:06:08.899 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:10.404 | INFO | WebEdgeService:run_exam | --- 第 12 题 ---
+2026-05-14 00:06:10.413 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:11.308 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-14 00:06:11.309 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:11.313 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:11.313 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:12.026 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='a17f5eed-1c83-408a-b331-c4c56daa7629', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688373, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:12.026 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:06:12.027 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:06:12.027 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:06:12.031 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:06:12.031 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:12.036 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:06:12.046 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:13.556 | INFO | WebEdgeService:run_exam | --- 第 13 题 ---
+2026-05-14 00:06:13.565 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:14.492 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:06:14.492 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:14.497 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:14.497 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:15.168 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='5b863c3b-90c1-423d-9acd-16072860f260', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688376, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:15.168 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:06:15.169 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:06:15.169 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:06:15.172 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:06:15.173 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:15.176 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:06:15.183 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:16.687 | INFO | WebEdgeService:run_exam | --- 第 14 题 ---
+2026-05-14 00:06:16.696 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:17.804 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:06:17.805 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:17.809 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:17.810 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:18.558 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='54df621f-b500-4003-b187-00c4faf9b26d', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688380, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:18.558 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-14 00:06:18.559 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-14 00:06:18.559 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A']
+2026-05-14 00:06:18.566 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A']
+2026-05-14 00:06:18.566 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:18.573 | INFO | SolutionService:_click_exam_options | 点击 A: 
+2026-05-14 00:06:18.591 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:20.095 | INFO | WebEdgeService:run_exam | --- 第 15 题 ---
+2026-05-14 00:06:20.103 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:20.982 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-14 00:06:20.983 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:20.987 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:20.988 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:21.892 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='940ea57b-f33a-4455-9015-4bded58b951a', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688383, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:21.892 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:06:21.892 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:06:21.893 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:06:21.896 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:06:21.897 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:21.901 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:06:21.913 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:23.417 | INFO | WebEdgeService:run_exam | --- 第 16 题 ---
+2026-05-14 00:06:23.424 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:24.339 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:06:24.340 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:24.345 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:24.345 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:25.082 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='faf265a9-8c52-4244-829a-0565ad0cbb73', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688386, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:25.083 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-14 00:06:25.083 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-14 00:06:25.084 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A']
+2026-05-14 00:06:25.089 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A']
+2026-05-14 00:06:25.089 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:25.097 | INFO | SolutionService:_click_exam_options | 点击 A: 
+2026-05-14 00:06:25.115 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:26.621 | INFO | WebEdgeService:run_exam | --- 第 17 题 ---
+2026-05-14 00:06:26.626 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:27.565 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-14 00:06:27.565 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:27.570 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:27.570 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:28.254 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='674e5f25-204c-474e-bc4c-842e509771e1', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688390, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:28.255 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:06:28.255 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:06:28.255 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:06:28.261 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:06:28.261 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:28.269 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:06:28.280 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:29.787 | INFO | WebEdgeService:run_exam | --- 第 18 题 ---
+2026-05-14 00:06:29.796 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:30.967 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:06:30.967 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:30.973 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:30.973 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:31.755 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='0a1921ef-7c84-4326-844d-830ec0b4a204', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688393, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:31.755 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:06:31.755 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:06:31.756 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:06:31.758 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:06:31.759 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:31.762 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:06:31.769 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:33.273 | INFO | WebEdgeService:run_exam | --- 第 19 题 ---
+2026-05-14 00:06:33.280 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:34.237 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:06:34.238 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:34.243 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:34.243 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:34.850 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='51367c86-a14a-4d72-b294-46b87b7ecef2', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688396, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:34.850 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-14 00:06:34.850 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-14 00:06:34.851 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A']
+2026-05-14 00:06:34.855 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A']
+2026-05-14 00:06:34.855 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:34.860 | INFO | SolutionService:_click_exam_options | 点击 A: 
+2026-05-14 00:06:34.870 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:36.376 | INFO | WebEdgeService:run_exam | --- 第 20 题 ---
+2026-05-14 00:06:36.382 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:37.191 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-14 00:06:37.192 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:37.197 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:37.197 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:38.079 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='43871d9c-9e56-47ae-b30d-69e5ddef1969', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688399, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:38.079 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:06:38.079 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:06:38.080 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:06:38.085 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:06:38.085 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:38.089 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:06:38.101 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:39.605 | INFO | WebEdgeService:run_exam | --- 第 21 题 ---
+2026-05-14 00:06:39.611 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:40.498 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:06:40.498 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:40.503 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:40.503 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:41.127 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='dea1d92d-0dc5-4171-ab26-ab4beeea5240', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688403, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:41.128 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:06:41.128 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:06:41.128 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:06:41.131 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:06:41.131 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:41.136 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:06:41.147 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:42.650 | INFO | WebEdgeService:run_exam | --- 第 22 题 ---
+2026-05-14 00:06:42.659 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:43.540 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:06:43.540 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:43.545 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:43.546 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:44.211 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='2f3d016c-2035-4787-885f-e4c8dc6ba207', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688406, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:44.212 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-14 00:06:44.212 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-14 00:06:44.212 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A']
+2026-05-14 00:06:44.218 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A']
+2026-05-14 00:06:44.218 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:44.224 | INFO | SolutionService:_click_exam_options | 点击 A: 
+2026-05-14 00:06:44.241 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:45.746 | INFO | WebEdgeService:run_exam | --- 第 23 题 ---
+2026-05-14 00:06:45.753 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:46.671 | DEBUG | SolutionService:ocr_text | OCR提取40行
+2026-05-14 00:06:46.672 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:46.678 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:46.678 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:47.266 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='7b5f76ea-8df5-495f-aa42-42ceaf775162', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688409, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:47.268 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-14 00:06:47.268 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-14 00:06:47.268 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-14 00:06:47.273 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-14 00:06:47.274 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:47.279 | INFO | SolutionService:_click_exam_options | 点击 B: 
+2026-05-14 00:06:47.295 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:48.802 | INFO | WebEdgeService:run_exam | --- 第 24 题 ---
+2026-05-14 00:06:48.810 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:49.676 | DEBUG | SolutionService:ocr_text | OCR提取41行
+2026-05-14 00:06:49.677 | WARNING | SolutionService:solve_exam_question | 截图 OCR 失败，尝试 DOM 提取。
+2026-05-14 00:06:49.681 | INFO | SolutionService:solve_exam_question | 题目文本: 人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:49.681 | INFO | DeepSeek:answer_question | 问题：人工智能原理
+第二章单元测试
+1.
+【单选题】 (2分)
+A.
+归纳推理
+B.
+演绎推理
+C.
+单调推理
+D.
+缺省推理
+沪公网备31010402003974号
+2026-05-14 00:06:50.326 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='618dcd25-7d3c-47fe-9f4c-0d056fcfe0ce', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778688412, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=194, total_tokens=201, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=66))
+2026-05-14 00:06:50.327 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["D"]}
+2026-05-14 00:06:50.327 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['D'], 'raw': '{"selected": ["D"]}'}
+2026-05-14 00:06:50.329 | INFO | SolutionService:solve_exam_question | LLM 答案: ['D']
+2026-05-14 00:06:50.335 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['D']
+2026-05-14 00:06:50.335 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '']
+2026-05-14 00:06:50.345 | INFO | SolutionService:_click_exam_options | 点击 D: 
+2026-05-14 00:06:50.366 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮。
+2026-05-14 00:06:51.874 | INFO | WebEdgeService:run_exam | --- 第 25 题 ---
+2026-05-14 00:06:51.885 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 00:06:52.527 | INFO | WebEdgeService:shutdown | 触发服务关闭：准备先保存 Cookie
+2026-05-14 00:07:04.824 | ERROR | WebEdgeService:_save_cookies | 保存 Cookie 失败: HTTPConnectionPool(host='localhost', port=25897): Max retries exceeded with url: /session/783967197900277305d8bb4f36204ec2/cookie (Caused by NewConnectionError("HTTPConnection(host='localhost', port=25897): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-05-14 00:07:21.169 | INFO | WebEdgeService:shutdown | 浏览器已关闭，退出程序。

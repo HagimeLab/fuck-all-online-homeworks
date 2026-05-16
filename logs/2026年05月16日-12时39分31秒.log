@@ -1,0 +1,1030 @@
+2026-05-16 12:39:32.192 | INFO | webdriverConfig:_load_cookies | 准备从 D:\desktop\工具\fuckZHS-homeworking\tools\edgedriver_win64\cookies.json 加载 Cookie，目标域：https://onlineweb.zhihuishu.com/
+2026-05-16 12:39:41.264 | INFO | webdriverConfig:_load_cookies | 已加载 12/12 条 Cookie，刷新页面以应用登录态。
+2026-05-16 12:39:42.726 | INFO | DeepSeek:__init__ | DeepSeek 初始化完成，模型：deepseek-chat
+2026-05-16 12:40:03.078 | INFO | Main:main | 答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/406679/e2Nm03Lb/yNVNOBby/1000002677/1847/0
+2026-05-16 12:40:04.391 | INFO | WebEdgeService:run_exam | 已打开答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/406679/e2Nm03Lb/yNVNOBby/1000002677/1847/0
+2026-05-16 12:40:06.664 | INFO | WebEdgeService:_handle_login | 已登录，继续。
+2026-05-16 12:40:09.670 | DEBUG | WebEdgeService:_click_start_if_needed | 未找到「开始答题」按钮，可能已直接进入答题页。
+2026-05-16 12:40:12.672 | INFO | WebEdgeService:run_exam | 等待第一题加载...
+2026-05-16 12:40:12.681 | INFO | WebEdgeService:run_exam | 第一题已加载。
+2026-05-16 12:40:12.681 | INFO | WebEdgeService:run_exam | 开始答题流程...
+2026-05-16 12:40:12.681 | INFO | WebEdgeService:run_exam | ========== 第 1 题 ==========
+2026-05-16 12:40:12.720 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:40:12.720 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(261字): 名称 人工智能与科学之美
+对应章节 第二章
+成绩类型 百分制
+截止时间 2026-05-19 23:59:59
+题目数 10
+总分数 100
+
+
+说明
+
+提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+
+第1部分
+总题数: 10
+1.
+【单选题】 (10分)
+A.
+
+太阳从东边升起
+
+
+B.
+
+一年有春夏秋冬四个季节
+
+
+C.
+
+雪是白色的
+
+
+D.
+
+如果头痛且流涕，则可能患了感
+2026-05-16 12:40:12.720 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(68字): 1.
+【单选题】 (10分)
+A.
+太阳从东边升起
+B.
+一年有春夏秋冬四个季节
+C.
+雪是白色的
+D.
+如果头痛且流涕，则可能患了感冒
+2026-05-16 12:40:13.099 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_124013.png
+2026-05-16 12:40:13.432 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-16 12:40:13.432 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 73 字
+2026-05-16 12:40:13.432 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(73字): 1.【单选题】（10分)
+以下哪些是规则?（)
+A.太阳从东边升起
+B.一年有春夏秋冬四个季节
+C.雪是白色的
+D.如果头痛且流涕，则可能患了感冒
+2026-05-16 12:40:13.432 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(73字): 1.【单选题】（10分)
+以下哪些是规则?（)
+A.太阳从东边升起
+B.一年有春夏秋冬四个季节
+C.雪是白色的
+D.如果头痛且流涕，则可能患了感冒
+2026-05-16 12:40:13.433 | INFO | SolutionService:solve_exam_question | DOM+OCR 均有内容，择优使用。
+2026-05-16 12:40:13.433 | INFO | SolutionService:solve_exam_question | 题目文本(68字): 1.
+【单选题】 (10分)
+A.
+太阳从东边升起
+B.
+一年有春夏秋冬四个季节
+C.
+雪是白色的
+D.
+如果头痛且流涕，则可能患了感冒
+2026-05-16 12:40:13.433 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124013.txt
+2026-05-16 12:40:13.434 | INFO | DeepSeek:answer_question | 问题：1.
+【单选题】 (10分)
+A.
+太阳从东边升起
+B.
+一年有春夏秋冬四个季节
+C.
+雪是白色的
+D.
+如果头痛且流涕，则可能患了感冒
+2026-05-16 12:40:14.457 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='3d23b0ed-1c8b-4660-a162-d78ea5ec0ab9', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906417, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=190, total_tokens=197, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=62))
+2026-05-16 12:40:14.458 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["D"]}
+2026-05-16 12:40:14.458 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['D'], 'raw': '{"selected": ["D"]}'}
+2026-05-16 12:40:14.458 | INFO | SolutionService:solve_exam_question | LLM 答案: ['D']
+2026-05-16 12:40:14.465 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-16 12:40:14.470 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['D']
+2026-05-16 12:40:14.470 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+太阳从东边升起
+2026-05-16 12:40:14.471 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+一年有春夏秋冬四个季节
+2026-05-16 12:40:14.471 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+雪是白色的
+2026-05-16 12:40:14.472 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+如果头痛且流涕，则可能患了感冒
+2026-05-16 12:40:14.481 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+如果头痛且流涕，则可能患了感冒
+2026-05-16 12:40:15.085 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=1, active元素=1
+2026-05-16 12:40:15.104 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-16 12:40:15.421 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-16 12:40:17.427 | INFO | WebEdgeService:run_exam | ========== 第 2 题 ==========
+2026-05-16 12:40:17.439 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:40:17.439 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-16 12:40:17.439 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-16 12:40:17.616 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_124017.png
+2026-05-16 12:40:17.967 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-16 12:40:17.967 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 88 字
+2026-05-16 12:40:17.967 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(88字): 2【多选题】（10分）
+知识具有的不确定性有哪些类型？（）
+A. 由不完全性引起的不确定性
+B. 由随机性引起的不确定性
+C.由模糊性引起的不确定性
+D. 由经验引起的不确定性
+2026-05-16 12:40:17.967 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(88字): 2【多选题】（10分）
+知识具有的不确定性有哪些类型？（）
+A. 由不完全性引起的不确定性
+B. 由随机性引起的不确定性
+C.由模糊性引起的不确定性
+D. 由经验引起的不确定性
+2026-05-16 12:40:17.968 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-16 12:40:17.968 | INFO | SolutionService:solve_exam_question | 题目文本(88字): 2【多选题】（10分）
+知识具有的不确定性有哪些类型？（）
+A. 由不完全性引起的不确定性
+B. 由随机性引起的不确定性
+C.由模糊性引起的不确定性
+D. 由经验引起的不确定性
+2026-05-16 12:40:17.969 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124017.txt
+2026-05-16 12:40:17.969 | INFO | DeepSeek:answer_question | 问题：2【多选题】（10分）
+知识具有的不确定性有哪些类型？（）
+A. 由不完全性引起的不确定性
+B. 由随机性引起的不确定性
+C.由模糊性引起的不确定性
+D. 由经验引起的不确定性
+2026-05-16 12:40:18.589 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='888348e8-e65a-4f71-a264-8be2ea67b52d', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A", "B", "C", "D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906421, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=16, prompt_tokens=197, total_tokens=213, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=69))
+2026-05-16 12:40:18.590 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A", "B", "C", "D"]}
+2026-05-16 12:40:18.590 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A', 'B', 'C', 'D'], 'raw': '{"selected": ["A", "B", "C", "D"]}'}
+2026-05-16 12:40:18.590 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A', 'B', 'C', 'D']
+2026-05-16 12:40:18.598 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-16 12:40:18.603 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A', 'B', 'C', 'D']
+2026-05-16 12:40:18.603 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+由不完全性引起的不确定性
+2026-05-16 12:40:18.603 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+由随机性引起的不确定性
+2026-05-16 12:40:18.603 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+由模糊性引起的不确定性
+2026-05-16 12:40:18.603 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+由经验引起的不确定性
+2026-05-16 12:40:18.609 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: A.
+
+由不完全性引起的不确定性
+2026-05-16 12:40:18.612 | INFO | SolutionService:_click_exam_options | 字母点击 B -> 选项[1]: B.
+
+由随机性引起的不确定性
+2026-05-16 12:40:18.620 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+由模糊性引起的不确定性
+2026-05-16 12:40:18.625 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+由经验引起的不确定性
+2026-05-16 12:40:19.229 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=5, active元素=1
+2026-05-16 12:40:19.250 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-16 12:40:19.562 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-16 12:40:21.564 | INFO | WebEdgeService:run_exam | ========== 第 3 题 ==========
+2026-05-16 12:40:21.580 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:40:21.581 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-16 12:40:21.581 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-16 12:40:21.764 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_124021.png
+2026-05-16 12:40:22.030 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-16 12:40:22.030 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 57 字
+2026-05-16 12:40:22.031 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(57字): 3.【单选题】（10分)
+以下选项中，（）是知识图谱的一种通用表示方式。
+A.属性
+B.三元组
+C.概念
+D。实体
+2026-05-16 12:40:22.031 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(57字): 3.【单选题】（10分)
+以下选项中，（）是知识图谱的一种通用表示方式。
+A.属性
+B.三元组
+C.概念
+D。实体
+2026-05-16 12:40:22.031 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-16 12:40:22.031 | INFO | SolutionService:solve_exam_question | 题目文本(57字): 3.【单选题】（10分)
+以下选项中，（）是知识图谱的一种通用表示方式。
+A.属性
+B.三元组
+C.概念
+D。实体
+2026-05-16 12:40:22.032 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124022.txt
+2026-05-16 12:40:22.032 | INFO | DeepSeek:answer_question | 问题：3.【单选题】（10分)
+以下选项中，（）是知识图谱的一种通用表示方式。
+A.属性
+B.三元组
+C.概念
+D。实体
+2026-05-16 12:40:22.674 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='902b8650-0675-4b0b-b50a-e3ce5b0004b7', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906425, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=180, total_tokens=187, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=52))
+2026-05-16 12:40:22.674 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-16 12:40:22.674 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-16 12:40:22.675 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-16 12:40:22.684 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-16 12:40:22.687 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-16 12:40:22.687 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+属性
+2026-05-16 12:40:22.687 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+三元组
+2026-05-16 12:40:22.688 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+概念
+2026-05-16 12:40:22.688 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+实体
+2026-05-16 12:40:22.693 | INFO | SolutionService:_click_exam_options | 字母点击 B -> 选项[1]: B.
+
+三元组
+2026-05-16 12:40:23.298 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=6, active元素=1
+2026-05-16 12:40:23.315 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-16 12:40:23.630 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-16 12:40:25.631 | INFO | WebEdgeService:run_exam | ========== 第 4 题 ==========
+2026-05-16 12:40:25.648 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:40:25.648 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-16 12:40:25.648 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-16 12:40:25.846 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_124025.png
+2026-05-16 12:40:26.192 | DEBUG | SolutionService:ocr_text | OCR提取7行
+2026-05-16 12:40:26.192 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 163 字
+2026-05-16 12:40:26.194 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(163字): 4.【单选题】（10分)
+以下对人工神经网络说法错误的是（）。
+A.人工神经网络是从信息处理角度对人脑神经元网络进行抽象
+B.当输入一个非样本数据时，已经训练好的神经网络将无法给出输出值
+C.人工神经网络利用最速下降法反复调整网络的连接权值，使网络的实际输出和目标输出值
+一致
+D.可以用最速下降法来调整人工神经网络的连接权值
+2026-05-16 12:40:26.194 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(163字): 4.【单选题】（10分)
+以下对人工神经网络说法错误的是（）。
+A.人工神经网络是从信息处理角度对人脑神经元网络进行抽象
+B.当输入一个非样本数据时，已经训练好的神经网络将无法给出输出值
+C.人工神经网络利用最速下降法反复调整网络的连接权值，使网络的实际输出和目标输出值
+一致
+D.可以用最速下降法来调整人工神经网络的连接权值
+2026-05-16 12:40:26.194 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-16 12:40:26.194 | INFO | SolutionService:solve_exam_question | 题目文本(163字): 4.【单选题】（10分)
+以下对人工神经网络说法错误的是（）。
+A.人工神经网络是从信息处理角度对人脑神经元网络进行抽象
+B.当输入一个非样本数据时，已经训练好的神经网络将无法给出输出值
+C.人工神经网络利用最速下降法反复调整网络的连接权值，使网络的实际输出和目标输出值
+一致
+D.可以用最速下降法来调整人工神经网络的连接权值
+2026-05-16 12:40:26.196 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124026.txt
+2026-05-16 12:40:26.196 | INFO | DeepSeek:answer_question | 问题：4.【单选题】（10分)
+以下对人工神经网络说法错误的是（）。
+A.人工神经网络是从信息处理角度对人脑神经元网络进行抽象
+B.当输入一个非样本数据时，已经训练好的神经网络将无法给出输出值
+C.人工神经网络利用最速下降法反复调整网络的连接权值，使网络的实际输出和目标输出值
+一致
+D.可以用最速下降法来调整人工神经网络的连接权值
+2026-05-16 12:40:26.807 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='75ebd1b3-748a-4021-98db-577bf49a70b9', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906429, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=236, total_tokens=243, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=108))
+2026-05-16 12:40:26.808 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-16 12:40:26.808 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-16 12:40:26.809 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-16 12:40:26.810 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-16 12:40:26.810 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-16 12:40:26.810 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+人工神经网络是从信息处理角度对人脑神经元网络进行抽象
+2026-05-16 12:40:26.810 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+当输入一个非样本数据时，已经训练好的神经网络将无法给出输出值
+2026-05-16 12:40:26.810 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+人工神经网络利用最速下降法反复调整网络的连接权值，使网络的实际输出和目标输出值一致
+2026-05-16 12:40:26.810 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+可以用最速下降法来调整人工神经网络的连接权值
+2026-05-16 12:40:26.822 | INFO | SolutionService:_click_exam_options | 字母点击 B -> 选项[1]: B.
+
+当输入一个非样本数据时，已经训练好的神经网络将无法给出输出值
+2026-05-16 12:40:27.427 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=7, active元素=1
+2026-05-16 12:40:27.444 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-16 12:40:27.755 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-16 12:40:29.760 | INFO | WebEdgeService:run_exam | ========== 第 5 题 ==========
+2026-05-16 12:40:29.774 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:40:29.774 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-16 12:40:29.775 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-16 12:40:29.963 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_124029.png
+2026-05-16 12:40:30.229 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-16 12:40:30.231 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 58 字
+2026-05-16 12:40:30.231 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(58字): 5【多选题】（10分)
+大数据的显著特征有（）。
+A.数据体量巨大
+B.价值密度高
+C.数据类型多样
+D.处理速度快
+2026-05-16 12:40:30.231 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(58字): 5【多选题】（10分)
+大数据的显著特征有（）。
+A.数据体量巨大
+B.价值密度高
+C.数据类型多样
+D.处理速度快
+2026-05-16 12:40:30.232 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-16 12:40:30.232 | INFO | SolutionService:solve_exam_question | 题目文本(58字): 5【多选题】（10分)
+大数据的显著特征有（）。
+A.数据体量巨大
+B.价值密度高
+C.数据类型多样
+D.处理速度快
+2026-05-16 12:40:30.233 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124030.txt
+2026-05-16 12:40:30.233 | INFO | DeepSeek:answer_question | 问题：5【多选题】（10分)
+大数据的显著特征有（）。
+A.数据体量巨大
+B.价值密度高
+C.数据类型多样
+D.处理速度快
+2026-05-16 12:40:30.971 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='857a6bf8-b79f-446d-99f4-79d336df6c95', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A", "C", "D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906433, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=13, prompt_tokens=181, total_tokens=194, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=53))
+2026-05-16 12:40:30.971 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A", "C", "D"]}
+2026-05-16 12:40:30.971 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A', 'C', 'D'], 'raw': '{"selected": ["A", "C", "D"]}'}
+2026-05-16 12:40:30.971 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A', 'C', 'D']
+2026-05-16 12:40:30.980 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-16 12:40:30.983 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A', 'C', 'D']
+2026-05-16 12:40:30.985 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+数据体量巨大
+2026-05-16 12:40:30.985 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+价值密度高
+2026-05-16 12:40:30.985 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+数据类型多样
+2026-05-16 12:40:30.985 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+处理速度快
+2026-05-16 12:40:30.990 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: A.
+
+数据体量巨大
+2026-05-16 12:40:30.994 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+数据类型多样
+2026-05-16 12:40:30.997 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+处理速度快
+2026-05-16 12:40:31.603 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=10, active元素=1
+2026-05-16 12:40:31.618 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-16 12:40:31.933 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-16 12:40:33.937 | INFO | WebEdgeService:run_exam | ========== 第 6 题 ==========
+2026-05-16 12:40:33.950 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:40:33.950 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-16 12:40:33.950 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-16 12:40:34.130 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_124034.png
+2026-05-16 12:40:34.399 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-16 12:40:34.399 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 65 字
+2026-05-16 12:40:34.400 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(65字): 6.【单选题】（10分)
+以下不属于计算机表示知识的方法的是（）。
+A。知识图谱
+B.链式表示法
+C.框架表示法
+D.产生式表示发
+2026-05-16 12:40:34.400 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(65字): 6.【单选题】（10分)
+以下不属于计算机表示知识的方法的是（）。
+A。知识图谱
+B.链式表示法
+C.框架表示法
+D.产生式表示发
+2026-05-16 12:40:34.400 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-16 12:40:34.400 | INFO | SolutionService:solve_exam_question | 题目文本(65字): 6.【单选题】（10分)
+以下不属于计算机表示知识的方法的是（）。
+A。知识图谱
+B.链式表示法
+C.框架表示法
+D.产生式表示发
+2026-05-16 12:40:34.401 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124034.txt
+2026-05-16 12:40:34.401 | INFO | DeepSeek:answer_question | 问题：6.【单选题】（10分)
+以下不属于计算机表示知识的方法的是（）。
+A。知识图谱
+B.链式表示法
+C.框架表示法
+D.产生式表示发
+2026-05-16 12:40:35.081 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='1e99b76a-3200-4d15-aa2e-e5c2391e8a64', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906437, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=185, total_tokens=192, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=57))
+2026-05-16 12:40:35.082 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B"]}
+2026-05-16 12:40:35.082 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B'], 'raw': '{"selected": ["B"]}'}
+2026-05-16 12:40:35.083 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B']
+2026-05-16 12:40:35.091 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-16 12:40:35.091 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B']
+2026-05-16 12:40:35.091 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+知识图谱
+2026-05-16 12:40:35.091 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+链式表示法
+2026-05-16 12:40:35.091 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+框架表示法
+2026-05-16 12:40:35.091 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+产生式表示发
+2026-05-16 12:40:35.102 | INFO | SolutionService:_click_exam_options | 字母点击 B -> 选项[1]: B.
+
+链式表示法
+2026-05-16 12:40:35.707 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=11, active元素=1
+2026-05-16 12:40:35.723 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-16 12:40:36.030 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-16 12:40:38.040 | INFO | WebEdgeService:run_exam | ========== 第 7 题 ==========
+2026-05-16 12:40:38.052 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:40:38.053 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-16 12:40:38.053 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-16 12:40:38.239 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_124038.png
+2026-05-16 12:40:38.517 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-16 12:40:38.519 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 81 字
+2026-05-16 12:40:38.519 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(81字): 7.【单选题】（10分)
+下列不确定性例子中涉及到模糊性的是（)。
+A。今天天气比较冷
+B.火星上没有水和生命
+C.老马识途
+D.如果头疼且流涕，则有可能患了感冒
+2026-05-16 12:40:38.519 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(81字): 7.【单选题】（10分)
+下列不确定性例子中涉及到模糊性的是（)。
+A。今天天气比较冷
+B.火星上没有水和生命
+C.老马识途
+D.如果头疼且流涕，则有可能患了感冒
+2026-05-16 12:40:38.520 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-16 12:40:38.520 | INFO | SolutionService:solve_exam_question | 题目文本(81字): 7.【单选题】（10分)
+下列不确定性例子中涉及到模糊性的是（)。
+A。今天天气比较冷
+B.火星上没有水和生命
+C.老马识途
+D.如果头疼且流涕，则有可能患了感冒
+2026-05-16 12:40:38.520 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124038.txt
+2026-05-16 12:40:38.520 | INFO | DeepSeek:answer_question | 问题：7.【单选题】（10分)
+下列不确定性例子中涉及到模糊性的是（)。
+A。今天天气比较冷
+B.火星上没有水和生命
+C.老马识途
+D.如果头疼且流涕，则有可能患了感冒
+2026-05-16 12:40:39.085 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='b379be3c-61ea-4cf9-a676-b959cb38ae93', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906441, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=196, total_tokens=203, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=68))
+2026-05-16 12:40:39.085 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-16 12:40:39.087 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-16 12:40:39.087 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A']
+2026-05-16 12:40:39.092 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-16 12:40:39.095 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A']
+2026-05-16 12:40:39.095 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+今天天气比较冷
+2026-05-16 12:40:39.095 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+火星上没有水和生命
+2026-05-16 12:40:39.095 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+老马识途
+2026-05-16 12:40:39.096 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+如果头疼且流涕，则有可能患了感冒
+2026-05-16 12:40:39.101 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: A.
+
+今天天气比较冷
+2026-05-16 12:40:39.708 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=12, active元素=1
+2026-05-16 12:40:39.725 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-16 12:40:40.037 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-16 12:40:42.042 | INFO | WebEdgeService:run_exam | ========== 第 8 题 ==========
+2026-05-16 12:40:42.055 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:40:42.056 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-16 12:40:42.056 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-16 12:40:42.251 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_124042.png
+2026-05-16 12:40:42.531 | DEBUG | SolutionService:ocr_text | OCR提取7行
+2026-05-16 12:40:42.531 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 85 字
+2026-05-16 12:40:42.531 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(85字): 8【多选题】（10分）
+以下哪些是人类知识？
+().
+A.如果大雁向南飞，则冬天就要来临了
+B.洛阳亲友如相问，一片冰心在玉壶
+C.烽火连三月，家书抵万金
+D。雪是白色的
+2026-05-16 12:40:42.531 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(85字): 8【多选题】（10分）
+以下哪些是人类知识？
+().
+A.如果大雁向南飞，则冬天就要来临了
+B.洛阳亲友如相问，一片冰心在玉壶
+C.烽火连三月，家书抵万金
+D。雪是白色的
+2026-05-16 12:40:42.531 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-16 12:40:42.531 | INFO | SolutionService:solve_exam_question | 题目文本(85字): 8【多选题】（10分）
+以下哪些是人类知识？
+().
+A.如果大雁向南飞，则冬天就要来临了
+B.洛阳亲友如相问，一片冰心在玉壶
+C.烽火连三月，家书抵万金
+D。雪是白色的
+2026-05-16 12:40:42.533 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124042.txt
+2026-05-16 12:40:42.533 | INFO | DeepSeek:answer_question | 问题：8【多选题】（10分）
+以下哪些是人类知识？
+().
+A.如果大雁向南飞，则冬天就要来临了
+B.洛阳亲友如相问，一片冰心在玉壶
+C.烽火连三月，家书抵万金
+D。雪是白色的
+2026-05-16 12:40:43.193 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='c17adf2c-e2ce-4a2c-8231-0673a8fbce8c', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A", "B", "C", "D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906446, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=16, prompt_tokens=206, total_tokens=222, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=78))
+2026-05-16 12:40:43.194 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A", "B", "C", "D"]}
+2026-05-16 12:40:43.194 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A', 'B', 'C', 'D'], 'raw': '{"selected": ["A", "B", "C", "D"]}'}
+2026-05-16 12:40:43.194 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A', 'B', 'C', 'D']
+2026-05-16 12:40:43.200 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-16 12:40:43.204 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A', 'B', 'C', 'D']
+2026-05-16 12:40:43.205 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+如果大雁向南飞，则冬天就要来临了
+2026-05-16 12:40:43.205 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+洛阳亲友如相问，一片冰心在玉壶
+2026-05-16 12:40:43.205 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+烽火连三月，家书抵万金
+2026-05-16 12:40:43.205 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+雪是白色的
+2026-05-16 12:40:43.210 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: A.
+
+如果大雁向南飞，则冬天就要来临了
+2026-05-16 12:40:43.213 | INFO | SolutionService:_click_exam_options | 字母点击 B -> 选项[1]: B.
+
+洛阳亲友如相问，一片冰心在玉壶
+2026-05-16 12:40:43.216 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+烽火连三月，家书抵万金
+2026-05-16 12:40:43.219 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+雪是白色的
+2026-05-16 12:40:43.823 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=16, active元素=1
+2026-05-16 12:40:43.844 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-16 12:40:44.156 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-16 12:40:46.160 | INFO | WebEdgeService:run_exam | ========== 第 9 题 ==========
+2026-05-16 12:40:46.170 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:40:46.170 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-16 12:40:46.170 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-16 12:40:46.362 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_124046.png
+2026-05-16 12:40:46.632 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-16 12:40:46.632 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 97 字
+2026-05-16 12:40:46.632 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(97字): 9【多选题】（10分）
+以下为深度学习所涉及的方法的是（）。
+A、基于多层神经元的自编码神经网络
+B.马尔可夫决策过程
+C.以多层自编码神经网络的方式进行预训练、
+D.基于卷积运算的神经网络系统
+2026-05-16 12:40:46.632 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(97字): 9【多选题】（10分）
+以下为深度学习所涉及的方法的是（）。
+A、基于多层神经元的自编码神经网络
+B.马尔可夫决策过程
+C.以多层自编码神经网络的方式进行预训练、
+D.基于卷积运算的神经网络系统
+2026-05-16 12:40:46.634 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-16 12:40:46.634 | INFO | SolutionService:solve_exam_question | 题目文本(97字): 9【多选题】（10分）
+以下为深度学习所涉及的方法的是（）。
+A、基于多层神经元的自编码神经网络
+B.马尔可夫决策过程
+C.以多层自编码神经网络的方式进行预训练、
+D.基于卷积运算的神经网络系统
+2026-05-16 12:40:46.635 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124046.txt
+2026-05-16 12:40:46.635 | INFO | DeepSeek:answer_question | 问题：9【多选题】（10分）
+以下为深度学习所涉及的方法的是（）。
+A、基于多层神经元的自编码神经网络
+B.马尔可夫决策过程
+C.以多层自编码神经网络的方式进行预训练、
+D.基于卷积运算的神经网络系统
+2026-05-16 12:40:47.220 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='02ca8fbb-17d0-4a56-b06e-7710b172d759', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A", "C", "D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906450, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=13, prompt_tokens=198, total_tokens=211, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=70))
+2026-05-16 12:40:47.220 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A", "C", "D"]}
+2026-05-16 12:40:47.221 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A', 'C', 'D'], 'raw': '{"selected": ["A", "C", "D"]}'}
+2026-05-16 12:40:47.221 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A', 'C', 'D']
+2026-05-16 12:40:47.227 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-16 12:40:47.231 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A', 'C', 'D']
+2026-05-16 12:40:47.231 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+基于多层神经元的自编码神经网络
+2026-05-16 12:40:47.231 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+马尔可夫决策过程
+2026-05-16 12:40:47.232 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+以多层自编码神经网络的方式进行预训练
+2026-05-16 12:40:47.232 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+基于卷积运算的神经网络系统
+2026-05-16 12:40:47.236 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: A.
+
+基于多层神经元的自编码神经网络
+2026-05-16 12:40:47.240 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+以多层自编码神经网络的方式进行预训练
+2026-05-16 12:40:47.243 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+基于卷积运算的神经网络系统
+2026-05-16 12:40:47.848 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=19, active元素=1
+2026-05-16 12:40:47.866 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-16 12:40:48.178 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-16 12:40:50.183 | INFO | WebEdgeService:run_exam | ========== 第 10 题 ==========
+2026-05-16 12:40:50.195 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:40:50.195 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-16 12:40:50.195 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-16 12:40:50.349 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_124050.png
+2026-05-16 12:40:50.668 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-16 12:40:50.668 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 62 字
+2026-05-16 12:40:50.669 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(62字): 10【多选题】（10分)
+以下属于知识图谱广泛应用的领域的是（）。
+A.家电维护
+B.个性化推荐
+C.智能搜索
+D.智能问答
+2026-05-16 12:40:50.669 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(62字): 10【多选题】（10分)
+以下属于知识图谱广泛应用的领域的是（）。
+A.家电维护
+B.个性化推荐
+C.智能搜索
+D.智能问答
+2026-05-16 12:40:50.669 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-16 12:40:50.669 | INFO | SolutionService:solve_exam_question | 题目文本(62字): 10【多选题】（10分)
+以下属于知识图谱广泛应用的领域的是（）。
+A.家电维护
+B.个性化推荐
+C.智能搜索
+D.智能问答
+2026-05-16 12:40:50.670 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124050.txt
+2026-05-16 12:40:50.670 | INFO | DeepSeek:answer_question | 问题：10【多选题】（10分)
+以下属于知识图谱广泛应用的领域的是（）。
+A.家电维护
+B.个性化推荐
+C.智能搜索
+D.智能问答
+2026-05-16 12:40:51.333 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='f8ff8e24-bc46-40eb-b1fc-9e590d22a827', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B", "C", "D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906454, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=13, prompt_tokens=181, total_tokens=194, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=53))
+2026-05-16 12:40:51.334 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B", "C", "D"]}
+2026-05-16 12:40:51.334 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B', 'C', 'D'], 'raw': '{"selected": ["B", "C", "D"]}'}
+2026-05-16 12:40:51.334 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B', 'C', 'D']
+2026-05-16 12:40:51.340 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-16 12:40:51.343 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B', 'C', 'D']
+2026-05-16 12:40:51.344 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+家电维护
+2026-05-16 12:40:51.344 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+个性化推荐
+2026-05-16 12:40:51.344 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+智能搜索
+2026-05-16 12:40:51.344 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+智能问答
+2026-05-16 12:40:51.348 | INFO | SolutionService:_click_exam_options | 字母点击 B -> 选项[1]: B.
+
+个性化推荐
+2026-05-16 12:40:51.353 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+智能搜索
+2026-05-16 12:40:51.353 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+智能问答
+2026-05-16 12:40:51.963 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=22, active元素=1
+2026-05-16 12:40:51.976 | WARNING | WebEdgeService:_go_next_question | 未找到下一题按钮，尝试查找交卷按钮...
+2026-05-16 12:40:53.984 | WARNING | WebEdgeService:run_exam | 无法继续答题且未检测到完成状态，手动停止。
+2026-05-16 12:40:53.986 | INFO | WebEdgeService:run_exam | 答题流程结束，共处理 10 题。
+2026-05-16 12:42:33.461 | INFO | Main:main | 答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/406679/wVJnjkPO/wEnRkb2e/1000002677/1847/0
+2026-05-16 12:42:33.472 | INFO | WebEdgeService:run_exam | 已打开答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/406679/wVJnjkPO/wEnRkb2e/1000002677/1847/0
+2026-05-16 12:42:35.477 | INFO | WebEdgeService:_handle_login | 已登录，继续。
+2026-05-16 12:42:38.484 | DEBUG | WebEdgeService:_click_start_if_needed | 未找到「开始答题」按钮，可能已直接进入答题页。
+2026-05-16 12:42:41.485 | INFO | WebEdgeService:run_exam | 等待第一题加载...
+2026-05-16 12:42:41.492 | INFO | WebEdgeService:run_exam | 第一题已加载。
+2026-05-16 12:42:41.492 | INFO | WebEdgeService:run_exam | 开始答题流程...
+2026-05-16 12:42:41.493 | INFO | WebEdgeService:run_exam | ========== 第 1 题 ==========
+2026-05-16 12:42:41.508 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:42:41.510 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(261字): 名称 人工智能与科学之美
+对应章节 第二章
+成绩类型 百分制
+截止时间 2026-05-19 23:59:59
+题目数 10
+总分数 100
+
+
+说明
+
+提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+
+第1部分
+总题数: 10
+1.
+【单选题】 (10分)
+A.
+
+一年有春夏秋冬四个季节
+
+
+B.
+
+雪是白色的
+
+
+C.
+
+太阳从东边升起
+
+
+D.
+
+如果头痛且流涕，则可能患了感
+2026-05-16 12:42:41.510 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(68字): 1.
+【单选题】 (10分)
+A.
+一年有春夏秋冬四个季节
+B.
+雪是白色的
+C.
+太阳从东边升起
+D.
+如果头痛且流涕，则可能患了感冒
+2026-05-16 12:42:41.687 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_124241.png
+2026-05-16 12:42:41.970 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-16 12:42:41.970 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 74 字
+2026-05-16 12:42:41.971 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(74字): 1.【单选题】（10分)
+以下哪些是规则?（)
+A.一年有春夏秋冬四个季节
+B.雪是白色的
+C.太阳从东边升起
+●D.如果头痛且流涕，则可能患了感冒
+2026-05-16 12:42:41.971 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(74字): 1.【单选题】（10分)
+以下哪些是规则?（)
+A.一年有春夏秋冬四个季节
+B.雪是白色的
+C.太阳从东边升起
+●D.如果头痛且流涕，则可能患了感冒
+2026-05-16 12:42:41.971 | INFO | SolutionService:solve_exam_question | DOM+OCR 均有内容，择优使用。
+2026-05-16 12:42:41.972 | INFO | SolutionService:solve_exam_question | 题目文本(68字): 1.
+【单选题】 (10分)
+A.
+一年有春夏秋冬四个季节
+B.
+雪是白色的
+C.
+太阳从东边升起
+D.
+如果头痛且流涕，则可能患了感冒
+2026-05-16 12:42:41.972 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124241.txt
+2026-05-16 12:42:41.973 | INFO | DeepSeek:answer_question | 问题：1.
+【单选题】 (10分)
+A.
+一年有春夏秋冬四个季节
+B.
+雪是白色的
+C.
+太阳从东边升起
+D.
+如果头痛且流涕，则可能患了感冒
+2026-05-16 12:42:42.713 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='a71d884e-1454-4b43-8bd9-8ed80fa74f74', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906565, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=190, total_tokens=197, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=62))
+2026-05-16 12:42:42.713 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["D"]}
+2026-05-16 12:42:42.714 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['D'], 'raw': '{"selected": ["D"]}'}
+2026-05-16 12:42:42.714 | INFO | SolutionService:solve_exam_question | LLM 答案: ['D']
+2026-05-16 12:42:42.721 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-16 12:42:42.724 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['D']
+2026-05-16 12:42:42.724 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+一年有春夏秋冬四个季节
+2026-05-16 12:42:42.724 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+雪是白色的
+2026-05-16 12:42:42.724 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+太阳从东边升起
+2026-05-16 12:42:42.726 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+如果头痛且流涕，则可能患了感冒
+2026-05-16 12:42:42.728 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+如果头痛且流涕，则可能患了感冒
+2026-05-16 12:42:43.333 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=22, active元素=0
+2026-05-16 12:42:43.348 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-16 12:42:43.662 | WARNING | WebEdgeService:_go_next_question | 页面指纹未变化，尝试再次点击...
+2026-05-16 12:42:46.173 | INFO | WebEdgeService:run_exam | ========== 第 2 题 ==========
+2026-05-16 12:42:46.187 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-16 12:42:46.187 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-16 12:42:46.189 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-16 12:42:47.270 | ERROR | SolutionService:screenshot_web_element | 元素截图失败: Message: stale element reference: stale element not found
+  (Session info: MicrosoftEdge=148.0.3967.54); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a06bc7ae]
+	msedgedriver!(No symbol) [0x7ff7a06bb924]
+	msedgedriver!(No symbol) [0x7ff7a06bcd65]
+	msedgedriver!(No symbol) [0x7ff7a06b17a8]
+	msedgedriver!(No symbol) [0x7ff7a06afec6]
+	msedgedriver!(No symbol) [0x7ff7a06b3205]
+	msedgedriver!(No symbol) [0x7ff7a06b32cf]
+	msedgedriver!(No symbol) [0x7ff7a06f5ca2]
+	msedgedriver!(No symbol) [0x7ff7a06f7601]
+	msedgedriver!(No symbol) [0x7ff7a06f223a]
+	msedgedriver!(No symbol) [0x7ff7a07141ea]
+	msedgedriver!(No symbol) [0x7ff7a06eaac7]
+	msedgedriver!(No symbol) [0x7ff7a06ea9cd]
+	msedgedriver!(No symbol) [0x7ff7a06eaac7]
+	msedgedriver!(No symbol) [0x7ff7a072f112]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 12:42:47.271 | ERROR | SolutionService:ocr_items | OCR失败: float division by zero
+2026-05-16 12:42:47.272 | DEBUG | SolutionService:ocr_text | OCR提取0行
+2026-05-16 12:42:47.272 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(0字): 
+2026-05-16 12:42:47.272 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(0字): 
+2026-05-16 12:42:47.289 | INFO | SolutionService:solve_exam_question | 题目文本(1273字): 搜索
+同步课堂
+白天模式
+APP下载
+我的学堂
+范锦豪
+慕课西行
+赛事专区
+智慧课程
+职教资源库
+智能制造
+数字未来
+新媒体营销
+数字营销
+微专业
+人工智能+
+工业智能
+海洋认识与探索
+国际经济与贸易
+智慧慕课
+更多
+工学
+经济学
+法学
+教育学
+文学
+历史学
+理学
+农学
+医学
+管理学
+艺术学
+哲学
+智慧慕课
+人工智能引论
+浙江大学
+吴飞, 况琨,陈静远,张圣宇,范鹤鹤
+智慧慕课
+热流体基础
+哈尔滨工程大学
+孙宝芝,高杰,葛坤,姜玉廷,岳国强,董平,史建新,王佳琪,宋福元,张国磊,杨立平
+智慧慕课
+低碳生活与绿色文明
+华南农业大学
+吕辉雄,陈少华,梁瑜海,陈杨梅,陈火君,郑芊
+智慧慕课
+多媒体课
+2026-05-16 12:42:47.290 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_124247.txt
+2026-05-16 12:42:47.290 | INFO | DeepSeek:answer_question | 问题：搜索
+同步课堂
+白天模式
+APP下载
+我的学堂
+范锦豪
+慕课西行
+赛事专区
+智慧课程
+职教资源库
+智能制造
+数字未来
+新媒体营销
+数字营销
+微专业
+人工智能+
+工业智能
+海洋认识与探索
+国际经济与贸易
+智慧慕课
+更多
+工学
+经济学
+法学
+教育学
+文学
+历史学
+理学
+农学
+医学
+管理学
+艺术学
+哲学
+智慧慕课
+人工智能引论
+浙江大学
+吴飞, 况琨,陈静远,张圣宇,范鹤鹤
+智慧慕课
+热流体基础
+哈尔滨工程大学
+孙宝芝,高杰,葛坤,姜玉廷,岳国强,董平,史建新,王佳琪,宋福元,张国磊,杨立平
+智慧慕课
+低碳生活与绿色文明
+华南农业大学
+吕辉雄,陈少华,梁瑜海,陈杨梅,陈火君,郑芊
+智慧慕课
+多媒体课件设计与制作
+佳木斯大学
+孙崴,刘学敏,王福宝,关玉兵
+智慧慕课
+数字信号处理
+华东理工大学
+万永菁,朱宏擎,蒋翠玲,王嵘,张淑艳
+直播LIVE
+更多
+未开始
+5/18 13:30-15:00
+赚钱和剥削的秘密
+王彦君 | 浙江大学
+未开始
+5/18 15:30-17:00
+了不起的推理
+王彦君 | 浙江大学
+未开始
+5/19 19:00-20:30
+从要素建设到范式转型——课创赛与专创赛指标体系解读与案例剖析（师说 第244期）
+精彩回放
+今天 10:30-12:00
+真人秀的诞生、发展和类型
+李欣 | 浙江传媒学院
+精彩回放
+今天 10:30-12:00
+课程总复习暨主题讨论-中药毒性再认识
+彭崇胜 | 上海交通大学
+AI共享课
+更多
+开采损害与环境保护
+刘伟韬 | 山东科技大学
+遇见人工智能-o1（视频课）
+印鉴 | 中山大学
+创业风险管理
+孟奕爽 | 湖南师范大学
+AI艺术理论与实践
+胡智锋 | 北京师范大学
+国际贸易实务技能训练营
+张肃 | 长春理工大学
+人工智能课程
+更多
+人工智能引论
+吴飞 | 浙江大学
+人工智能与国家安全
+马溯川 | 西安交通大学
+人工智能伦理与安全
+杨子祺 | 浙江大学
+人工智能与智慧医学
+李校堃 | 温州医科大学
+AI赋能科研全流程
+周彦 | 湘潭大学
+国家金课
+更多
+换一换
+概率论与数理统计（天津大学）
+关静 | 天津大学
+选课人数    19.81万人
+民间美术
+涂俊 | 西安文理学院
+文学修养与大学生活
+杨海燕 | 山东大学
+食品保藏探秘
+刘尊英 | 中国海洋大学
+中国纺织文化
+生鸿飞 | 武汉纺织大学
+生物安全——转基因生物的安全、应用与管理
+叶恭银 | 浙江大学
+学前儿童心理发展与指导
+鞠晓辉 | 青岛职业技术学院
+虚拟实验课
+更多
+脓汁标本的病原性球菌检测虚拟仿真实验
+何永林/徐蕾 | 重庆医科大学
+大型同步发电机故障特性虚拟仿真实验
+岳秀梅 | 湖南大学
+两弹一星”精神虚拟仿真实验
+卢艳香 | 青海大学
+城市轨道交通虚拟仿真实训系统
+张风琴 | 山东职业学院
+环境色彩设计虚拟仿真实训课程
+吴懿 | 重庆工商职业学院
+东西部联盟
+吉林高校联盟
+外经贸联盟
+湖北师教联盟
+山东高校联盟
+青岛高职共享中心
+云南联盟
+中医药联盟
+海南联盟
+陕西联盟
+黑龙江联盟
+石油高校联盟
+2026-05-16 12:42:48.007 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='a11e035c-4f11-410f-b399-1de2575821d2', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778906570, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=1006, total_tokens=1013, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=878))
+2026-05-16 12:42:48.007 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-16 12:42:48.008 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-16 12:42:48.008 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A']
+2026-05-16 12:42:48.015 | DEBUG | SolutionService:solve_exam_question | 重新标记了 0 个选项元素
+2026-05-16 12:42:48.015 | WARNING | SolutionService:_click_exam_options | 未找到标记选项，使用通用点击。
+2026-05-16 12:42:48.019 | ERROR | SolutionService:_click_options_fallback | 回退方案也未找到选项。
+2026-05-16 12:42:48.019 | INFO | WebEdgeService:_solve_current_question | 第 2 次重试解答...
+2026-05-16 12:42:48.567 | INFO | WebEdgeService:shutdown | 触发服务关闭：准备先保存 Cookie
+2026-05-16 12:43:00.786 | ERROR | WebEdgeService:_save_cookies | 保存 Cookie 失败: HTTPConnectionPool(host='localhost', port=58447): Max retries exceeded with url: /session/73ea5a95f74ba07daa51ffe27cdca166/cookie (Caused by NewConnectionError("HTTPConnection(host='localhost', port=58447): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))

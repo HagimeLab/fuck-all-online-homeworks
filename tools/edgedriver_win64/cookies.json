@@ -1,0 +1,106 @@
+[
+  {
+    "domain": "onlineexamh5new.zhihuishu.com",
+    "expiry": 1781507121,
+    "httpOnly": false,
+    "name": "gdxidpyhxdE",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "wgDwn3bQ4pKNz7bQ4rkTuratCPlQkjuYG2gpOYZ9dp%5Cs%2B69zTnbdyXYpADPSYi443yKKYiqalI%2BK3p%2B5g%2FQdUWegG6mhyfnWRKMIRWhntEM3L4NwDlrtw4uok4evizq9s7KYvw78S7e%2B4aN1fGAu74mGRWZlw9fpwz%5CdYsIL0Io4WehY%3A1778915121122"
+  },
+  {
+    "domain": ".zhihuishu.com",
+    "expiry": 1779173193,
+    "httpOnly": false,
+    "name": "exitRecod_dlpwjNnz",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "2"
+  },
+  {
+    "domain": ".zhihuishu.com",
+    "httpOnly": false,
+    "name": "HMACCOUNT",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "DE685D226A2582E2"
+  },
+  {
+    "domain": ".zhihuishu.com",
+    "httpOnly": false,
+    "name": "o_session_id",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "83790D982C1132DFCC6DE638CFF12765"
+  },
+  {
+    "domain": ".zhihuishu.com",
+    "expiry": 1810450373,
+    "httpOnly": false,
+    "name": "Hm_lvt_0a1b7151d8c580761c3aef32a3d501c6",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "1778684779"
+  },
+  {
+    "domain": "onlineexamh5new.zhihuishu.com",
+    "expiry": 1810450220,
+    "httpOnly": false,
+    "name": "__snaker__id",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "gnYNkKSKWoy92giQ"
+  },
+  {
+    "domain": ".zhihuishu.com",
+    "httpOnly": false,
+    "name": "CASLOGC",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "%7B%22realName%22%3A%22%E8%8C%83%E9%94%A6%E8%B1%AA%22%2C%22myuniRole%22%3A0%2C%22myinstRole%22%3A0%2C%22userId%22%3A874698201%2C%22headPic%22%3A%22https%3A%2F%2Fimage.zhihuishu.com%2Fzhs%2Fuser%2Fweixin%2F202502%2Ff85ae15d135a4c0b891db980a3465bdc_s3.jpg%22%2C%22uuid%22%3A%22dlpwjNnz%22%2C%22mycuRole%22%3A0%2C%22username%22%3A%225439f817cdf6478f9df65cd0715963d9%22%7D"
+  },
+  {
+    "domain": ".zhihuishu.com",
+    "httpOnly": false,
+    "name": "CASTGC",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "TGT-3328699-RYZgn62Y7TM0xQKNSKAHYb9wiZbQzEXjcN3OFiOYUjsyAtN7Y7-passport.zhihuishu.com"
+  },
+  {
+    "domain": ".zhihuishu.com",
+    "httpOnly": false,
+    "name": "Hm_lpvt_0a1b7151d8c580761c3aef32a3d501c6",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "1778914373"
+  },
+  {
+    "domain": ".zhihuishu.com",
+    "httpOnly": false,
+    "name": "jt-cas",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "eyJraWQiOiJFRjRGMjJDMC01Q0IwLTQzNDgtOTY3Qi0wMjY0OTVFN0VGQzgiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJjb20uemhpaHVpc2h1IiwiYXVkIjoiQ0FTIiwic3ViIjoi6IyD6ZSm6LGqIiwiaWF0IjoxNzc4OTE0Mzc2LCJleHAiOjE3NzkwMDA3NzYsImp0aSI6IjBmODgxZDNmLWNiYTctNDQ1My1iYTI5LTQzNGYyZDdkYzIxMSIsInVpZCI6ODc0Njk4MjAxLCJuaWQiOiJBSWFnZlZVMWx4In0.VP8beFrFpjGgbo2gB0j5mUHuuEVlU_PFIh5vl4UzeT-SZJmR8ZdaSQO5H8BlzBZEBF2juSy3Zy2hXEz9X3ruXg"
+  },
+  {
+    "domain": "onlineexamh5new.zhihuishu.com",
+    "expiry": 1779173488,
+    "httpOnly": false,
+    "name": "achieveCount5pKVgr1J",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "10"
+  }
+]

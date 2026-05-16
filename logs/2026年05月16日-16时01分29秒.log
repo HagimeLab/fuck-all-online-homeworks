@@ -1,0 +1,294 @@
+2026-05-16 16:01:30.336 | INFO | webdriverConfig:_load_cookies | 准备从 D:\desktop\工具\fuckZHS-homeworking\tools\edgedriver_win64\cookies.json 加载 Cookie，目标域：https://onlineweb.zhihuishu.com/
+2026-05-16 16:01:32.475 | DEBUG | webdriverConfig:_load_cookies | 基础域页面等待失败，但继续尝试注入 Cookie。
+2026-05-16 16:01:32.477 | DEBUG | webdriverConfig:_load_cookies | 注入单条 Cookie 失败：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.480 | DEBUG | webdriverConfig:_load_cookies | 注入单条 Cookie 失败：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.482 | DEBUG | webdriverConfig:_load_cookies | 注入单条 Cookie 失败：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.484 | DEBUG | webdriverConfig:_load_cookies | 注入单条 Cookie 失败：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.487 | DEBUG | webdriverConfig:_load_cookies | 注入单条 Cookie 失败：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.489 | DEBUG | webdriverConfig:_load_cookies | 注入单条 Cookie 失败：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.491 | DEBUG | webdriverConfig:_load_cookies | 注入单条 Cookie 失败：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.492 | DEBUG | webdriverConfig:_load_cookies | 注入单条 Cookie 失败：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.494 | DEBUG | webdriverConfig:_load_cookies | 注入单条 Cookie 失败：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.495 | DEBUG | webdriverConfig:_load_cookies | 注入单条 Cookie 失败：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.499 | DEBUG | webdriverConfig:_load_cookies | 注入单条 Cookie 失败：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.499 | INFO | webdriverConfig:_load_cookies | 已加载 0/11 条 Cookie，刷新页面以应用登录态。
+2026-05-16 16:01:32.500 | WARNING | webdriverConfig:build | 加载 Cookie 时出现异常：Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff7a0980f74+e294]
+	msedgedriver!GetHandleVerifier [0x7ff7a0cfa65a+38797a]
+	msedgedriver!(No symbol) [0x7ff7a068dadd]
+	msedgedriver!(No symbol) [0x7ff7a071891c]
+	msedgedriver!(No symbol) [0x7ff7a072ea1f]
+	msedgedriver!(No symbol) [0x7ff7a06ea30c]
+	msedgedriver!(No symbol) [0x7ff7a06e9566]
+	msedgedriver!(No symbol) [0x7ff7a06ea133]
+	msedgedriver!(No symbol) [0x7ff7a07b3e49]
+	msedgedriver!(No symbol) [0x7ff7a07b0413]
+	msedgedriver!(No symbol) [0x7ff7a07c0672]
+	msedgedriver!GetHandleVerifier [0x7ff7a099d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff7a09a5e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff7a0988395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff7a09756a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ffc4acce957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4c52427c+2c]
+
+2026-05-16 16:01:32.940 | INFO | DeepSeek:__init__ | DeepSeek 初始化完成，模型：deepseek-chat
+2026-05-16 16:01:34.338 | INFO | WebEdgeService:shutdown | 触发服务关闭：准备先保存 Cookie
+2026-05-16 16:01:59.078 | INFO | WebEdgeService:shutdown | 浏览器已关闭，退出程序。

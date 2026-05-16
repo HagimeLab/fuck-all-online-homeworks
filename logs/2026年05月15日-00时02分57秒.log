@@ -1,0 +1,780 @@
+2026-05-15 00:02:58.491 | INFO | webdriverConfig:_load_cookies | 准备从 D:\desktop\工具\auto-zhihuishu\tools\edgedriver_win64\cookies.json 加载 Cookie，目标域：https://onlineweb.zhihuishu.com/
+2026-05-15 00:03:08.321 | INFO | webdriverConfig:_load_cookies | 已加载 10/10 条 Cookie，刷新页面以应用登录态。
+2026-05-15 00:03:09.913 | INFO | DeepSeek:__init__ | DeepSeek 初始化完成，模型：deepseek-chat
+2026-05-15 00:03:17.951 | INFO | Main:main | 答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/406679/eAOqv6dP/yNVNOBWy/1000002677/1847/0
+2026-05-15 00:03:19.906 | INFO | WebEdgeService:run_exam | 已打开答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/406679/eAOqv6dP/yNVNOBWy/1000002677/1847/0
+2026-05-15 00:03:21.911 | INFO | WebEdgeService:_handle_login | 已登录，继续。
+2026-05-15 00:03:26.949 | DEBUG | WebEdgeService:_click_start_if_needed | 未找到「开始答题」按钮，可能已直接进入答题页。
+2026-05-15 00:03:29.954 | INFO | WebEdgeService:run_exam | 等待第一题加载...
+2026-05-15 00:03:30.110 | INFO | WebEdgeService:run_exam | 第一题已加载。
+2026-05-15 00:03:30.114 | INFO | WebEdgeService:run_exam | 开始答题流程...
+2026-05-15 00:03:30.114 | INFO | WebEdgeService:run_exam | ========== 第 1 题 ==========
+2026-05-15 00:03:30.145 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-15 00:03:30.146 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(47字): 该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这些功能进行控制。
+2026-05-15 00:03:30.147 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(47字): 该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这些功能进行控制。
+2026-05-15 00:03:30.375 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000330.png
+2026-05-15 00:03:30.806 | DEBUG | SolutionService:ocr_text | OCR提取8行
+2026-05-15 00:03:30.806 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 197 字
+2026-05-15 00:03:30.807 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(197字): 1.【单选题】（10分)
+智能汽车的第三个层次是什么（）
+A.该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这
+些功能进行控制。
+B.具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+C.能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否
+返回驾驶员驾驶模式。
+D.该层次汽车完全自动控制车辆，在任何时候都不需要对车辆进行操控。
+2026-05-15 00:03:30.808 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(197字): 1.【单选题】（10分)
+智能汽车的第三个层次是什么（）
+A.该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这
+些功能进行控制。
+B.具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+C.能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否
+返回驾驶员驾驶模式。
+D.该层次汽车完全自动控制车辆，在任何时候都不需要对车辆进行操控。
+2026-05-15 00:03:30.808 | INFO | SolutionService:solve_exam_question | DOM+OCR 均有内容，择优使用。
+2026-05-15 00:03:30.808 | INFO | SolutionService:solve_exam_question | 题目文本(197字): 1.【单选题】（10分)
+智能汽车的第三个层次是什么（）
+A.该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这
+些功能进行控制。
+B.具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+C.能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否
+返回驾驶员驾驶模式。
+D.该层次汽车完全自动控制车辆，在任何时候都不需要对车辆进行操控。
+2026-05-15 00:03:30.810 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000330.txt
+2026-05-15 00:03:30.810 | INFO | DeepSeek:answer_question | 问题：1.【单选题】（10分)
+智能汽车的第三个层次是什么（）
+A.该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这
+些功能进行控制。
+B.具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+C.能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否
+返回驾驶员驾驶模式。
+D.该层次汽车完全自动控制车辆，在任何时候都不需要对车辆进行操控。
+2026-05-15 00:03:31.981 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='918a82cf-6cce-44a8-a500-32c4f4a0624b', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["C"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774613, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=248, total_tokens=255, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=120))
+2026-05-15 00:03:31.982 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["C"]}
+2026-05-15 00:03:31.983 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['C'], 'raw': '{"selected": ["C"]}'}
+2026-05-15 00:03:31.983 | INFO | SolutionService:solve_exam_question | LLM 答案: ['C']
+2026-05-15 00:03:31.992 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-15 00:03:32.001 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['C']
+2026-05-15 00:03:32.001 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这些功能进行控制。
+2026-05-15 00:03:32.002 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+2026-05-15 00:03:32.002 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否返回驾驶员驾驶模式。
+2026-05-15 00:03:32.002 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+该层次汽车完全自动控制车辆，在任何时候都不需要对车辆进行操控。
+2026-05-15 00:03:32.049 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否返回驾驶员驾驶
+2026-05-15 00:03:32.655 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=1, active元素=1
+2026-05-15 00:03:32.676 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-15 00:03:43.579 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-15 00:03:43.583 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-15 00:03:45.587 | INFO | WebEdgeService:run_exam | ========== 第 2 题 ==========
+2026-05-15 00:03:45.600 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-15 00:03:45.601 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-15 00:03:45.601 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-15 00:03:45.794 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000345.png
+2026-05-15 00:03:46.241 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-15 00:03:46.242 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 79 字
+2026-05-15 00:03:46.243 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(79字): 2【多选题】（10分）
+百度无人车第一次路测，经过了下列地点中的（）。
+A.G7京新高速公路
+B.北京中关村软件园的百度大厦
+C.奥林匹克森林公园
+D.五环路
+2026-05-15 00:03:46.243 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(79字): 2【多选题】（10分）
+百度无人车第一次路测，经过了下列地点中的（）。
+A.G7京新高速公路
+B.北京中关村软件园的百度大厦
+C.奥林匹克森林公园
+D.五环路
+2026-05-15 00:03:46.244 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-15 00:03:46.244 | INFO | SolutionService:solve_exam_question | 题目文本(79字): 2【多选题】（10分）
+百度无人车第一次路测，经过了下列地点中的（）。
+A.G7京新高速公路
+B.北京中关村软件园的百度大厦
+C.奥林匹克森林公园
+D.五环路
+2026-05-15 00:03:46.245 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000346.txt
+2026-05-15 00:03:46.245 | INFO | DeepSeek:answer_question | 问题：2【多选题】（10分）
+百度无人车第一次路测，经过了下列地点中的（）。
+A.G7京新高速公路
+B.北京中关村软件园的百度大厦
+C.奥林匹克森林公园
+D.五环路
+2026-05-15 00:03:47.234 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='6481e60a-d5a0-4ac0-88cc-bf2056bc51fa', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A", "D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774629, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=10, prompt_tokens=192, total_tokens=202, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=64))
+2026-05-15 00:03:47.234 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A", "D"]}
+2026-05-15 00:03:47.234 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A', 'D'], 'raw': '{"selected": ["A", "D"]}'}
+2026-05-15 00:03:47.234 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A', 'D']
+2026-05-15 00:03:47.240 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-15 00:03:47.243 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A', 'D']
+2026-05-15 00:03:47.244 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+G7京新高速公路
+2026-05-15 00:03:47.244 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+北京中关村软件园的百度大厦
+2026-05-15 00:03:47.244 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+奥林匹克森林公园
+2026-05-15 00:03:47.244 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+五环路
+2026-05-15 00:03:47.252 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: A.
+
+G7京新高速公路
+2026-05-15 00:03:47.256 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+五环路
+2026-05-15 00:03:47.860 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=3, active元素=1
+2026-05-15 00:03:47.880 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-15 00:03:58.793 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-15 00:03:58.796 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-15 00:04:00.804 | INFO | WebEdgeService:run_exam | ========== 第 3 题 ==========
+2026-05-15 00:04:00.827 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-15 00:04:00.828 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-15 00:04:00.828 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-15 00:04:01.025 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000401.png
+2026-05-15 00:04:01.332 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-15 00:04:01.333 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 54 字
+2026-05-15 00:04:01.334 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(54字): 3【多选题】（10分)
+智能汽车的感知对象包括（）。
+A.驾驶状态
+B.周边物体
+C.行驶路线
+D.驾驶环境
+2026-05-15 00:04:01.334 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(54字): 3【多选题】（10分)
+智能汽车的感知对象包括（）。
+A.驾驶状态
+B.周边物体
+C.行驶路线
+D.驾驶环境
+2026-05-15 00:04:01.334 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-15 00:04:01.334 | INFO | SolutionService:solve_exam_question | 题目文本(54字): 3【多选题】（10分)
+智能汽车的感知对象包括（）。
+A.驾驶状态
+B.周边物体
+C.行驶路线
+D.驾驶环境
+2026-05-15 00:04:01.336 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000401.txt
+2026-05-15 00:04:01.336 | INFO | DeepSeek:answer_question | 问题：3【多选题】（10分)
+智能汽车的感知对象包括（）。
+A.驾驶状态
+B.周边物体
+C.行驶路线
+D.驾驶环境
+2026-05-15 00:04:02.490 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='3a8d5dda-4eda-4194-b301-630f1406f5b8', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["B", "C", "D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774643, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=13, prompt_tokens=178, total_tokens=191, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=50))
+2026-05-15 00:04:02.490 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["B", "C", "D"]}
+2026-05-15 00:04:02.490 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['B', 'C', 'D'], 'raw': '{"selected": ["B", "C", "D"]}'}
+2026-05-15 00:04:02.490 | INFO | SolutionService:solve_exam_question | LLM 答案: ['B', 'C', 'D']
+2026-05-15 00:04:02.497 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-15 00:04:02.500 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['B', 'C', 'D']
+2026-05-15 00:04:02.500 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+驾驶状态
+2026-05-15 00:04:02.501 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+周边物体
+2026-05-15 00:04:02.501 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+行驶路线
+2026-05-15 00:04:02.501 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+驾驶环境
+2026-05-15 00:04:02.506 | INFO | SolutionService:_click_exam_options | 字母点击 B -> 选项[1]: B.
+
+周边物体
+2026-05-15 00:04:02.511 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+行驶路线
+2026-05-15 00:04:02.515 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+驾驶环境
+2026-05-15 00:04:03.120 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=6, active元素=1
+2026-05-15 00:04:03.141 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-15 00:04:14.060 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-15 00:04:14.068 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-15 00:04:16.073 | INFO | WebEdgeService:run_exam | ========== 第 4 题 ==========
+2026-05-15 00:04:16.092 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-15 00:04:16.092 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-15 00:04:16.092 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-15 00:04:16.325 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000416.png
+2026-05-15 00:04:16.651 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-15 00:04:16.652 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 64 字
+2026-05-15 00:04:16.654 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(64字): 4【多选题】（10分）
+智能驾驶的优势有（）。
+A。满足特殊乘客的出行需求
+B.减少生活空间
+C.减少温室气体排放
+D.节省时间
+2026-05-15 00:04:16.655 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(64字): 4【多选题】（10分）
+智能驾驶的优势有（）。
+A。满足特殊乘客的出行需求
+B.减少生活空间
+C.减少温室气体排放
+D.节省时间
+2026-05-15 00:04:16.655 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-15 00:04:16.655 | INFO | SolutionService:solve_exam_question | 题目文本(64字): 4【多选题】（10分）
+智能驾驶的优势有（）。
+A。满足特殊乘客的出行需求
+B.减少生活空间
+C.减少温室气体排放
+D.节省时间
+2026-05-15 00:04:16.656 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000416.txt
+2026-05-15 00:04:16.657 | INFO | DeepSeek:answer_question | 问题：4【多选题】（10分）
+智能驾驶的优势有（）。
+A。满足特殊乘客的出行需求
+B.减少生活空间
+C.减少温室气体排放
+D.节省时间
+2026-05-15 00:04:17.911 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='4d63ebb2-01b7-49e3-acc5-297e567e9c2d', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A", "C", "D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774659, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=13, prompt_tokens=184, total_tokens=197, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=56))
+2026-05-15 00:04:17.911 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A", "C", "D"]}
+2026-05-15 00:04:17.911 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A', 'C', 'D'], 'raw': '{"selected": ["A", "C", "D"]}'}
+2026-05-15 00:04:17.912 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A', 'C', 'D']
+2026-05-15 00:04:17.916 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-15 00:04:17.918 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A', 'C', 'D']
+2026-05-15 00:04:17.920 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+满足特殊乘客的出行需求
+2026-05-15 00:04:17.920 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+减少生活空间
+2026-05-15 00:04:17.920 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+减少温室气体排放
+2026-05-15 00:04:17.920 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+节省时间
+2026-05-15 00:04:17.928 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: A.
+
+满足特殊乘客的出行需求
+2026-05-15 00:04:17.931 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+减少温室气体排放
+2026-05-15 00:04:17.936 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+节省时间
+2026-05-15 00:04:18.542 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=9, active元素=1
+2026-05-15 00:04:18.560 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-15 00:04:29.486 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-15 00:04:29.492 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-15 00:04:31.500 | INFO | WebEdgeService:run_exam | ========== 第 5 题 ==========
+2026-05-15 00:04:31.517 | DEBUG | SolutionService:solve_exam_question | 找到 2 个选项元素
+2026-05-15 00:04:31.518 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-15 00:04:31.518 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-15 00:04:31.764 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000431.png
+2026-05-15 00:04:32.435 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-15 00:04:32.436 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 69 字
+2026-05-15 00:04:32.437 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(69字): 第1部分总题数:10
+5【判断题]
+(10分)
+我国部分城市已经实现了公交车的智能驾驶，所以智能驾驶已没有任何挑战性。（）
+A.错
+B.对
+2026-05-15 00:04:32.437 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(58字): 5【判断题]
+(10分)
+我国部分城市已经实现了公交车的智能驾驶，所以智能驾驶已没有任何挑战性。（）
+A.错
+B.对
+2026-05-15 00:04:32.437 | WARNING | SolutionService:solve_exam_question | DOM/OCR 均无明确题目内容，回退使用 OCR 文本。
+2026-05-15 00:04:32.437 | INFO | SolutionService:solve_exam_question | 题目文本(58字): 5【判断题]
+(10分)
+我国部分城市已经实现了公交车的智能驾驶，所以智能驾驶已没有任何挑战性。（）
+A.错
+B.对
+2026-05-15 00:04:32.438 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000432.txt
+2026-05-15 00:04:32.438 | INFO | DeepSeek:answer_question | 问题：5【判断题]
+(10分)
+我国部分城市已经实现了公交车的智能驾驶，所以智能驾驶已没有任何挑战性。（）
+A.错
+B.对
+2026-05-15 00:04:33.271 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='9b0641c9-0532-4d1c-9afe-9b75c8196d05', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["错"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774675, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=179, total_tokens=186, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=51))
+2026-05-15 00:04:33.271 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["错"]}
+2026-05-15 00:04:33.271 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-15 00:04:33.271 | INFO | SolutionService:solve_exam_question | LLM 答案: ['错']
+2026-05-15 00:04:33.277 | DEBUG | SolutionService:solve_exam_question | 重新标记了 2 个选项元素
+2026-05-15 00:04:33.280 | INFO | SolutionService:_click_exam_options | 共 2 个选项，目标: ['错']
+2026-05-15 00:04:33.280 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+错
+2026-05-15 00:04:33.280 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+对
+2026-05-15 00:04:33.286 | INFO | SolutionService:_click_exam_options | 文本匹配 错 -> 选项[0]: A.
+错
+2026-05-15 00:04:33.892 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=10, active元素=1
+2026-05-15 00:04:33.910 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-15 00:04:44.828 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-15 00:04:44.832 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-15 00:04:46.837 | INFO | WebEdgeService:run_exam | ========== 第 6 题 ==========
+2026-05-15 00:04:46.867 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-15 00:04:46.867 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-15 00:04:46.867 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-15 00:04:47.135 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000447.png
+2026-05-15 00:04:47.555 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-15 00:04:47.556 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 77 字
+2026-05-15 00:04:47.556 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(77字): 6.【单选题】（10分)
+百度无人汽车核心技术最核心的是（）。
+A.智能决策和控制层
+B.实现采集高精度的地图技术
+C.厘米级的定位技术
+D.环境感知技术
+2026-05-15 00:04:47.556 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(77字): 6.【单选题】（10分)
+百度无人汽车核心技术最核心的是（）。
+A.智能决策和控制层
+B.实现采集高精度的地图技术
+C.厘米级的定位技术
+D.环境感知技术
+2026-05-15 00:04:47.557 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-15 00:04:47.557 | INFO | SolutionService:solve_exam_question | 题目文本(77字): 6.【单选题】（10分)
+百度无人汽车核心技术最核心的是（）。
+A.智能决策和控制层
+B.实现采集高精度的地图技术
+C.厘米级的定位技术
+D.环境感知技术
+2026-05-15 00:04:47.558 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000447.txt
+2026-05-15 00:04:47.558 | INFO | DeepSeek:answer_question | 问题：6.【单选题】（10分)
+百度无人汽车核心技术最核心的是（）。
+A.智能决策和控制层
+B.实现采集高精度的地图技术
+C.厘米级的定位技术
+D.环境感知技术
+2026-05-15 00:04:48.359 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='51040e16-2f08-47e1-983f-a05946066a60', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774690, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=190, total_tokens=197, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=62))
+2026-05-15 00:04:48.359 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-15 00:04:48.361 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-15 00:04:48.361 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A']
+2026-05-15 00:04:48.365 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-15 00:04:48.370 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A']
+2026-05-15 00:04:48.370 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+智能决策和控制层
+2026-05-15 00:04:48.370 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+实现采集高精度的地图技术
+2026-05-15 00:04:48.370 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+厘米级的定位技术
+2026-05-15 00:04:48.370 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+环境感知技术
+2026-05-15 00:04:48.375 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: A.
+
+智能决策和控制层
+2026-05-15 00:04:48.980 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=11, active元素=1
+2026-05-15 00:04:49.002 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-15 00:04:59.908 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-15 00:04:59.912 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-15 00:05:01.918 | INFO | WebEdgeService:run_exam | ========== 第 7 题 ==========
+2026-05-15 00:05:01.933 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-15 00:05:01.933 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-15 00:05:01.934 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-15 00:05:02.122 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000502.png
+2026-05-15 00:05:02.431 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-15 00:05:02.432 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 64 字
+2026-05-15 00:05:02.433 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(64字): 7.【单选题】（10分)
+下列不属于微波传感特点的是（）。
+A。实时性好
+B.对光照环境变化的敏感度低
+C.精度极高
+D。体积小
+2026-05-15 00:05:02.433 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(64字): 7.【单选题】（10分)
+下列不属于微波传感特点的是（）。
+A。实时性好
+B.对光照环境变化的敏感度低
+C.精度极高
+D。体积小
+2026-05-15 00:05:02.433 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-15 00:05:02.433 | INFO | SolutionService:solve_exam_question | 题目文本(64字): 7.【单选题】（10分)
+下列不属于微波传感特点的是（）。
+A。实时性好
+B.对光照环境变化的敏感度低
+C.精度极高
+D。体积小
+2026-05-15 00:05:02.435 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000502.txt
+2026-05-15 00:05:02.435 | INFO | DeepSeek:answer_question | 问题：7.【单选题】（10分)
+下列不属于微波传感特点的是（）。
+A。实时性好
+B.对光照环境变化的敏感度低
+C.精度极高
+D。体积小
+2026-05-15 00:05:03.684 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='8789d0c4-c376-45c5-a7f6-1c45f2d5ecec', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["C"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774705, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=184, total_tokens=191, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=56))
+2026-05-15 00:05:03.684 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["C"]}
+2026-05-15 00:05:03.685 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['C'], 'raw': '{"selected": ["C"]}'}
+2026-05-15 00:05:03.685 | INFO | SolutionService:solve_exam_question | LLM 答案: ['C']
+2026-05-15 00:05:03.691 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-15 00:05:03.695 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['C']
+2026-05-15 00:05:03.695 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+实时性好
+2026-05-15 00:05:03.696 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+对光照环境变化的敏感度低
+2026-05-15 00:05:03.696 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+精度极高
+2026-05-15 00:05:03.696 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+体积小
+2026-05-15 00:05:03.701 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+精度极高
+2026-05-15 00:05:04.305 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=12, active元素=1
+2026-05-15 00:05:04.326 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-15 00:05:15.253 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-15 00:05:15.257 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-15 00:05:17.265 | INFO | WebEdgeService:run_exam | ========== 第 8 题 ==========
+2026-05-15 00:05:17.286 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-15 00:05:17.286 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-15 00:05:17.287 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-15 00:05:17.527 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000517.png
+2026-05-15 00:05:18.020 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-15 00:05:18.021 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 72 字
+2026-05-15 00:05:18.021 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(72字): 8【多选题】（10分）
+汽车传感器的特点有（）。
+A.性价比高，适合大批量生产
+B.稳定性和可靠性高
+C.适应性强，耐恶劣环境
+D.抗干扰能力强
+2026-05-15 00:05:18.022 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(72字): 8【多选题】（10分）
+汽车传感器的特点有（）。
+A.性价比高，适合大批量生产
+B.稳定性和可靠性高
+C.适应性强，耐恶劣环境
+D.抗干扰能力强
+2026-05-15 00:05:18.022 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-15 00:05:18.022 | INFO | SolutionService:solve_exam_question | 题目文本(72字): 8【多选题】（10分）
+汽车传感器的特点有（）。
+A.性价比高，适合大批量生产
+B.稳定性和可靠性高
+C.适应性强，耐恶劣环境
+D.抗干扰能力强
+2026-05-15 00:05:18.023 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000518.txt
+2026-05-15 00:05:18.023 | INFO | DeepSeek:answer_question | 问题：8【多选题】（10分）
+汽车传感器的特点有（）。
+A.性价比高，适合大批量生产
+B.稳定性和可靠性高
+C.适应性强，耐恶劣环境
+D.抗干扰能力强
+2026-05-15 00:05:18.775 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='2bf9116a-8990-492c-b5c1-d612a5e3c79e', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A", "B", "C", "D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774720, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=16, prompt_tokens=189, total_tokens=205, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=61))
+2026-05-15 00:05:18.776 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A", "B", "C", "D"]}
+2026-05-15 00:05:18.776 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A', 'B', 'C', 'D'], 'raw': '{"selected": ["A", "B", "C", "D"]}'}
+2026-05-15 00:05:18.776 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A', 'B', 'C', 'D']
+2026-05-15 00:05:18.783 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-15 00:05:18.787 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A', 'B', 'C', 'D']
+2026-05-15 00:05:18.787 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+性价比高，适合大批量生产
+2026-05-15 00:05:18.787 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+稳定性和可靠性高
+2026-05-15 00:05:18.787 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+适应性强，耐恶劣环境
+2026-05-15 00:05:18.787 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+抗干扰能力强
+2026-05-15 00:05:18.791 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: A.
+
+性价比高，适合大批量生产
+2026-05-15 00:05:18.795 | INFO | SolutionService:_click_exam_options | 字母点击 B -> 选项[1]: B.
+
+稳定性和可靠性高
+2026-05-15 00:05:18.797 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+适应性强，耐恶劣环境
+2026-05-15 00:05:18.803 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+抗干扰能力强
+2026-05-15 00:05:19.408 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=16, active元素=1
+2026-05-15 00:05:19.425 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-15 00:05:30.336 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-15 00:05:30.339 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-15 00:05:32.343 | INFO | WebEdgeService:run_exam | ========== 第 9 题 ==========
+2026-05-15 00:05:32.359 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-15 00:05:32.359 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-15 00:05:32.359 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-15 00:05:32.549 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000532.png
+2026-05-15 00:05:32.866 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-15 00:05:32.866 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 64 字
+2026-05-15 00:05:32.867 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(64字): 9【多选题】（10分）
+汽车的发展阶段包含哪些（）。
+A.无智能化
+B。有条件的无人驾驶
+C.多功能的智能化
+D.全工况无人驾驶
+2026-05-15 00:05:32.867 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(64字): 9【多选题】（10分）
+汽车的发展阶段包含哪些（）。
+A.无智能化
+B。有条件的无人驾驶
+C.多功能的智能化
+D.全工况无人驾驶
+2026-05-15 00:05:32.868 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-15 00:05:32.868 | INFO | SolutionService:solve_exam_question | 题目文本(64字): 9【多选题】（10分）
+汽车的发展阶段包含哪些（）。
+A.无智能化
+B。有条件的无人驾驶
+C.多功能的智能化
+D.全工况无人驾驶
+2026-05-15 00:05:32.869 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000532.txt
+2026-05-15 00:05:32.870 | INFO | DeepSeek:answer_question | 问题：9【多选题】（10分）
+汽车的发展阶段包含哪些（）。
+A.无智能化
+B。有条件的无人驾驶
+C.多功能的智能化
+D.全工况无人驾驶
+2026-05-15 00:05:34.200 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='29a9e4ca-dd36-4cfe-b9e8-244d9b55f92d', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A", "B", "C", "D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774735, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=16, prompt_tokens=183, total_tokens=199, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=55))
+2026-05-15 00:05:34.201 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A", "B", "C", "D"]}
+2026-05-15 00:05:34.201 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A', 'B', 'C', 'D'], 'raw': '{"selected": ["A", "B", "C", "D"]}'}
+2026-05-15 00:05:34.201 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A', 'B', 'C', 'D']
+2026-05-15 00:05:34.206 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-15 00:05:34.209 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A', 'B', 'C', 'D']
+2026-05-15 00:05:34.209 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+无智能化
+2026-05-15 00:05:34.209 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+有条件的无人驾驶
+2026-05-15 00:05:34.209 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+多功能的智能化
+2026-05-15 00:05:34.209 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+全工况无人驾驶
+2026-05-15 00:05:34.215 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: A.
+
+无智能化
+2026-05-15 00:05:34.218 | INFO | SolutionService:_click_exam_options | 字母点击 B -> 选项[1]: B.
+
+有条件的无人驾驶
+2026-05-15 00:05:34.221 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+多功能的智能化
+2026-05-15 00:05:34.224 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+全工况无人驾驶
+2026-05-15 00:05:34.828 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=20, active元素=1
+2026-05-15 00:05:34.847 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-15 00:05:45.757 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-15 00:05:45.761 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-15 00:05:47.769 | INFO | WebEdgeService:run_exam | ========== 第 10 题 ==========
+2026-05-15 00:05:47.788 | DEBUG | SolutionService:solve_exam_question | 找到 2 个选项元素
+2026-05-15 00:05:47.788 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-15 00:05:47.788 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-15 00:05:48.011 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000547.png
+2026-05-15 00:05:48.743 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-15 00:05:48.743 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 87 字
+2026-05-15 00:05:48.744 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(87字): 第1部分总题数:10
+10【判断题】（10分）
+汽车对环境的感知是通过摄像头、激光雷达、毫米波雷达、超声波雷达等传感器，感知周围环境信息和
+车辆状态信息。（）
+A.对
+B.错
+2026-05-15 00:05:48.744 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(76字): 10【判断题】（10分）
+汽车对环境的感知是通过摄像头、激光雷达、毫米波雷达、超声波雷达等传感器，感知周围环境信息和
+车辆状态信息。（）
+A.对
+B.错
+2026-05-15 00:05:48.744 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-15 00:05:48.745 | INFO | SolutionService:solve_exam_question | 题目文本(76字): 10【判断题】（10分）
+汽车对环境的感知是通过摄像头、激光雷达、毫米波雷达、超声波雷达等传感器，感知周围环境信息和
+车辆状态信息。（）
+A.对
+B.错
+2026-05-15 00:05:48.746 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000548.txt
+2026-05-15 00:05:48.746 | INFO | DeepSeek:answer_question | 问题：10【判断题】（10分）
+汽车对环境的感知是通过摄像头、激光雷达、毫米波雷达、超声波雷达等传感器，感知周围环境信息和
+车辆状态信息。（）
+A.对
+B.错
+2026-05-15 00:05:49.457 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='2acc514f-21b1-4656-bbcd-0f557fb5a2ef', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774751, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=188, total_tokens=195, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=60))
+2026-05-15 00:05:49.457 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-15 00:05:49.458 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-15 00:05:49.458 | INFO | SolutionService:solve_exam_question | LLM 答案: ['对']
+2026-05-15 00:05:49.463 | DEBUG | SolutionService:solve_exam_question | 重新标记了 2 个选项元素
+2026-05-15 00:05:49.465 | INFO | SolutionService:_click_exam_options | 共 2 个选项，目标: ['对']
+2026-05-15 00:05:49.465 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+对
+2026-05-15 00:05:49.467 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+错
+2026-05-15 00:05:49.470 | INFO | SolutionService:_click_exam_options | 文本匹配 对 -> 选项[0]: A.
+对
+2026-05-15 00:05:50.075 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=21, active元素=1
+2026-05-15 00:05:50.095 | WARNING | WebEdgeService:_go_next_question | 未找到下一题按钮，尝试查找交卷按钮...
+2026-05-15 00:05:52.106 | WARNING | WebEdgeService:run_exam | 无法继续答题且未检测到完成状态，手动停止。
+2026-05-15 00:05:52.106 | INFO | WebEdgeService:run_exam | 答题流程结束，共处理 10 题。
+2026-05-15 00:07:13.846 | INFO | Main:main | 答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/wnkY1axr/eGrB8v9w/1000011088/1847/0
+2026-05-15 00:07:13.860 | INFO | WebEdgeService:run_exam | 已打开答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/wnkY1axr/eGrB8v9w/1000011088/1847/0
+2026-05-15 00:07:15.865 | INFO | WebEdgeService:_handle_login | 已登录，继续。
+2026-05-15 00:07:20.872 | DEBUG | WebEdgeService:_click_start_if_needed | 未找到「开始答题」按钮，可能已直接进入答题页。
+2026-05-15 00:07:23.873 | INFO | WebEdgeService:run_exam | 等待第一题加载...
+2026-05-15 00:07:23.880 | INFO | WebEdgeService:run_exam | 第一题已加载。
+2026-05-15 00:07:23.882 | INFO | WebEdgeService:run_exam | 开始答题流程...
+2026-05-15 00:07:23.883 | INFO | WebEdgeService:run_exam | ========== 第 1 题 ==========
+2026-05-15 00:07:23.898 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-15 00:07:23.898 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(28字): 具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+2026-05-15 00:07:23.899 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(28字): 具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+2026-05-15 00:07:24.119 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000724.png
+2026-05-15 00:07:24.529 | DEBUG | SolutionService:ocr_text | OCR提取8行
+2026-05-15 00:07:24.542 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 197 字
+2026-05-15 00:07:24.544 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(197字): 1.【单选题】（10分）
+智能汽车的第三个层次是什么（）
+A.具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+B.该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这
+些功能进行控制。
+C.能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否
+返回驾驶员驾驶模式。
+D.该层次汽车完全自动控制车辆，在任何时候都不需要对车辆进行操控。
+2026-05-15 00:07:24.545 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(197字): 1.【单选题】（10分）
+智能汽车的第三个层次是什么（）
+A.具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+B.该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这
+些功能进行控制。
+C.能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否
+返回驾驶员驾驶模式。
+D.该层次汽车完全自动控制车辆，在任何时候都不需要对车辆进行操控。
+2026-05-15 00:07:24.545 | INFO | SolutionService:solve_exam_question | DOM+OCR 均有内容，择优使用。
+2026-05-15 00:07:24.545 | INFO | SolutionService:solve_exam_question | 题目文本(197字): 1.【单选题】（10分）
+智能汽车的第三个层次是什么（）
+A.具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+B.该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这
+些功能进行控制。
+C.能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否
+返回驾驶员驾驶模式。
+D.该层次汽车完全自动控制车辆，在任何时候都不需要对车辆进行操控。
+2026-05-15 00:07:24.568 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000724.txt
+2026-05-15 00:07:24.569 | INFO | DeepSeek:answer_question | 问题：1.【单选题】（10分）
+智能汽车的第三个层次是什么（）
+A.具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+B.该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这
+些功能进行控制。
+C.能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否
+返回驾驶员驾驶模式。
+D.该层次汽车完全自动控制车辆，在任何时候都不需要对车辆进行操控。
+2026-05-15 00:07:25.286 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='9d9b28b9-4290-4181-a95d-ab5289fc4d0d', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["C"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774847, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=248, total_tokens=255, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=120))
+2026-05-15 00:07:25.287 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["C"]}
+2026-05-15 00:07:25.287 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['C'], 'raw': '{"selected": ["C"]}'}
+2026-05-15 00:07:25.287 | INFO | SolutionService:solve_exam_question | LLM 答案: ['C']
+2026-05-15 00:07:25.293 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-15 00:07:25.297 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['C']
+2026-05-15 00:07:25.297 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+具有一个或多个特殊自动控制功能，通过警告防范车祸于未然。
+2026-05-15 00:07:25.297 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+该层次汽车具有将至少两个原始控制功能融合在一起实现的系统，完全不需要驾驶员对这些功能进行控制。
+2026-05-15 00:07:25.298 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否返回驾驶员驾驶模式。
+2026-05-15 00:07:25.298 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+该层次汽车完全自动控制车辆，在任何时候都不需要对车辆进行操控。
+2026-05-15 00:07:25.301 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: C.
+
+能够在某个特定的驾驶交通环境下完全不用控制汽车，汽车可以检测环境的变化判断是否返回驾驶员驾驶
+2026-05-15 00:07:25.906 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=21, active元素=0
+2026-05-15 00:07:25.924 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-15 00:07:36.831 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-15 00:07:36.835 | INFO | WebEdgeService:_go_next_question | 页面指纹已变化，视为切换成功。
+2026-05-15 00:07:38.841 | INFO | WebEdgeService:run_exam | ========== 第 2 题 ==========
+2026-05-15 00:07:38.857 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-15 00:07:38.857 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-15 00:07:38.857 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-15 00:07:39.070 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_000739.png
+2026-05-15 00:07:39.394 | DEBUG | SolutionService:ocr_text | OCR提取8行
+2026-05-15 00:07:39.398 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 83 字
+2026-05-15 00:07:39.399 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(83字): 2【多选题】（10分)
+百度无人车第一次路测，经过了下列地点中的（）。
+A.奥林匹克森林公园
+B.北京中关村软件园的百度大厦
+v
+C。五环路
+v
+D.G7京新高速公路
+2026-05-15 00:07:39.401 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(83字): 2【多选题】（10分)
+百度无人车第一次路测，经过了下列地点中的（）。
+A.奥林匹克森林公园
+B.北京中关村软件园的百度大厦
+v
+C。五环路
+v
+D.G7京新高速公路
+2026-05-15 00:07:39.403 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-15 00:07:39.406 | INFO | SolutionService:solve_exam_question | 题目文本(83字): 2【多选题】（10分)
+百度无人车第一次路测，经过了下列地点中的（）。
+A.奥林匹克森林公园
+B.北京中关村软件园的百度大厦
+v
+C。五环路
+v
+D.G7京新高速公路
+2026-05-15 00:07:39.410 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_000739.txt
+2026-05-15 00:07:39.414 | INFO | DeepSeek:answer_question | 问题：2【多选题】（10分)
+百度无人车第一次路测，经过了下列地点中的（）。
+A.奥林匹克森林公园
+B.北京中关村软件园的百度大厦
+v
+C。五环路
+v
+D.G7京新高速公路
+2026-05-15 00:07:40.262 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='5f964ef1-4b62-40d3-95b5-0f95447e9b87', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A", "B", "D"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778774862, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=13, prompt_tokens=196, total_tokens=209, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=68))
+2026-05-15 00:07:40.262 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A", "B", "D"]}
+2026-05-15 00:07:40.262 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A', 'B', 'D'], 'raw': '{"selected": ["A", "B", "D"]}'}
+2026-05-15 00:07:40.264 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A', 'B', 'D']
+2026-05-15 00:07:40.269 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-15 00:07:40.271 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A', 'B', 'D']
+2026-05-15 00:07:40.271 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+
+奥林匹克森林公园
+2026-05-15 00:07:40.271 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+
+北京中关村软件园的百度大厦
+2026-05-15 00:07:40.271 | DEBUG | SolutionService:_click_exam_options |   选项[2]: C.
+
+五环路
+2026-05-15 00:07:40.271 | DEBUG | SolutionService:_click_exam_options |   选项[3]: D.
+
+G7京新高速公路
+2026-05-15 00:07:40.275 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: A.
+
+奥林匹克森林公园
+2026-05-15 00:07:40.278 | INFO | SolutionService:_click_exam_options | 字母点击 B -> 选项[1]: B.
+
+北京中关村软件园的百度大厦
+2026-05-15 00:07:40.281 | INFO | SolutionService:_click_exam_options | 字母点击 D -> 选项[3]: D.
+
+G7京新高速公路
+2026-05-15 00:07:40.887 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=21, active元素=0
+2026-05-15 00:07:40.901 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-15 00:07:47.286 | ERROR | WebEdgeService:_go_next_question | 点击下一题失败: Message: target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: MicrosoftEdge=148.0.3967.54)
+Stacktrace:
+	msedgedriver!GetHandleVerifier [0x7ff6ef360f15+e235]
+	msedgedriver!GetHandleVerifier [0x7ff6ef360f74+e294]
+	msedgedriver!(No symbol) [0x7ff6ef08ac4e]
+	msedgedriver!(No symbol) [0x7ff6ef07d6b8]
+	msedgedriver!(No symbol) [0x7ff6ef07c7b5]
+	msedgedriver!(No symbol) [0x7ff6ef097e03]
+	msedgedriver!(No symbol) [0x7ff6ef0f8ac1]
+	msedgedriver!(No symbol) [0x7ff6ef10ea1f]
+	msedgedriver!(No symbol) [0x7ff6ef0ca30c]
+	msedgedriver!(No symbol) [0x7ff6ef0c9566]
+	msedgedriver!(No symbol) [0x7ff6ef0ca133]
+	msedgedriver!(No symbol) [0x7ff6ef193e49]
+	msedgedriver!(No symbol) [0x7ff6ef190413]
+	msedgedriver!(No symbol) [0x7ff6ef1a0672]
+	msedgedriver!GetHandleVerifier [0x7ff6ef37d498+2a7b8]
+	msedgedriver!GetHandleVerifier [0x7ff6ef385e86+331a6]
+	msedgedriver!GetHandleVerifier [0x7ff6ef368274+15594]
+	msedgedriver!GetHandleVerifier [0x7ff6ef368395+156b5]
+	msedgedriver!GetHandleVerifier [0x7ff6ef3556a3+29c3]
+	KERNEL32!BaseThreadInitThunk [0x7ff9e582e957+17]
+	ntdll!RtlUserThreadStart [0x7ff9e5be427c+2c]
+
+2026-05-15 00:07:49.289 | WARNING | WebEdgeService:run_exam | 无法继续答题且未检测到完成状态，手动停止。
+2026-05-15 00:07:49.291 | INFO | WebEdgeService:run_exam | 答题流程结束，共处理 2 题。
+2026-05-15 00:07:49.371 | INFO | WebEdgeService:shutdown | 触发服务关闭：准备先保存 Cookie
+2026-05-15 00:08:11.815 | INFO | WebEdgeService:shutdown | 浏览器已关闭，退出程序。

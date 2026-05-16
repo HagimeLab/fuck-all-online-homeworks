@@ -1,6 +1,5 @@
 import json
 import re
-import json
 from typing import List, Dict, Any
 from openai import OpenAI
 from loguru import logger
@@ -21,7 +20,7 @@ class DeepSeek:
         self.api_key = ds.get("api_key")
         if not self.api_key or self.api_key == "YOUR_API_KEY":
             logger.error("DeepSeek API 密钥未配置")
-            raise RuntimeError("请在 config.json 的 llm.deepseek.api_key 写入真实的密钥，或在代码中传入 api_key。")
+            raise RuntimeError("请设置环境变量 DEEPSEEK_API_KEY 或在 config.json 的 llm.deepseek.api_key 写入真实的密钥。")
         self.client = OpenAI(api_key=self.api_key, base_url=ds.get("base_url") or DEEPSEEK_BASE_URL)
         self.model = ds.get("model") or DEEPSEEK_MODEL
         logger.info(f"DeepSeek 初始化完成，模型：{self.model}")
@@ -36,29 +35,39 @@ class DeepSeek:
             raise ValueError("qa_text 不能为空")
 
         sys_prompt = (
-            "你是答题助手，题目和答案我将会一起给你，请你自行判断是否为单选题或多选题。只返回严格 JSON（不包含任何额外文本或代码块）。"
-            "若是判断题，则只返回 {\"selected\": [\"对\"]} 或 {\"selected\": [\"错\"]}。"
-            "如果你无法判断这道题的正确答案，则返回一个你认为对的选择，前提是需要判断出这是选择题还是判断题。"
-            "字段：selected；值为选项字母数组，如格式：{\"selected\": [\"A\"]}；多选则返回多个字母，如 {\"selected\": [\"A\", \"C\"]}。"
-            "用户给出的原始文本中可能存在其他信息不是题干或者选项的，请你自行识别题干与选项并选择答案。"
+            "你是专业的答题助手。我会把题目和选项一起给你，你需要选出正确答案。\n"
+            "规则：\n"
+            "1. 单选题：返回 {\"selected\": [\"A\"]}（字母对应选项）\n"
+            "2. 多选题：返回 {\"selected\": [\"A\", \"C\"]}（多个字母）\n"
+            "3. 判断题：返回 {\"selected\": [\"对\"]} 或 {\"selected\": [\"错\"]}\n"
+            "4. 如果不确定，也必须给出你认为最可能的答案\n"
+            "5. 只返回纯 JSON，不要有任何额外文字、解释或代码块标记\n"
+            "题目和选项文本中可能混有页面UI文字（如题号、分数字样），请自动忽略，只关注题目内容和选项。"
         )
         messages = [
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": qa_text},
         ]
 
+        # 截断过长文本，防止 token 超限
+        max_len = 3000
+        if len(qa_text) > max_len:
+            logger.warning(f"题目文本过长 ({len(qa_text)} 字符)，截断到 {max_len}")
+            qa_text = qa_text[:max_len]
+
         logger.info(f"问题：{qa_text}")
-        resp = self.client.chat.completions.create(
-            model=self.model,
-            messages=messages,
-        )
-        logger.info(f"DeepSeek 原始回复：{resp}")
-        
-        # 提取模型回复内容
-        content = resp.choices[0].message.content if resp and resp.choices else ""
-        logger.info(f"DeepSeek 回复内容：{content}")
-        
-        return self.parse_content(content)
+        try:
+            resp = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+            )
+            logger.info(f"DeepSeek 原始回复：{resp}")
+            content = resp.choices[0].message.content if resp and resp.choices else ""
+            logger.info(f"DeepSeek 回复内容：{content}")
+            return self.parse_content(content)
+        except Exception as e:
+            logger.error(f"DeepSeek API 调用失败: {e}")
+            return {"selected": ["A"], "raw": "", "error": str(e)}
 
     def parse_content(self, content: str) -> Dict[str, Any]:
         """

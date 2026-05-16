@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 from typing import Dict, Any
 
@@ -27,8 +28,9 @@ cfg = load_config()
 # 读取 llm.deepseek 配置
 def get_llm_deepseek_config() -> Dict[str, Any]:
     d = cfg.get("llm", {}).get("deepseek", {})
+    api_key = os.getenv("DEEPSEEK_API_KEY") or (d.get("api_key") or "").strip()
     return {
-        "api_key": (d.get("api_key") or "").strip(),
+        "api_key": api_key,
         "base_url": d.get("base_url") or "https://api.deepseek.com",
         "model": d.get("model") or "deepseek-chat",
     }
@@ -50,8 +52,12 @@ def resolve_driver_exe_path() -> str:
     exe = root / "tools" / web["driver_path"] / "msedgedriver.exe"
     if exe.exists():
         return str(exe)
-    # 回退默认
-    return str(root / "tools" / "edgedriver_win64" / "msedgedriver.exe")
+    # 回退默认路径
+    fallback = root / "tools" / "edgedriver_win64" / "msedgedriver.exe"
+    if fallback.exists():
+        return str(fallback)
+    # 最后回退项目根目录
+    return str(root / "msedgedriver.exe")
 
 
 def resolve_cookie_file_path() -> str:

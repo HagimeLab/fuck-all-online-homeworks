@@ -1,34 +1,44 @@
-import re
 import json
 from pathlib import Path
-from typing import Optional, List, Dict
-from time import sleep, time
-from threading import Event, Thread
+from typing import Optional
+from time import sleep
 from loguru import logger
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.remote.webelement import WebElement
-from selenium.webdriver.common.action_chains import ActionChains
 
-from config.WebdriverConfig import WebDriverConfigurator
+from config.webdriverConfig import WebDriverConfigurator
 from config.JsonLoadConfig import resolve_cookie_file_path
 from service.SolutionService import SolutionService
 
+"⢰⡟⣡⡟⣱⣿⡿⠡⢛⣋⣥⣴⣌⢿⣿⣿⣿⣿⣷⣌⠻⢿⣿⣿⣿⣿⣿⣿"
+"⠏⢼⡿⣰⡿⠿⠡⠿⠿⢯⣉⠿⣿⣿⣿⣿⣿⣿⣷⣶⣿⣦⣍⠻⢿⣿⣿⣿"
+"⣼⣷⢠⠀⠀⢠⣴⡖⠀⠀⠈⠻⣿⡿⣿⣿⣿⣿⣿⣛⣯⣝⣻⣿⣶⣿⣿⣿"
+"⣿⡇⣿⡷⠂⠈⡉⠀⠀⠀⣠⣴⣾⣿⣿⣿⣿⣿⣍⡤⣤⣤⣤⡀⠀⠉⠛⠿"
+"⣿⢸⣿⡅⣠⣬⣥⣤⣴⣴⣿⣿⢿⣿⣿⣿⣿⣿⣟⡭⡄⣀⣉⡀⠀⠀⠀⠀"
+"⡟⣿⣿⢰⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣶⣦⣈⠀⠀⠀⢀⣶"
+"⡧⣿⡇⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣾⣿"
+"⡇⣿⠃⣿⣿⣿⣿⣿⠛⠛⢫⣿⣿⣻⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿"
+"⡇⣿⠘⡇⢻⣿⣿⣿⡆⠀⠀⠀⠀⠈⠉⠙⠻⠏⠛⠻⣿⣿⣿⣿⣿⣭⡾⢁"
+"⡇⣿⠀⠘⢿⣿⣿⣿⣧⢠⣤⠀⡤⢀⣠⣀⣀⠀⠀⣼⣿⣿⣿⣿⣿⠟⣁⠉"
+"⣧⢻⠀⡄⠀⠹⣿⣿⣿⡸⣿⣾⡆⣿⣿⣿⠿⣡⣾⣿⣿⣿⣿⡿⠋⠐⢡⣶"
+"⣿⡘⠈⣷⠀⠀⠈⠻⣿⣷⣎⠐⠿⢟⣋⣤⣾⣿⣿⣿⡿⠟⣩⠖⢠⡬⠈⠀"
+"⣿⣧⠁⢻⡇⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⠿⠟⠋⠁⢀⠈⢀⡴⠈⠁⠀⠀"
+"⠻⣿⣆⠘⣿⠀⠀⣀⡁⠀⠈⠙⠛⠋⠉⠀⠀⠀⠀⡀⠤⠚⠁⠄⣠"
+"欸嘿嘿，一注释又少"
+"二屎山又多"
+"你看得下得去你就看吧！"
+"一看一个不知声！过几天我自己都看不懂！"
+"又不是造飞机大炮，差不多能跑就行啦"
 
-# 初始化解题服务
-solution_service = SolutionService()
 
 class WebEdgeService:
     def __init__(
-        self, 
-        configurator: Optional[WebDriverConfigurator] = None, 
+        self,
+        configurator: Optional[WebDriverConfigurator] = None,
         cookies_file: Optional[str] = None
     ):
-        # 统一 cookies 路径：从 JsonLoadConfig 解析
         self._shutdown_done = False
-        self.cookies_file = resolve_cookie_file_path()
+        self.cookies_file = cookies_file or resolve_cookie_file_path()
         cookies_cfg_path: Optional[str] = self.cookies_file
         try:
             p = Path(self.cookies_file)
@@ -53,17 +63,13 @@ class WebEdgeService:
             logger.warning(f"Cookie 文件检查异常，跳过加载：{e}")
             cookies_cfg_path = None
 
-        # 构建驱动配置，只有在 cookies 文件有效时才传入路径，否则禁用加载
         self.configurator = configurator or WebDriverConfigurator(cookies_file=cookies_cfg_path)
         self.driver = self.configurator.build()
+        self.solution = SolutionService()
 
-    def _save_cookies(
-        self, 
-        file_path: Optional[str] = None
-    ):
-        """保存当前浏览器的 Cookie 到指定文件。"""
+    # ---------- Cookie ----------
+    def _save_cookies(self, file_path: Optional[str] = None):
         target = file_path or self.cookies_file
-        # 会话健壮性检查：若驱动或会话已关闭，直接跳过保存
         try:
             if not hasattr(self, "driver") or self.driver is None:
                 logger.debug("Driver 不存在，跳过保存 Cookie。")
@@ -72,7 +78,6 @@ class WebEdgeService:
                 logger.debug("Driver 会话已结束，跳过保存 Cookie。")
                 return
         except Exception:
-            # 若检查本身异常，不影响后续保存流程
             pass
         try:
             cookies = self.driver.get_cookies()
@@ -93,717 +98,539 @@ class WebEdgeService:
         except Exception as e:
             logger.error(f"保存 Cookie 失败: {e}")
 
-    # 打开入口并确保登录进入学习页面
-    def _ensure_login_and_enter_study(
-        self, 
-        base_url: str = "https://onlineweb.zhihuishu.com/", 
-        study_url_hint: str = "https://onlineweb.zhihuishu.com/onlinestuh5", 
-        login_domain_hint: str = "passport.zhihuishu.com", 
-        login_wait_seconds: int = 180
+    # ---------- 登录 ----------
+    def _handle_login(
+        self,
+        login_domain_hint: str = "passport.zhihuishu.com",
+        login_wait_seconds: int = 300
     ) -> bool:
-        """
-        打开入口页，若未登录则提示用户在浏览器中完成登录，并等待进入学习页面。
-        返回是否成功进入学习页。
-        """
+        """检测当前页面是否需要登录，若是则等待用户完成登录并保存 Cookie。"""
         driver = self.driver
-        driver.get(base_url)
-        logger.debug(f"已打开入口页：{base_url}")
-
-        try:
-            WebDriverWait(driver, 2).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        except Exception:
-            pass
-
+        sleep(2)
         current_url = driver.current_url
         if login_domain_hint in current_url:
-            logger.warning("检测到未登录，请在浏览器窗口内完成登录（扫码或知到APP）。系统将自动监听登录状态，登录成功后会自动跳转到学习页面。")
+            logger.warning("检测到未登录，请在浏览器窗口内完成登录（扫码或知到APP）。")
             try:
-                WebDriverWait(driver, login_wait_seconds, poll_frequency=1).until(EC.url_contains(study_url_hint))
-                logger.info("登录成功，已进入学习页面。")
+                WebDriverWait(driver, login_wait_seconds, poll_frequency=1).until(
+                    lambda d: login_domain_hint not in d.current_url
+                )
+                logger.info("登录成功。")
+                self._save_cookies()
                 return True
             except TimeoutException:
-                logger.error("登录等待超时（%s 秒）。请确认已在浏览器中完成登录后重新运行程序。", login_wait_seconds)
+                logger.error(f"登录等待超时（{login_wait_seconds} 秒）。")
                 return False
         else:
-            try:
-                WebDriverWait(driver, login_wait_seconds, poll_frequency=1).until(EC.url_contains(study_url_hint))
-                logger.info("已登录，自动进入学习页面。")
-                return True
-            except TimeoutException:
-                logger.warning(f"未在预期时间进入学习页面，当前地址：{driver.current_url}")
-                return False
-
-    # 提示用户选择课程;进入课程页面后关闭课前必读并提取课程名称
-    def _wait_course_and_prepare(
-        self, 
-        course_url_hint: str = "https://studywisdomh5.zhihuishu.com/study/index", 
-        wait_seconds: int = 30
-    ) -> Optional[str]:
-        """
-        提示用户选择课程并等待课程页面，关闭课前必读弹窗，返回课程名称。
-        """
-        driver = self.driver
-        logger.warning(f"请在{wait_seconds}秒内选择要进入的课程。")
-        sleep(3)
-        try:
-            WebDriverWait(driver, wait_seconds, poll_frequency=1).until(EC.url_contains(course_url_hint))
-            overlays = driver.find_elements(By.CSS_SELECTOR, ".el-overlay.ss2077-custom-modal")
-            for overlay in overlays:
-                style = overlay.get_attribute("style") or ""
-                if not re.search(r"display\s*:\s*none\s*;", style, flags=re.IGNORECASE):
-                    new_style = style.rstrip(";") + "; display: none;"
-                    driver.execute_script("arguments[0].setAttribute('style', arguments[1]);", overlay, new_style)
-            logger.info("已关闭课前必读窗口。")
-
-            try:
-                container = WebDriverWait(driver, 5, poll_frequency=1).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.course-name")))
-                spans = container.find_elements(By.TAG_NAME, "span")
-                if len(spans) >= 2:
-                    course_name = spans[1].text.strip()
-                    logger.info(f"当前课程名称: {course_name}")
-                    return course_name
-                else:
-                    logger.warning("未找到课程名称的第二个 span，页面结构可能变化。")
-                    return None
-            except TimeoutException:
-                logger.warning("在课程页面未找到课程名称容器（等待超时）。")
-                return None
-            except Exception as e:
-                logger.error(f"提取课程名称时发生异常: {e}")
-                return None
-        except TimeoutException:
-            logger.error(f"未在{wait_seconds}秒内选择课程，操作终止。当前URL：{driver.current_url}")
-            return None
-
-    # 获取所有课程和测试
-    def _get_course_and_test_account(
-        self
-    ) -> Dict[str, List[WebElement]]:
-        res: Dict[str, List[WebElement]] = {
-            "unfinished_course": [],
-            "unfinished_test": []
-        }
-        driver = self.driver
-        
-        # 以 catalogue 容器为锚点查找
-        try:
-            # 等待并获取课程目录的滚动容器
-            catalogue = WebDriverWait(driver, 10, poll_frequency=0.5).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "div.el-scrollbar.catalogue"))
-            )
-            inner_view = catalogue.find_element(By.CSS_SELECTOR, "div.el-scrollbar__view")
-            # 在 catalogue 的 view 中查找 item
-            child_concontainer = inner_view.find_elements(By.CSS_SELECTOR, "div.item")
-
-            logger.debug(f"catalogue 容器存在: {catalogue is not None}")
-            logger.debug(f"课程列表子容器数量: {len(child_concontainer)}")
-            if not child_concontainer:
-                logger.error("未找到课程列表子容器class=\"item\"")
-                return res
-        except TimeoutException:
-            logger.error("未在限定时间找到课程目录容器 div.el-scrollbar.catalogue")
-            return res
-        except Exception as e:
-            logger.error(f"查询课程列表子容器失败：{e}")
-            return res
-
-        # 收集每个子容器内的 item-main
-        item_main_list: List[WebElement] = []
-        for item in child_concontainer:
-            item_main_list.extend(item.find_elements(By.CSS_SELECTOR, "div.item-main"))
-
-        if not item_main_list:
-            logger.error("未找到课程列表子容器内的class=\"item-main\"")
-            return res
-
-        # 遍历每个 item-main，查找课程 child 项
-        for item_main in item_main_list:
-            child_list = item_main.find_elements(By.CSS_SELECTOR, "div.child")
-            if not child_list:
-                logger.warning("未找到课程列表子容器内的class=\"child\"")
-                continue
-
-            for child in child_list:
-                # 打开class="child"内的class="child-info cur hasvideo"
-                child_info_list = child.find_elements(By.CSS_SELECTOR, "div.child-info.cur.hasvideo")
-                if not child_info_list:
-                    # 兼容结构变化
-                    child_info_list = child.find_elements(By.CSS_SELECTOR, "div.child-info")
-                if not child_info_list:
-                    continue
-                child_info_el = child_info_list[0]
-
-                # 获取课程名称
-                child_main = child.find_element(By.CSS_SELECTOR, "div.child-main")
-                child_line = child_main.find_element(By.CSS_SELECTOR, "div.child-line")
-                current_course_name = child_line.find_element(By.CSS_SELECTOR, "span").text.strip()
-
-                # 检查是否已完成
-                try:
-                    has_finish = driver.execute_script(
-                        "return !!arguments[0].querySelector('img.finish-icon')",
-                        child_info_el
-                    )
-                except Exception:
-                    # 兜底：若 JS 执行失败，再用 find_elements
-                    has_finish = bool(child_info_el.find_elements(By.CSS_SELECTOR, "img.finish-icon"))
-
-                if has_finish:
-                    logger.debug(f"已完成课程: {current_course_name}")
-                else:
-                    res["unfinished_course"].append(child_info_el)
-                    logger.debug(f"待完成课程: {current_course_name}")
-
-            # 遍历剩余测试数
-            item_tests = item_main.find_elements(By.CSS_SELECTOR, "div.item-test")
-            if not item_tests:
-                logger.debug("未找到测试项 item-test")
-            else:
-                for item_test in item_tests:
-                    try:
-                        status_text = driver.execute_script(
-                            "var el = arguments[0].querySelector('span.float-right'); return el ? el.textContent.trim() : '';",
-                            item_test
-                        )
-                    except Exception:
-                        spans = item_test.find_elements(By.CSS_SELECTOR, "span.float-right")
-                        status_text = spans[0].text.strip() if spans else ""
-
-                    if status_text and ("去完成" in status_text):
-                        res["unfinished_test"].append(item_test)
-
-        logger.info(f"待观看课程数: {len(res['unfinished_course'])}, 待测试数: {len(res['unfinished_test'])}")
-        return res
-    
-    # 判断视频是否正在播放
-    def _is_playing(
-        self
-    ) -> bool:
-        driver = self.driver
-        # 先确保 controlsBar 可见
-        try:
-            if not self._is_controls_bar_visible():
-                logger.debug("controlsBar 不可见，尝试显示以检测播放状态")
-                self.show_controls_bar()
-                sleep(0.2)
-        except Exception as e:
-            logger.debug(f"显示 controlsBar 异常: {e}")
-        btn = driver.execute_script("return document.querySelector('div.controlsBar #playButton');")
-        if not btn:
-            logger.warning("未找到播放控制按钮 #playButton，无法判断播放状态")
-            return False
-        try:
-            cls = driver.execute_script("return arguments[0].getAttribute('class') || '';", btn) or ""
-            logger.debug(f"播放控制按钮(#playButton)的 class 属性: '{cls}'")
-            # 规则：class 包含 'pauseButton' 视为正在播放；否则视为暂停
-            return "pauseButton" in cls
-        except Exception as e:
-            logger.error(f"读取播放状态失败: {e}")
-            return False
-
-    # FIXME: 切换视频播放状态（暂停/播放）
-    def _change_play_state(
-        self, pause: bool = True
-    ):
-        driver = self.driver
-        # 先确保 controlsBar 可见
-        try:
-            if not self._is_controls_bar_visible():
-                logger.debug("controlsBar 不可见，尝试显示以切换播放状态")
-                self.show_controls_bar()
-                sleep(0.2)
-        except Exception as e:
-            logger.debug(f"显示 controlsBar 异常: {e}")
-        btn = driver.execute_script("return document.querySelector('div.controlsBar #playButton');")
-        if not btn:
-            logger.error("切换播放状态失败：未找到 #playButton")
-            return False
-        current_playing = self._is_playing()
-        logger.debug(f"当前播放状态: {'播放中' if current_playing else '已暂停'}，目标: {'暂停' if pause else '播放'}")
-        # 需要点击的条件：
-        # - 目标为暂停，且当前播放中
-        # - 目标为播放，且当前已暂停
-        need_click = (pause and current_playing) or ((not pause) and (not current_playing))
-        if not need_click:
-            logger.info("视频播放状态未改变, 无需操作")
+            logger.info("已登录，继续。")
             return True
-        # 点击 #playButton 切换状态
-        try:
-            btn.click()
-        except Exception:
-            try:
-                driver.execute_script("arguments[0].click();", btn)
-            except Exception as e:
-                logger.error(f"点击播放按钮失败：{e}")
-                return False
-        # 点击后短暂等待并复核状态
-        sleep(0.3)
-        changed_playing = self._is_playing()
-        logger.info(f"切换播放状态完成，当前: {'播放中' if changed_playing else '已暂停'}")
-        return True
 
-    def _is_controls_bar_visible(self) -> bool:
-        """检测 controlsBar 是否可见。"""
+    def run_exam(self, exam_url: str):
         driver = self.driver
-        try:
-            el = driver.execute_script("return document.querySelector('div.controlsBar');")
-            if not el:
-                return False
-            try:
-                visible = driver.execute_script(
-                    "var s=window.getComputedStyle(arguments[0]); return s && s.display !== 'none';",
-                    el
-                )
-            except Exception:
-                style = driver.execute_script("return arguments[0].getAttribute('style') || '';", el) or ""
-                visible = ("display: block" in style)
-            return bool(visible)
-        except Exception:
-            return False
-    
-    # 将 controlsBar 设置为可见
-    def show_controls_bar(self) -> bool:
-        driver = self.driver
-        try:
-            el = driver.execute_script("return document.querySelector('div.controlsBar');")
-            if el:
-                driver.execute_script(
-                    "arguments[0].setAttribute('style', 'z-index: 2; overflow: inherit; display: block;');",
-                    el
-                )
-                logger.debug("controlsBar 已设置为可见")
-                return True
-            return False
-        except Exception:
-            return False
-    
-    # 恢复 controlsBar 隐藏
-    def hide_controls_bar(self) -> bool:
-        driver = self.driver
-        try:
-            el = driver.execute_script("return document.querySelector('div.controlsBar');")
-            if el:
-                driver.execute_script(
-                    "arguments[0].setAttribute('style', 'z-index: 2; overflow: hidden; display: none;');",
-                    el
-                )
-                logger.debug("controlsBar 已恢复为隐藏")
-                return True
-            return False
-        except Exception:
-            return False
-    
-    # 设置播放速度为1.5x
-    def _set_15x_play(
-        self
-    ):
-        driver = self.driver
-        
-        # 确保 controlsBar 可见
-        if not self._is_controls_bar_visible():
-            self.show_controls_bar()
-        
-        # 在设置播放速度前，若检测到随堂测试窗口，则等待其结束
-        try:
-            has_test = driver.execute_script("return !!document.querySelector('div.ai-test-question-wrapper');")
-        except Exception:
-            has_test = False
-        if has_test:
-            logger.info("设置倍速前检测到随堂测试窗口")
-            while True:
-                try:
-                    present = driver.execute_script("var el=document.querySelector('div.ai-test-question-wrapper'); return !!el && el.offsetParent!==null;")
-                except Exception:
-                    present = False
-                if not present:
-                    break
-                sleep(0.5)
-            logger.info("随堂测试结束")
-        
-        # 设置倍速
-        speed15 = driver.execute_script("return document.querySelector('div.speedBox .speedTab.speedTab15');")
-        if speed15:
-            try:
-                # 将光标放到 class="speedBox" 上
-                speedBox = driver.execute_script("return document.querySelector('div.speedBox');")
-                if speedBox:
-                    ActionChains(driver).move_to_element(speedBox).perform()
-                # 点击1.5倍速度
-                speed15.click()
-            except Exception:
-                driver.execute_script("arguments[0].click();", speed15)
-                pass
-            logger.info("设置播放速度为1.5x")
-            # 确保视频开始播放
-            self._change_play_state(pause=False)
-        else:
-            logger.warning("未找到1.5倍播放速度选项")
-        
-        # 恢复controlsBar的默认样式
-        try:
-            driver.execute_script("arguments[0].setAttribute('style', 'z-index: 2; overflow: hidden; display: none;');", controls_bar)
-        except Exception:
-            pass
-    
-    # FIXME: 视频结束监听线程
-    def _listen_video_play_end(
-        self
-    ):
-        """
-        启动一个后台线程，周期性读取页面上的当前播放时间和总时长，
-        当检测到当前时间达到总时长或达到最大等待时长后，置位 finished 事件。
-        线程支持通过 pause/stop 事件进行暂停与停止控制。
-        """
-        driver = self.driver
+        driver.get(exam_url)
+        logger.info(f"已打开答题网址: {exam_url}")
 
-        # 控制事件（若不存在则创建），并清理初始状态
-        pause_event = getattr(self, "_video_pause_event", None) or Event()
-        stop_event = getattr(self, "_video_stop_event", None) or Event()
-        finished_event = getattr(self, "_video_finished_event", None) or Event()
-        self._video_pause_event = pause_event
-        self._video_stop_event = stop_event
-        self._video_finished_event = finished_event
-        finished_event.clear()
-        stop_event.clear()
+        if not self._handle_login():
+            return
 
-        def js_read_times():
-            """从页面读取当前播放时间与总时长文本。"""
-            try:
-                return driver.execute_script(
-                    """
-                    var el = document.querySelector("div.nPlayTime[class='nPlayTime 33322']")
-                             || document.querySelector("div.nPlayTime");
-                    var cur = el ? el.querySelector("span.currentTime") : null;
-                    var dur = el ? el.querySelector("span.duration") : null;
-                    return { cur: cur ? cur.textContent.trim() : null,
-                             dur: dur ? dur.textContent.trim() : null };
-                    """
-                )
-            except Exception:
-                return {"cur": None, "dur": None}
-        
-        def parse_time(text: str):
-            """将类似 00:23:45 的时间文本转为秒。"""
-            if not text:
-                return None
-            parts = str(text).split(":")
-            try:
-                vals = [int(p) for p in parts]
-            except Exception:
-                return None
-            sec = 0
-            for v in vals:
-                sec = sec * 60 + v
-            return sec
-        
-        def worker():
-            """后台线程：监控播放进度，设置 finished 事件。"""
-            interval = 0.5  # 固定检查间隔
-            # 优先使用课程上下文中读取的总时长文本（在 _handle_course 中设置）
-            attr_dur_txt = getattr(self, "_video_total_text", None)
-            dur_sec_attr = parse_time(attr_dur_txt) if attr_dur_txt else None
-            if attr_dur_txt:
-                logger.debug(f"视频结束监控线程开始，总时长：{attr_dur_txt}")
-            else:
-                logger.debug("视频结束监控线程开始，总时长信息未就绪，稍后继续读取")
-            # 最大等待时间：若能读到时长则+60秒余量，否则固定30分钟
-            max_wait = (dur_sec_attr + 60) if dur_sec_attr is not None else 1800
-            logger.debug(f"视频结束监控线程开始，最大等待时间：{max_wait}秒")
-            logged_dur = bool(attr_dur_txt)
-            start_ts = time()  # 新增：监控起始时间，用于最大等待时间判断
-            
-            while not stop_event.is_set():
-                if pause_event.is_set():
-                    sleep(interval)
-                    continue
-                data = js_read_times()
-                cur_txt = data.get("cur") if data else None
-                dur_txt = data.get("dur") if data else None
-                cur_sec = parse_time(cur_txt)
-                dur_sec2 = parse_time(dur_txt)
-                # 首次读取到总时长时更新日志与最大等待时间
-                if dur_txt and not logged_dur:
-                    logger.debug(f"已读取到总时长：{dur_txt}")
-                    if dur_sec2 is not None:
-                        max_wait = dur_sec2 + 60
-                        logger.debug(f"更新最大等待时间：{max_wait}秒")
-                    logged_dur = True
-                # 达到总时长或接近结束（差1秒以内）即认为完成
-                if (cur_txt and dur_txt and cur_txt == dur_txt) or (
-                    cur_sec is not None and dur_sec2 is not None and cur_sec >= (dur_sec2 - 1)
-                ) or (
-                    cur_sec is not None and dur_sec_attr is not None and cur_sec >= (dur_sec_attr - 1)
-                ):
-                    finished_event.set()
-                    logger.debug("视频结束监控线程检测到视频结束")
-                    break
-                # 超过最大等待时间也认为完成，防止卡死
-                if (time() - start_ts) > max_wait:
-                    finished_event.set()
-                    logger.debug("视频结束监控线程超过最大等待时间，认为视频结束")
-                    break
-                sleep(interval)
-            logger.debug("视频结束监控线程已退出")
-        
-        # 若旧线程仍在运行，先停止并回收
-        old = getattr(self, "_video_thread", None)
-        if old and old.is_alive():
-            logger.debug("正在停止旧视频结束监控线程")
-            stop_event.set()
-            try:
-                logger.debug("等待旧视频结束监控线程停止")
-                old.join(timeout=3)
-            except Exception:
-                pass
-            logger.debug("旧视频结束监控线程已停止")
-            stop_event.clear()
-        
-        # 启动新线程
-        th = Thread(target=worker, name="VideoPlayEndMonitor", daemon=True)
-        th.start()
-        logger.debug("视频结束监控线程已启动")
-        self._video_thread = th
-        
-        # 返回控制事件（也存放在 self 上，外部可直接访问）
-        return {
-            "thread": th,
-            "pause": pause_event,
-            "stop": stop_event,
-            "finished": finished_event,
-        }
+        # 等待页面完全加载
+        sleep(3)
 
-    # HACK: 监听随堂测试窗口是否出现
-    def _listen_in_class_test(
-        self
-    ) -> bool:
-        driver = self.driver
+        # 处理"开始答题"入口按钮
+        self._click_start_if_needed()
+        sleep(3)
 
-        # 标记：随堂测试检测状态，供外部主循环暂停/恢复使用
-        setattr(self, "_in_class_test_detected", False)
-        stop_event = getattr(self, "_in_class_test_stop_event", None)
-        pause_event = getattr(self, "_in_class_test_pause_event", None)
-        while True:
-            # 支持暂停与停止
-            if stop_event and stop_event.is_set():
-                setattr(self, "_in_class_test_detected", False)
-                logger.debug("随堂测试监听停止")
-                return False
-            if pause_event and pause_event.is_set():
-                sleep(0.5)
-                continue
-            try:
-                # 检测弹窗是否可见（offsetParent 为 null 表示不可见）
-                present = driver.execute_script(
-                    "var el=document.querySelector('div.ai-test-question-wrapper'); return !!el && el.offsetParent!==null;"
-                )
-                if present:
-                    logger.info("检测到随堂测试窗口")
-                    # 通知主循环：测试已出现
-                    setattr(self, "_in_class_test_detected", True)
-
-                    # 暂停视频结束监控线程
-                    v_pause = getattr(self, "_video_pause_event", None)
-                    if v_pause:
-                        v_pause.set()
-
-                    # 小幅等待以确保弹窗渲染完成
-                    sleep(0.5)
-
-                    # 开始答题
-                    ok = solution_service.solve_answers_from_image(driver=driver)
-                    if ok:
-                        logger.info("随堂测试已完成并已提交")
-                        # 等待弹窗消失，最多 30 秒
-                        try:
-                            WebDriverWait(driver, 30, poll_frequency=0.5).until(
-                                lambda d: d.execute_script(
-                                    "var el=document.querySelector('div.ai-test-question-wrapper'); return !el || el.offsetParent===null;"
-                                )
-                            )
-                        except Exception:
-                            pass
-                        sleep(2)
-                        self._change_play_state(pause=False)
-                    else:
-                        logger.error("解决随堂测试失败")
-
-                    # 恢复视频结束监控线程
-                    if v_pause:
-                        v_pause.clear()
-
-                    # 清除测试检测标记，允许后续再次检测与处理
-                    setattr(self, "_in_class_test_detected", False)
-            except Exception:
-                pass
-            sleep(0.5)
-    
-    # 初始化线程
-    def init_listeners(
-        self
-    ):
-        """初始化并启动监听线程（随堂测试与视频监控），默认置为暂停状态。"""
-        # 初始化随堂测试监听
-        self._in_class_test_stop_event = getattr(self, "_in_class_test_stop_event", None) or Event()
-        self._in_class_test_pause_event = getattr(self, "_in_class_test_pause_event", None) or Event()
-        self._in_class_test_pause_event.set()  # 初始暂停
-        th_test = getattr(self, "_in_class_test_thread", None)
-        if not th_test or not th_test.is_alive():
-            th_test = Thread(target=self._listen_in_class_test, name="InClassTestListener", daemon=True)
-            th_test.start()
-            self._in_class_test_thread = th_test
-            logger.debug("随堂测试监听线程已初始化并启动（暂停中）")
-        
-        # 初始化视频结束监控线程
-        ctrl = self._listen_video_play_end()  # 创建事件与线程
-        ctrl["pause"].set()  # 初始暂停
-        logger.debug("视频结束监控线程已初始化并启动（暂停中）")
-    
-    # 恢复线程
-    def resume_listeners(
-        self
-    ):
-        """恢复线程（清除暂停）。"""
-        # 清除随堂测试监听的暂停
-        pause_evt = getattr(self, "_in_class_test_pause_event", None)
-        if pause_evt:
-            pause_evt.clear()
-        # 清除视频监控的暂停，并重置完成事件
-        v_pause = getattr(self, "_video_pause_event", None)
-        v_finished = getattr(self, "_video_finished_event", None)
-        if v_finished:
-            v_finished.clear()
-        if v_pause:
-            v_pause.clear()
-        logger.debug("已恢复线程")
-    
-    # 暂停线程
-    def pause_listeners(
-        self
-    ):
-        """暂停线程。"""
-        p1 = getattr(self, "_in_class_test_pause_event", None)
-        if p1:
-            p1.set()
-        p2 = getattr(self, "_video_pause_event", None)
-        if p2:
-            p2.set()
-        logger.debug("已暂停线程")
-    
-    # 释放线程
-    def release_listeners(
-        self
-    ):
-        """停止并释放线程资源。"""
-        # 停止视频监控
-        v_stop = getattr(self, "_video_stop_event", None)
-        v_th = getattr(self, "_video_thread", None)
-        try:
-            if v_stop:
-                v_stop.set()
-            if v_th and v_th.is_alive():
-                v_th.join(timeout=3)
-        except Exception:
-            pass
-        # 停止随堂测试监听
-        t_stop = getattr(self, "_in_class_test_stop_event", None)
-        t_th = getattr(self, "_in_class_test_thread", None)
-        try:
-            if t_stop:
-                t_stop.set()
-            if t_th and t_th.is_alive():
-                t_th.join(timeout=3)
-        except Exception:
-            pass
-        logger.debug("已释放线程资源")
-
-    # TODO: 处理单个课程
-    def _handle_course(
-        self, 
-        course_element: WebElement
-    ):
-        # 点击进入课程页面
-        course_element.click()
-        logger.debug(f"点击进入课程：{course_element}")
-        sleep(1)
-
-        # 等待播放器时间区域加载，并在课程上下文中读取总时长文本，供监控线程使用
-        driver = self.driver
+        # 再次等待，确保第一题完全加载（Vue 渲染需要时间）
+        logger.info("等待第一题加载...")
         try:
             WebDriverWait(driver, 15, poll_frequency=0.5).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, "div.nPlayTime"))
+                lambda d: d.execute_script("""
+                    var inputs = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+                    for (var i = 0; i < inputs.length; i++) {
+                        if (inputs[i].offsetParent !== null) return true;
+                    }
+                    var opts = document.querySelectorAll('.el-radio, .option-item, [class*="option"], li[class*="option"]');
+                    var vis = 0;
+                    for (var j = 0; j < opts.length; j++) {
+                        if (opts[j].offsetParent !== null) vis++;
+                    }
+                    if (vis >= 2) return true;
+                    var all = document.querySelectorAll('div, li, span, label');
+                    var cnt = 0;
+                    for (var a = 0; a < all.length; a++) {
+                        var t = (all[a].innerText || all[a].textContent || '').trim();
+                        if (/^[A-Z][.、)）]/.test(t) && all[a].offsetParent !== null) cnt++;
+                    }
+                    return cnt >= 2;
+                """)
             )
-            info = driver.execute_script(
-                """
-                var el = document.querySelector("div.nPlayTime[class='nPlayTime 33322']")
-                         || document.querySelector("div.nPlayTime");
-                var dur = el ? el.querySelector("span.duration") : null;
-                return { dur: dur ? dur.textContent.trim() : null };
-                """
-            )
-            dur_txt = (info or {}).get("dur")
-            setattr(self, "_video_total_text", dur_txt)
-            if dur_txt:
-                logger.debug(f"读取到视频总时长文本：{dur_txt}")
-            else:
-                logger.debug("未读取到视频总时长文本，监控线程将继续尝试获取")
+            logger.info("第一题已加载。")
         except TimeoutException:
-            setattr(self, "_video_total_text", None)
-            logger.warning("等待播放器时间区域加载超时，可能导致总时长不可读")
+            logger.warning("等待第一题加载超时，尝试继续。")
 
-        # 课程开始前：确保 controlsBar 可见
-        try:
-            if not self._is_controls_bar_visible():
-                self.show_controls_bar()
-                sleep(1)
-        except Exception:
-            pass
+        logger.info("开始答题流程...")
 
-        # 启动当次课程的监听（取消暂停），并清除视频完成标记
-        self.resume_listeners()
-        sleep(1)
-        
-        # 设置播放速度 1.5x 并确保播放
-        self._set_15x_play()
-        sleep(1)
+        question_index = 0
+        max_questions = 200
 
-        # 主循环：等待播放完成或处理随堂测试
-        try:
-            while True:
-                # 播放结束：置位 finished
-                finished_evt = getattr(self, "_video_finished_event", None)
-                if finished_evt and finished_evt.is_set():
-                    logger.info("当前视频播放完成")
-                    # 课程结束后暂停监听，控制权交还给外层循环
-                    self.pause_listeners()
-                    return
-                # 若随堂测试监听线程检测到测试窗口出现，则暂停视频结束监控线程
-                if getattr(self, "_in_class_test_detected", False):
-                    logger.info("检测到随堂测试窗口，暂停视频结束监控线程")
-                    v_pause = getattr(self, "_video_pause_event", None)
-                    if v_pause:
-                        v_pause.set()
-                    # 等待随堂测试结束
-                    while getattr(self, "_in_class_test_detected", False):
-                        sleep(0.5)
-                    logger.info("随堂测试结束，恢复视频结束监控线程")
-                    if v_pause:
-                        v_pause.clear()
+        while question_index < max_questions:
+            question_index += 1
+            logger.info(f"========== 第 {question_index} 题 ==========")
+
+            # 记录答题前的页面指纹（跳过页面元数据，取题目内容区域）
+            pre_solve_fingerprint = driver.execute_script("""
+                var body = (document.body.innerText || document.body.textContent || '');
+                // 跳过固定元数据，从第 100 字符开始取 300 字（含题干+选项）
+                return body.substring(100, 400);
+            """) or ""
+
+            success = self._solve_current_question()
+            if not success:
+                logger.warning(f"第 {question_index} 题解答失败，尝试跳过。")
+                driver.execute_script("""
+                    var inputs = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+                    if (inputs.length > 0) {
+                        var vis = [];
+                        for (var i = 0; i < inputs.length; i++) {
+                            if (inputs[i].offsetParent !== null) vis.push(inputs[i]);
+                        }
+                        if (vis.length > 0) {
+                            try { vis[0].click(); } catch(e) {}
+                            try { vis[0].dispatchEvent(new Event('change', {bubbles: true})); } catch(e) {}
+                        }
+                    }
+                """)
                 sleep(0.5)
-        finally:
-            # 兜底：课程退出时确保监听被暂停（资源释放在全局 release_listeners 中处理）
-            self.pause_listeners()
 
+            # 检测选项点击后页面是否已自动跳转到下一题
+            post_solve_fingerprint = driver.execute_script("""
+                var body = (document.body.innerText || document.body.textContent || '');
+                return body.substring(100, 400);
+            """) or ""
 
-    # TODO: 完成测试功能
-    # - 测试界面URL：https://onlineexamh5new.zhihuishu.com/
-    # - 当完成率为100时说明以及答完所有题目，提交答案
-    def _handle_test(self, test_element: WebElement):
-        pass
-    
-    
-    # FIXME: 关闭浏览器并保存 Cookie,释放线程
+            if pre_solve_fingerprint and post_solve_fingerprint and pre_solve_fingerprint != post_solve_fingerprint:
+                logger.info("选项点击后页面已自动跳转到下一题，跳过「下一题」按钮。")
+                logger.debug(f"指纹变化: {pre_solve_fingerprint[:80]}... → {post_solve_fingerprint[:80]}...")
+                sleep(1)
+                if self._detect_exam_finished():
+                    logger.info("检测到考试已完成。")
+                    break
+                continue
+
+            # 下一题/交卷
+            if not self._go_next_question():
+                sleep(2)
+                if self._detect_exam_finished():
+                    logger.info("已交卷，考试完成。")
+                else:
+                    logger.warning("无法继续答题且未检测到完成状态，手动停止。")
+                break
+
+            sleep(2)
+
+            # 检测完成
+            if self._detect_exam_finished():
+                logger.info("检测到考试已完成。")
+                break
+
+        logger.info(f"答题流程结束，共处理 {question_index} 题。")
+
+    # ---------- 点击"开始答题" ----------
+    def _click_start_if_needed(self):
+        driver = self.driver
+        try:
+            clicked = driver.execute_script("""
+                function fireClick(el) {
+                    try { el.click(); } catch(e) {}
+                    try { el.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true})); } catch(e) {}
+                    try {
+                        var r = el.getBoundingClientRect();
+                        var o = {bubbles: true, cancelable: true, view: window,
+                            clientX: r.left+r.width/2, clientY: r.top+r.height/2};
+                        el.dispatchEvent(new MouseEvent('mousedown', o));
+                        el.dispatchEvent(new MouseEvent('mouseup', o));
+                        el.dispatchEvent(new MouseEvent('click', o));
+                    } catch(e) {}
+                }
+                var keywords = ['开始答题', '开始考试', '进入考试', '开始作答', '进入答题'];
+                var all = document.querySelectorAll('button, span, div, a');
+                for (var i = 0; i < all.length; i++) {
+                    var txt = (all[i].innerText || all[i].textContent || '').trim();
+                    for (var k = 0; k < keywords.length; k++) {
+                        if (txt === keywords[k] || txt.indexOf(keywords[k]) >= 0) {
+                            if (all[i].offsetParent !== null) {
+                                fireClick(all[i]);
+                                return true;
+                            }
+                        }
+                    }
+                }
+                // 尝试查找 el-button 元素
+                var buttons = document.querySelectorAll('.el-button, button.el-button, [class*="start-btn"], [class*="begin-btn"]');
+                for (var j = 0; j < buttons.length; j++) {
+                    var bt = (buttons[j].innerText || buttons[j].textContent || '').trim();
+                    for (var k2 = 0; k2 < keywords.length; k2++) {
+                        if (bt === keywords[k2] || bt.indexOf(keywords[k2]) >= 0) {
+                            if (buttons[j].offsetParent !== null) {
+                                fireClick(buttons[j]);
+                                return true;
+                            }
+                        }
+                    }
+                }
+                return false;
+            """)
+            if clicked:
+                logger.info("已点击「开始答题」按钮。")
+            else:
+                logger.debug("未找到「开始答题」按钮，可能已直接进入答题页。")
+        except Exception as e:
+            logger.debug(f"查找开始答题按钮异常: {e}")
+
+    # ---------- 检测考试是否结束 ----------
+    def _detect_exam_finished(self) -> bool:
+        driver = self.driver
+        try:
+            result = driver.execute_script("""
+                var bodyText = (document.body.innerText || document.body.textContent || '');
+
+                // 必须有明确的"提交/交卷成功"关键词（弱关键词如"成绩""得分"不单独触发）
+                var strongKeywords = ['提交成功', '交卷成功', '考试结束', '答题完成',
+                    '试卷已提交', '已提交', '交卷完成', '恭喜您完成',
+                    '不能继续答题', '无需再次答题', '您已完成'];
+                var hasFinishedText = false;
+                for (var i = 0; i < strongKeywords.length; i++) {
+                    if (bodyText.indexOf(strongKeywords[i]) >= 0) {
+                        hasFinishedText = true;
+                        break;
+                    }
+                }
+                if (!hasFinishedText) return false;
+
+                // 确认页面上没有题目元素（防止在答题页误判）
+                var questionEls = document.querySelectorAll(
+                    '[class*="question"], [class*="topic"], [class*="stem"],' +
+                    'input[type="radio"], input[type="checkbox"],' +
+                    '.option-item, [class*="option"]'
+                );
+                var hasQuestionVisible = false;
+                for (var q = 0; q < questionEls.length; q++) {
+                    if (questionEls[q].offsetParent !== null) {
+                        hasQuestionVisible = true;
+                        break;
+                    }
+                }
+                // 有完成文本 且 无可见题目 → 确实完成了
+                return hasFinishedText && !hasQuestionVisible;
+            """)
+            return bool(result)
+        except Exception:
+            return False
+
+    # ---------- 解答当前题目 ----------
+    def _solve_current_question(self) -> bool:
+        driver = self.driver
+        # 等待题目区域加载（最多 15 秒，适应慢网络）
+        try:
+            WebDriverWait(driver, 15, poll_frequency=0.5).until(
+                lambda d: d.execute_script("""
+                    // 清除残留标记
+                    var old = document.querySelectorAll('[__opt_idx__]');
+                    for (var oi = 0; oi < old.length; oi++) {
+                        old[oi].removeAttribute('__opt_idx__');
+                        old[oi].removeAttribute('__opt_text__');
+                    }
+                    // 策略1: 可见的 radio/checkbox input
+                    var radios = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+                    for (var i = 0; i < radios.length; i++) {
+                        if (radios[i].offsetParent !== null) return true;
+                    }
+                    // 策略2: 常见选项类名
+                    var optSelectors = [
+                        '.el-radio', '.option-item', '[class*="option-item"]',
+                        'li[class*="option"]', '.options li', '.options div',
+                        '.option', '.choice-item', '[class*="choice"]',
+                        '.answer-item', '[class*="answer-"]',
+                        '.topic-option', '.exam-option', '[class*="exam-option"]',
+                        'label.el-radio', '.radio-item', '.check-item',
+                        '[class*="option-wrap"]', '[class*="option-box"]'
+                    ];
+                    for (var s = 0; s < optSelectors.length; s++) {
+                        try {
+                            var els = document.querySelectorAll(optSelectors[s]);
+                            var vis = 0;
+                            for (var e = 0; e < els.length; e++) {
+                                if (els[e].offsetParent !== null) vis++;
+                            }
+                            if (vis >= 2) return true;
+                        } catch(e) {}
+                    }
+                    // 策略3: 文本以 A/B/C/D 开头的可见元素（≥2个）
+                    var allEls = document.querySelectorAll('div, li, span, label, p, dt, dd');
+                    var optLike = 0;
+                    for (var t = 0; t < allEls.length; t++) {
+                        var txt = (allEls[t].innerText || allEls[t].textContent || '').trim();
+                        if (/^[A-Z][.、)）\\s]/.test(txt) && txt.length > 2 && txt.length < 500 &&
+                            allEls[t].offsetParent !== null) {
+                            optLike++;
+                        }
+                    }
+                    if (optLike >= 2) return true;
+                    // 策略4: 题目容器元素有内容
+                    var qSelectors = [
+                        '.topic', '.subject', '.stem', '[class*="topic"]',
+                        '[class*="subject"]', '[class*="stem"]',
+                        '[class*="question"]', '[class*="exam"]',
+                        '.ques-card-box', '.ques-item', '[class*="ques"]',
+                        '.el-card__body', '.el-dialog__body'
+                    ];
+                    for (var q = 0; q < qSelectors.length; q++) {
+                        try {
+                            var qel = document.querySelector(qSelectors[q]);
+                            if (qel && qel.offsetParent !== null &&
+                                (qel.innerText || qel.textContent || '').trim().length > 10) {
+                                return true;
+                            }
+                        } catch(e) {}
+                    }
+                    // 策略5: body 文本足够长（≥50字符）
+                    var bodyText = (document.body.innerText || document.body.textContent || '').trim();
+                    if (bodyText.length > 50) return true;
+                    return false;
+                """)
+            )
+        except TimeoutException:
+            logger.error("等待题目区域超时。")
+            return False
+        except Exception as e:
+            logger.error(f"等待题目区域异常: {e}")
+            return False
+
+        # 重试 3 次（Vue 渲染可能异步更新 DOM）
+        for retry in range(3):
+            try:
+                if retry > 0:
+                    logger.info(f"第 {retry + 1} 次重试解答...")
+                    sleep(1.5)
+                result = self.solution.solve_exam_question(driver)
+                if result:
+                    return True
+            except Exception as e:
+                logger.error(f"解答当前题目异常 (尝试 {retry + 1}/3): {e}")
+                import traceback
+                logger.debug(traceback.format_exc())
+
+        logger.error("3 次重试后仍无法解答当前题目。")
+        return False
+
+    # ---------- 下一题 ----------
+    def _go_next_question(self) -> bool:
+        driver = self.driver
+        try:
+            # 检测是否最后一题（只有交卷按钮，没有下一题按钮）
+            is_last = driver.execute_script("""
+                if (document.body.getAttribute('__last_question__') === '1') return true;
+                var allBtns = document.querySelectorAll('button, span, div, a, li');
+                var hasSubmit = false, hasNext = false;
+                for (var i = 0; i < allBtns.length; i++) {
+                    var txt = (allBtns[i].innerText || allBtns[i].textContent || '').trim();
+                    if ((txt === '交卷' || txt === '提交试卷' || txt === '提交') && allBtns[i].offsetParent !== null) {
+                        hasSubmit = true;
+                    }
+                    if ((txt === '下一题' || txt.indexOf('下一题') >= 0) && allBtns[i].offsetParent !== null) {
+                        hasNext = true;
+                    }
+                }
+                if (hasSubmit && !hasNext) {
+                    document.body.setAttribute('__last_question__', '1');
+                    return true;
+                }
+                return false;
+            """)
+
+            if is_last:
+                logger.info("检测到最后一题，点击交卷/提交按钮...")
+                clicked = driver.execute_script("""
+                    function fireAll(el) {
+                        var r = el.getBoundingClientRect();
+                        var o = {bubbles: true, cancelable: true, view: window,
+                            clientX: r.left+r.width/2, clientY: r.top+r.height/2};
+                        try { el.click(); } catch(e) {}
+                        try { el.dispatchEvent(new MouseEvent('click', o)); } catch(e) {}
+                        try { el.dispatchEvent(new PointerEvent('click', o)); } catch(e) {}
+                    }
+                    var all = document.querySelectorAll('button, span, div, a');
+                    for (var i = 0; i < all.length; i++) {
+                        var txt = (all[i].innerText || all[i].textContent || '').trim();
+                        if (txt === '交卷' || txt === '提交试卷' || txt === '提交') {
+                            if (all[i].offsetParent !== null) {
+                                fireAll(all[i]);
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                """)
+                if clicked:
+                    logger.info("已点击交卷按钮，检测确认弹窗...")
+                    sleep(1.5)
+                    driver.execute_script("""
+                        var all = document.querySelectorAll('button, span, div, a');
+                        for (var i = 0; i < all.length; i++) {
+                            var txt = (all[i].innerText || all[i].textContent || '').trim();
+                            if (txt === '确定' || txt === '确认' || txt === '是' || txt.indexOf('确定') >= 0) {
+                                if (all[i].offsetParent !== null) {
+                                    try { all[i].click(); } catch(e) {}
+                                    return true;
+                                }
+                            }
+                        }
+                    """)
+                    sleep(5)
+                return False
+
+            # 记录点击前的页面文本指纹（跳过元数据区域）
+            pre_fingerprint = driver.execute_script("""
+                var body = (document.body.innerText || document.body.textContent || '');
+                return body.substring(100, 400);
+            """) or ""
+
+            # 强力查找并点击"下一题"（只触发一次点击，避免 Vue 收到多次事件导致跳题）
+            next_clicked = driver.execute_script("""
+                function singleClick(el) {
+                    // 只使用一种点击方式，防止 Vue/Element 响应多次
+                    try { el.click(); } catch(e) {}
+                }
+
+                function walkToBtn(el) {
+                    var cur = el;
+                    for (var up = 0; up < 6; up++) {
+                        var tag = (cur.tagName || '').toLowerCase();
+                        if (tag === 'button' || tag === 'a') return cur;
+                        var cls = (cur.className || '').toString();
+                        if (cls.indexOf('btn') >= 0 || cls.indexOf('button') >= 0) return cur;
+                        if (cur.parentElement && cur.parentElement !== document.body) cur = cur.parentElement;
+                        else break;
+                    }
+                    return el;
+                }
+
+                // 策略1: 文本精确查找 "下一题"（优先找 button 元素）
+                var all = document.querySelectorAll('button, a, span, div, li');
+                for (var i = 0; i < all.length; i++) {
+                    var txt = (all[i].innerText || all[i].textContent || '').trim();
+                    if (txt === '下一题' || txt === '下一頁') {
+                        if (all[i].offsetParent !== null && all[i].offsetParent.offsetParent !== null) {
+                            singleClick(walkToBtn(all[i]));
+                            return true;
+                        }
+                    }
+                }
+
+                // 策略2: CSS选择器查找
+                var selectors = [
+                    '.next-btn', '.nextBtn', '.next-question', '[class*="next-btn"]', '[class*="nextBtn"]',
+                    '.el-button--primary', 'button.el-button--primary',
+                    '.submit-footer .next', '.question-footer .next',
+                    '[class*="footer"] button', '[class*="footer"] span'
+                ];
+                for (var j = 0; j < selectors.length; j++) {
+                    try {
+                        var els = document.querySelectorAll(selectors[j]);
+                        for (var k = 0; k < els.length; k++) {
+                            var t = (els[k].innerText || els[k].textContent || '').trim();
+                            if ((t === '下一题' || t.indexOf('下一题') >= 0) && els[k].offsetParent !== null) {
+                                singleClick(els[k]);
+                                return true;
+                            }
+                        }
+                    } catch(e) {}
+                }
+
+                // 策略3: 查找页面底部按钮区域
+                var footerAreas = document.querySelectorAll('[class*="footer"], [class*="bottom"], [class*="action"], [class*="operation"]');
+                for (var f = 0; f < footerAreas.length; f++) {
+                    if (footerAreas[f].offsetParent === null) continue;
+                    var btns = footerAreas[f].querySelectorAll('button, span, div, a');
+                    for (var b = 0; b < btns.length; b++) {
+                        var bt = (btns[b].innerText || btns[b].textContent || '').trim();
+                        if (bt === '下一题' || bt.indexOf('下一题') >= 0) {
+                            singleClick(btns[b]);
+                            return true;
+                        }
+                    }
+                }
+
+                return false;
+            """)
+
+            if next_clicked:
+                logger.info("已触发下一题按钮，等待页面切换...")
+                # 初始化页面指纹（记录点击前的 body 文本）
+                driver.execute_script("""
+                    var body = (document.body.innerText || document.body.textContent || '');
+                    document.body.setAttribute('__prev_body__', body.substring(100, 400));
+                """)
+                sleep(0.3)
+                # 清除旧标记
+                driver.execute_script("""
+                    var old = document.querySelectorAll('[__opt_idx__]');
+                    for (var oi = 0; oi < old.length; oi++) {
+                        old[oi].removeAttribute('__opt_idx__');
+                        old[oi].removeAttribute('__opt_text__');
+                    }
+                """)
+                # 检查页面指纹是否变化
+                post_fingerprint = driver.execute_script("""
+                    var body = (document.body.innerText || document.body.textContent || '');
+                    return body.substring(100, 400);
+                """) or ""
+                pre_fingerprint = driver.execute_script(
+                    "return document.body.getAttribute('__prev_body__') || '';"
+                ) or ""
+                if pre_fingerprint and post_fingerprint and pre_fingerprint != post_fingerprint:
+                    logger.info("页面指纹已变化，视为切换成功。")
+                else:
+                    logger.warning("页面指纹未变化，尝试再次点击...")
+                    driver.execute_script("""
+                        var all = document.querySelectorAll('button, span, div, a');
+                        for (var i = 0; i < all.length; i++) {
+                            var txt = (all[i].innerText || all[i].textContent || '').trim();
+                            if (txt === '下一题' && all[i].offsetParent !== null) {
+                                try { all[i].click(); } catch(e) {}
+                                return;
+                            }
+                        }
+                    """)
+                    sleep(0.5)
+                return True
+            else:
+                logger.warning("未找到下一题按钮，尝试查找交卷按钮...")
+                has_submit = driver.execute_script("""
+                    var all = document.querySelectorAll('button, span, div, a');
+                    for (var i = 0; i < all.length; i++) {
+                        var txt = (all[i].innerText || all[i].textContent || '').trim();
+                        if ((txt === '交卷' || txt === '提交试卷' || txt === '提交') &&
+                            all[i].offsetParent !== null) {
+                            try { all[i].click(); } catch(e) {
+                                var r = all[i].getBoundingClientRect();
+                                all[i].dispatchEvent(new MouseEvent('click',
+                                    {bubbles: true, clientX: r.left+r.width/2, clientY: r.top+r.height/2}));
+                            }
+                            return true;
+                        }
+                    }
+                    return false;
+                """)
+                if has_submit:
+                    logger.info("已点击交卷按钮作为兜底。")
+                    sleep(5)
+                return False
+        except Exception as e:
+            logger.error(f"点击下一题失败: {e}")
+            return False
+
+    # ---------- 关闭 ----------
     def shutdown(self):
-        """结束服务，先保存 Cookie，再释放线程，最后关闭浏览器。"""
         if self._shutdown_done:
             return
         self._shutdown_done = True
@@ -813,11 +640,6 @@ class WebEdgeService:
         except Exception as e:
             logger.warning(f"服务关闭保存 Cookie 失败：{e}")
         finally:
-            try:
-                self.release_listeners()
-                logger.debug("监听线程已释放")
-            except Exception:
-                pass
             try:
                 self.driver.quit()
                 logger.info("浏览器已关闭，退出程序。")

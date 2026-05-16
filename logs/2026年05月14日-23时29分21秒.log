@@ -1,0 +1,88 @@
+2026-05-14 23:29:24.256 | INFO | Main:main | 答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/406679/yo43O7p0/yZGbNMRw/1000002677/1847/0
+2026-05-14 23:29:25.385 | INFO | webdriverConfig:_load_cookies | 准备从 D:\desktop\工具\auto-zhihuishu\tools\edgedriver_win64\cookies.json 加载 Cookie，目标域：https://onlineweb.zhihuishu.com/
+2026-05-14 23:29:30.777 | INFO | webdriverConfig:_load_cookies | 已加载 11/11 条 Cookie，刷新页面以应用登录态。
+2026-05-14 23:29:31.919 | INFO | DeepSeek:__init__ | DeepSeek 初始化完成，模型：deepseek-chat
+2026-05-14 23:29:34.441 | INFO | WebEdgeService:run_exam | 已打开答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/406679/yo43O7p0/yZGbNMRw/1000002677/1847/0
+2026-05-14 23:29:36.454 | WARNING | WebEdgeService:_handle_login | 检测到未登录，请在浏览器窗口内完成登录（扫码或知到APP）。
+2026-05-14 23:29:45.953 | INFO | WebEdgeService:_handle_login | 登录成功。
+2026-05-14 23:29:45.958 | INFO | WebEdgeService:_save_cookies | 已保存 8 条 Cookie 到 D:\desktop\工具\auto-zhihuishu\tools\edgedriver_win64\cookies.json
+2026-05-14 23:29:50.965 | DEBUG | WebEdgeService:_click_start_if_needed | 未找到「开始答题」按钮，可能已直接进入答题页。
+2026-05-14 23:29:53.966 | INFO | WebEdgeService:run_exam | 等待第一题加载...
+2026-05-14 23:29:53.972 | INFO | WebEdgeService:run_exam | 第一题已加载。
+2026-05-14 23:29:53.972 | INFO | WebEdgeService:run_exam | 开始答题流程...
+2026-05-14 23:29:53.972 | INFO | WebEdgeService:run_exam | ========== 第 1 题 ==========
+2026-05-14 23:29:53.993 | DEBUG | SolutionService:solve_exam_question | 找到 2 个选项元素
+2026-05-14 23:29:53.994 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(201字): 名称 人工智能与科学之美
+对应章节 绪论
+成绩类型 百分制
+截止时间 2026-05-19 23:59:59
+题目数 1
+总分数 20
+
+
+说明
+
+提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+
+第1部分
+总题数: 1
+1
+【判断题】 (20分)
+ A.
+对
+ B.
+错
+上一题
+保存
+
+答题后请点【下一题】保存答案，全部试题答完后请点击右上角【提交】按钮完成答题，避免答题记录丢失
+2026-05-14 23:29:54.156 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(21字): 【判断题】 (20分)
+A.
+对
+B.
+错
+2026-05-14 23:29:54.356 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_232954.png
+2026-05-14 23:29:54.759 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-14 23:29:54.761 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 48 字
+2026-05-14 23:29:54.761 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(48字): 第1部分总题数:1
+1【判断题]
+（20分)
+2016年被称为人工智能元年。（）
+A.对
+B.错
+2026-05-14 23:29:54.762 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(38字): 1【判断题]
+（20分)
+2016年被称为人工智能元年。（）
+A.对
+B.错
+2026-05-14 23:29:54.762 | INFO | SolutionService:solve_exam_question | DOM+OCR 均有内容，择优使用。
+2026-05-14 23:29:54.762 | INFO | SolutionService:solve_exam_question | 题目文本(38字): 1【判断题]
+（20分)
+2016年被称为人工智能元年。（）
+A.对
+B.错
+2026-05-14 23:29:54.763 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_232954.txt
+2026-05-14 23:29:54.763 | INFO | DeepSeek:answer_question | 问题：1【判断题]
+（20分)
+2016年被称为人工智能元年。（）
+A.对
+B.错
+2026-05-14 23:29:55.839 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='414f9b88-2bd7-4a0d-a128-397ff197dab0', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["错"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778772597, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=168, total_tokens=175, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=40))
+2026-05-14 23:29:55.839 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["错"]}
+2026-05-14 23:29:55.840 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-14 23:29:55.840 | INFO | SolutionService:solve_exam_question | LLM 答案: ['错']
+2026-05-14 23:29:55.845 | DEBUG | SolutionService:solve_exam_question | 重新标记了 2 个选项元素
+2026-05-14 23:29:55.849 | INFO | SolutionService:_click_exam_options | 共 2 个选项，目标: ['错']
+2026-05-14 23:29:55.850 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+对
+2026-05-14 23:29:55.850 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+错
+2026-05-14 23:29:55.857 | INFO | SolutionService:_click_exam_options | 文本匹配 错 -> 选项[1]: B.
+错
+2026-05-14 23:29:56.463 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=1, active元素=1
+2026-05-14 23:29:56.475 | WARNING | WebEdgeService:_go_next_question | 未找到下一题按钮，尝试查找交卷按钮...
+2026-05-14 23:29:58.483 | WARNING | WebEdgeService:run_exam | 无法继续答题且未检测到完成状态，手动停止。
+2026-05-14 23:29:58.483 | INFO | WebEdgeService:run_exam | 答题流程结束，共处理 1 题。
+2026-05-14 23:29:58.483 | INFO | WebEdgeService:shutdown | 触发服务关闭：准备先保存 Cookie
+2026-05-14 23:29:58.488 | INFO | WebEdgeService:_save_cookies | 已保存 10 条 Cookie 到 D:\desktop\工具\auto-zhihuishu\tools\edgedriver_win64\cookies.json
+2026-05-14 23:30:00.652 | INFO | WebEdgeService:shutdown | 浏览器已关闭，退出程序。

@@ -1,0 +1,274 @@
+2026-05-14 22:37:39.117 | INFO | Main:main | 答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/yZJG4LKW/y79p4GRe/1000011088/1847/0
+2026-05-14 22:37:40.183 | INFO | webdriverConfig:_load_cookies | 准备从 D:\desktop\工具\auto-zhihuishu\tools\edgedriver_win64\cookies.json 加载 Cookie，目标域：https://onlineweb.zhihuishu.com/
+2026-05-14 22:37:51.445 | INFO | webdriverConfig:_load_cookies | 已加载 12/12 条 Cookie，刷新页面以应用登录态。
+2026-05-14 22:37:53.000 | INFO | DeepSeek:__init__ | DeepSeek 初始化完成，模型：deepseek-chat
+2026-05-14 22:37:55.469 | INFO | WebEdgeService:run_exam | 已打开答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/yZJG4LKW/y79p4GRe/1000011088/1847/0
+2026-05-14 22:37:57.474 | INFO | WebEdgeService:_handle_login | 已登录，继续。
+2026-05-14 22:38:02.480 | DEBUG | WebEdgeService:_click_start_if_needed | 未找到「开始答题」按钮，可能已直接进入答题页。
+2026-05-14 22:38:05.481 | INFO | WebEdgeService:run_exam | 等待第一题加载...
+2026-05-14 22:38:05.486 | INFO | WebEdgeService:run_exam | 第一题已加载。
+2026-05-14 22:38:05.486 | INFO | WebEdgeService:run_exam | 开始答题流程...
+2026-05-14 22:38:05.486 | INFO | WebEdgeService:run_exam | ========== 第 1 题 ==========
+2026-05-14 22:38:05.494 | DEBUG | SolutionService:solve_exam_question | 找到 2 个选项元素
+2026-05-14 22:38:05.495 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(199字): 名称 人工智能原理
+对应章节 第四章
+成绩类型 百分制
+截止时间 2026-05-19 23:59:59
+题目数 9
+总分数 18
+
+
+说明
+
+提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+
+第1部分
+总题数: 9
+1
+【判断题】 (2分)
+ A.
+对
+ B.
+错
+上一题
+下一题
+
+答题后请点【下一题】保存答案，全部试题答完后请点击右上角【提交】按钮完成答题，避免答题记录丢失！
+2026-05-14 22:38:05.495 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(20字): 【判断题】 (2分)
+A.
+对
+B.
+错
+2026-05-14 22:38:05.693 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_223805.png
+2026-05-14 22:38:06.081 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-14 22:38:06.081 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 62 字
+2026-05-14 22:38:06.082 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(62字): 第1部分总题数:9
+1【判断题]
+（2分)
+在深度优先搜索法中，OPEN表的最后一个元素是深度最深的节点状态
+A.对
+B.错
+2026-05-14 22:38:06.082 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(52字): 1【判断题]
+（2分)
+在深度优先搜索法中，OPEN表的最后一个元素是深度最深的节点状态
+A.对
+B.错
+2026-05-14 22:38:06.082 | INFO | SolutionService:solve_exam_question | DOM+OCR 均有内容，择优使用。
+2026-05-14 22:38:06.082 | INFO | SolutionService:solve_exam_question | 题目文本(52字): 1【判断题]
+（2分)
+在深度优先搜索法中，OPEN表的最后一个元素是深度最深的节点状态
+A.对
+B.错
+2026-05-14 22:38:06.084 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_223806.txt
+2026-05-14 22:38:06.084 | INFO | DeepSeek:answer_question | 问题：1【判断题]
+（2分)
+在深度优先搜索法中，OPEN表的最后一个元素是深度最深的节点状态
+A.对
+B.错
+2026-05-14 22:38:07.181 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='66cdde72-2524-4a50-b5ae-3e04535f2757', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778769488, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=177, total_tokens=184, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=49))
+2026-05-14 22:38:07.181 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-14 22:38:07.182 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-14 22:38:07.182 | INFO | SolutionService:solve_exam_question | LLM 答案: ['对']
+2026-05-14 22:38:07.188 | DEBUG | SolutionService:solve_exam_question | 重新标记了 2 个选项元素
+2026-05-14 22:38:07.192 | INFO | SolutionService:_click_exam_options | 共 2 个选项，目标: ['对']
+2026-05-14 22:38:07.192 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+对
+2026-05-14 22:38:07.192 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+错
+2026-05-14 22:38:07.197 | INFO | SolutionService:_click_exam_options | 文本匹配 对 -> 选项[0]: A.
+对
+2026-05-14 22:38:07.802 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=3, active元素=1
+2026-05-14 22:38:07.816 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-14 22:38:18.711 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-14 22:38:18.715 | WARNING | WebEdgeService:_go_next_question | 页面指纹未变化，尝试再次点击...
+2026-05-14 22:38:21.728 | INFO | WebEdgeService:run_exam | ========== 第 2 题 ==========
+2026-05-14 22:38:21.734 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 22:38:21.734 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-14 22:38:21.736 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-14 22:38:21.911 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_223821.png
+2026-05-14 22:38:22.210 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-14 22:38:22.210 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 70 字
+2026-05-14 22:38:22.211 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(70字): 3.【单选题】（2分)
+状态空间可以用有向图来表示，图里面的节点表示（）
+A.问题的目标
+B.问题的解题路径
+C.问题的状态
+D.问题的初始
+2026-05-14 22:38:22.211 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(70字): 3.【单选题】（2分)
+状态空间可以用有向图来表示，图里面的节点表示（）
+A.问题的目标
+B.问题的解题路径
+C.问题的状态
+D.问题的初始
+2026-05-14 22:38:22.211 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-14 22:38:22.211 | INFO | SolutionService:solve_exam_question | 题目文本(70字): 3.【单选题】（2分)
+状态空间可以用有向图来表示，图里面的节点表示（）
+A.问题的目标
+B.问题的解题路径
+C.问题的状态
+D.问题的初始
+2026-05-14 22:38:22.212 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_223822.txt
+2026-05-14 22:38:22.213 | INFO | DeepSeek:answer_question | 问题：3.【单选题】（2分)
+状态空间可以用有向图来表示，图里面的节点表示（）
+A.问题的目标
+B.问题的解题路径
+C.问题的状态
+D.问题的初始
+2026-05-14 22:38:23.325 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='d64eeede-2301-45eb-846f-f1e1b1f34519', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["C"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778769505, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=186, total_tokens=193, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=58))
+2026-05-14 22:38:23.325 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["C"]}
+2026-05-14 22:38:23.326 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['C'], 'raw': '{"selected": ["C"]}'}
+2026-05-14 22:38:23.326 | INFO | SolutionService:solve_exam_question | LLM 答案: ['C']
+2026-05-14 22:38:23.330 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-14 22:38:23.333 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['C']
+2026-05-14 22:38:23.333 | DEBUG | SolutionService:_click_exam_options |   选项[0]: 
+2026-05-14 22:38:23.333 | DEBUG | SolutionService:_click_exam_options |   选项[1]: 
+2026-05-14 22:38:23.333 | DEBUG | SolutionService:_click_exam_options |   选项[2]: 
+2026-05-14 22:38:23.333 | DEBUG | SolutionService:_click_exam_options |   选项[3]: 
+2026-05-14 22:38:23.339 | INFO | SolutionService:_click_exam_options | 字母点击 C -> 选项[2]: 
+2026-05-14 22:38:23.945 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=4, active元素=1
+2026-05-14 22:38:23.958 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-14 22:38:34.850 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-14 22:38:34.854 | WARNING | WebEdgeService:_go_next_question | 页面指纹未变化，尝试再次点击...
+2026-05-14 22:38:37.865 | INFO | WebEdgeService:run_exam | ========== 第 3 题 ==========
+2026-05-14 22:38:37.873 | DEBUG | SolutionService:solve_exam_question | 找到 2 个选项元素
+2026-05-14 22:38:37.874 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-14 22:38:37.874 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-14 22:38:38.026 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_223838.png
+2026-05-14 22:38:38.322 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-14 22:38:38.322 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 57 字
+2026-05-14 22:38:38.323 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(57字): 第1部分总题数:9
+5【判断题]
+(2分）
+状态空间搜索算法中的CLOSED表可以防止节点被忽略。
+A.对
+B.错
+2026-05-14 22:38:38.323 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(47字): 5【判断题]
+(2分）
+状态空间搜索算法中的CLOSED表可以防止节点被忽略。
+A.对
+B.错
+2026-05-14 22:38:38.323 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-14 22:38:38.324 | INFO | SolutionService:solve_exam_question | 题目文本(47字): 5【判断题]
+(2分）
+状态空间搜索算法中的CLOSED表可以防止节点被忽略。
+A.对
+B.错
+2026-05-14 22:38:38.325 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_223838.txt
+2026-05-14 22:38:38.325 | INFO | DeepSeek:answer_question | 问题：5【判断题]
+(2分）
+状态空间搜索算法中的CLOSED表可以防止节点被忽略。
+A.对
+B.错
+2026-05-14 22:38:38.959 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='bc398b7d-5956-4c5b-a90c-5a0ee303ddcc', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["错"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778769520, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=175, total_tokens=182, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=47))
+2026-05-14 22:38:38.960 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["错"]}
+2026-05-14 22:38:38.960 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-14 22:38:38.960 | INFO | SolutionService:solve_exam_question | LLM 答案: ['错']
+2026-05-14 22:38:38.964 | DEBUG | SolutionService:solve_exam_question | 重新标记了 2 个选项元素
+2026-05-14 22:38:38.966 | INFO | SolutionService:_click_exam_options | 共 2 个选项，目标: ['错']
+2026-05-14 22:38:38.966 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+对
+2026-05-14 22:38:38.967 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+错
+2026-05-14 22:38:38.971 | INFO | SolutionService:_click_exam_options | 文本匹配 错 -> 选项[1]: B.
+错
+2026-05-14 22:38:39.575 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=5, active元素=1
+2026-05-14 22:38:39.589 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-14 22:38:50.484 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-14 22:38:50.487 | WARNING | WebEdgeService:_go_next_question | 页面指纹未变化，尝试再次点击...
+2026-05-14 22:38:53.498 | INFO | WebEdgeService:run_exam | ========== 第 4 题 ==========
+2026-05-14 22:38:53.506 | DEBUG | SolutionService:solve_exam_question | 找到 2 个选项元素
+2026-05-14 22:38:53.507 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-14 22:38:53.507 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-14 22:38:53.676 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_223853.png
+2026-05-14 22:38:53.960 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-14 22:38:53.960 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 67 字
+2026-05-14 22:38:53.961 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(67字): 第1部分总题数:9
+【判断题]
+(2分)
+状态空间搜索算法中的OPEN表中的节点必须是按照节点被放入的先后顺序来取出。
+A.对
+B.错
+2026-05-14 22:38:53.961 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(57字): 【判断题]
+(2分)
+状态空间搜索算法中的OPEN表中的节点必须是按照节点被放入的先后顺序来取出。
+A.对
+B.错
+2026-05-14 22:38:53.961 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-14 22:38:53.961 | INFO | SolutionService:solve_exam_question | 题目文本(57字): 【判断题]
+(2分)
+状态空间搜索算法中的OPEN表中的节点必须是按照节点被放入的先后顺序来取出。
+A.对
+B.错
+2026-05-14 22:38:53.962 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_223853.txt
+2026-05-14 22:38:53.962 | INFO | DeepSeek:answer_question | 问题：【判断题]
+(2分)
+状态空间搜索算法中的OPEN表中的节点必须是按照节点被放入的先后顺序来取出。
+A.对
+B.错
+2026-05-14 22:38:54.753 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='4da12795-1bda-49d7-a58f-a95a9f76e8ee', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["错"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778769536, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=178, total_tokens=185, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=50))
+2026-05-14 22:38:54.753 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["错"]}
+2026-05-14 22:38:54.753 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-14 22:38:54.754 | INFO | SolutionService:solve_exam_question | LLM 答案: ['错']
+2026-05-14 22:38:54.757 | DEBUG | SolutionService:solve_exam_question | 重新标记了 2 个选项元素
+2026-05-14 22:38:54.760 | INFO | SolutionService:_click_exam_options | 共 2 个选项，目标: ['错']
+2026-05-14 22:38:54.761 | DEBUG | SolutionService:_click_exam_options |   选项[0]: A.
+对
+2026-05-14 22:38:54.761 | DEBUG | SolutionService:_click_exam_options |   选项[1]: B.
+错
+2026-05-14 22:38:54.764 | INFO | SolutionService:_click_exam_options | 文本匹配 错 -> 选项[1]: B.
+错
+2026-05-14 22:38:55.369 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=5, active元素=1
+2026-05-14 22:38:55.383 | INFO | WebEdgeService:_go_next_question | 已触发下一题按钮，等待页面切换...
+2026-05-14 22:39:06.273 | WARNING | WebEdgeService:_go_next_question | 等待页面切换超时，检查页面是否实际已变化...
+2026-05-14 22:39:06.277 | WARNING | WebEdgeService:_go_next_question | 页面指纹未变化，尝试再次点击...
+2026-05-14 22:39:09.285 | INFO | WebEdgeService:run_exam | ========== 第 5 题 ==========
+2026-05-14 22:39:09.291 | DEBUG | SolutionService:solve_exam_question | 找到 4 个选项元素
+2026-05-14 22:39:09.292 | DEBUG | SolutionService:solve_exam_question | DOM 原始文本(31字): 提示：选择题选项顺序为随机排列，若要核对答案，请以选项内容为准
+2026-05-14 22:39:09.292 | DEBUG | SolutionService:solve_exam_question | DOM 清洗后(0字): 
+2026-05-14 22:39:09.495 | DEBUG | SolutionService:_screenshot_question_card | OCR 截图已保存到 debug/ocr_223909.png
+2026-05-14 22:39:09.834 | DEBUG | SolutionService:ocr_text | OCR提取6行
+2026-05-14 22:39:09.834 | DEBUG | SolutionService:_screenshot_question_card | OCR 卡片截图成功，原始文本 119 字
+2026-05-14 22:39:09.835 | DEBUG | SolutionService:solve_exam_question | OCR 原始文本(119字): 9.【单选题】（2分)）
+如果状态空间图是树状结构,则当前扩展节点n的子结点只有一种形式，即（）
+A.既不存在于OPEN表也不存在于CLOSED表
+B.存在于CLOSED表中
+C.同时存在于OPEN、CLOSED表
+D.存在于OPEN表中
+2026-05-14 22:39:09.835 | DEBUG | SolutionService:solve_exam_question | OCR 清洗后(119字): 9.【单选题】（2分)）
+如果状态空间图是树状结构,则当前扩展节点n的子结点只有一种形式，即（）
+A.既不存在于OPEN表也不存在于CLOSED表
+B.存在于CLOSED表中
+C.同时存在于OPEN、CLOSED表
+D.存在于OPEN表中
+2026-05-14 22:39:09.835 | INFO | SolutionService:solve_exam_question | OCR 含真实题目内容，使用 OCR 结果。
+2026-05-14 22:39:09.835 | INFO | SolutionService:solve_exam_question | 题目文本(119字): 9.【单选题】（2分)）
+如果状态空间图是树状结构,则当前扩展节点n的子结点只有一种形式，即（）
+A.既不存在于OPEN表也不存在于CLOSED表
+B.存在于CLOSED表中
+C.同时存在于OPEN、CLOSED表
+D.存在于OPEN表中
+2026-05-14 22:39:09.837 | DEBUG | SolutionService:solve_exam_question | 题目文本已保存到 debug/qa_223909.txt
+2026-05-14 22:39:09.837 | INFO | DeepSeek:answer_question | 问题：9.【单选题】（2分)）
+如果状态空间图是树状结构,则当前扩展节点n的子结点只有一种形式，即（）
+A.既不存在于OPEN表也不存在于CLOSED表
+B.存在于CLOSED表中
+C.同时存在于OPEN、CLOSED表
+D.存在于OPEN表中
+2026-05-14 22:39:11.014 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='2f496f9b-2a60-4be2-8344-c5a8e45448fd', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778769552, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=214, total_tokens=221, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=86))
+2026-05-14 22:39:11.014 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-14 22:39:11.014 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-14 22:39:11.015 | INFO | SolutionService:solve_exam_question | LLM 答案: ['A']
+2026-05-14 22:39:11.020 | DEBUG | SolutionService:solve_exam_question | 重新标记了 4 个选项元素
+2026-05-14 22:39:11.023 | INFO | SolutionService:_click_exam_options | 共 4 个选项，目标: ['A']
+2026-05-14 22:39:11.024 | DEBUG | SolutionService:_click_exam_options |   选项[0]: 
+2026-05-14 22:39:11.024 | DEBUG | SolutionService:_click_exam_options |   选项[1]: 
+2026-05-14 22:39:11.024 | DEBUG | SolutionService:_click_exam_options |   选项[2]: 
+2026-05-14 22:39:11.024 | DEBUG | SolutionService:_click_exam_options |   选项[3]: 
+2026-05-14 22:39:11.029 | INFO | SolutionService:_click_exam_options | 字母点击 A -> 选项[0]: 
+2026-05-14 22:39:11.634 | INFO | SolutionService:_click_exam_options | 选中验证: input选中=6, active元素=1
+2026-05-14 22:39:11.644 | WARNING | WebEdgeService:_go_next_question | 未找到下一题按钮，尝试查找交卷按钮...
+2026-05-14 22:39:13.652 | WARNING | WebEdgeService:run_exam | 无法继续答题且未检测到完成状态，手动停止。
+2026-05-14 22:39:13.652 | INFO | WebEdgeService:run_exam | 答题流程结束，共处理 5 题。
+2026-05-14 22:39:13.653 | INFO | WebEdgeService:shutdown | 触发服务关闭：准备先保存 Cookie
+2026-05-14 22:39:13.657 | INFO | WebEdgeService:_save_cookies | 已保存 11 条 Cookie 到 D:\desktop\工具\auto-zhihuishu\tools\edgedriver_win64\cookies.json
+2026-05-14 22:39:15.802 | INFO | WebEdgeService:shutdown | 浏览器已关闭，退出程序。

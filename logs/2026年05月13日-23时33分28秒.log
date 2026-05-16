@@ -1,0 +1,12 @@
+2026-05-13 23:33:35.610 | INFO | Main:main | 答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/wnkY1axr/eGrB8v9w/1000011088/1847/0
+2026-05-13 23:33:36.746 | INFO | webdriverConfig:_load_cookies | 准备从 D:\desktop\工具\auto-zhihuishu\tools\edgedriver_win64\cookies.json 加载 Cookie，目标域：https://onlineweb.zhihuishu.com/
+2026-05-13 23:33:52.973 | INFO | webdriverConfig:_load_cookies | 已加载 11/11 条 Cookie，刷新页面以应用登录态。
+2026-05-13 23:33:55.532 | INFO | DeepSeek:__init__ | DeepSeek 初始化完成，模型：deepseek-chat
+2026-05-13 23:34:01.426 | INFO | WebEdgeService:run_exam | 已打开答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/wnkY1axr/eGrB8v9w/1000011088/1847/0
+2026-05-13 23:34:03.429 | INFO | WebEdgeService:_handle_login | 已登录，继续。
+2026-05-13 23:34:06.430 | INFO | WebEdgeService:run_exam | 开始答题流程...
+2026-05-13 23:34:06.437 | INFO | WebEdgeService:run_exam | 检测到考试已完成。
+2026-05-13 23:34:06.437 | INFO | WebEdgeService:run_exam | 答题流程结束，共处理 0 题。
+2026-05-13 23:34:06.437 | INFO | WebEdgeService:shutdown | 触发服务关闭：准备先保存 Cookie
+2026-05-13 23:34:06.445 | INFO | WebEdgeService:_save_cookies | 已保存 10 条 Cookie 到 D:\desktop\工具\auto-zhihuishu\tools\edgedriver_win64\cookies.json
+2026-05-13 23:34:08.593 | INFO | WebEdgeService:shutdown | 浏览器已关闭，退出程序。

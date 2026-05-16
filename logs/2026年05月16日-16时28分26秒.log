@@ -1,0 +1,3 @@
+2026-05-16 16:28:27.579 | INFO | webdriverConfig:_load_cookies | 准备从 D:\desktop\工具\fuckzhs‘shomeworks\tools\edgedriver_win64\cookies.json 加载 Cookie，目标域：https://onlineweb.zhihuishu.com/
+2026-05-16 16:28:28.364 | INFO | webdriverConfig:_load_cookies | 已加载 11/11 条 Cookie，刷新页面以应用登录态。
+2026-05-16 16:28:31.474 | INFO | DeepSeek:__init__ | DeepSeek 初始化完成，模型：deepseek-chat

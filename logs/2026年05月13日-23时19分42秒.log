@@ -1,0 +1,307 @@
+2026-05-13 23:19:59.326 | INFO | Main:main | 答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/wnkY1axr/eGrB8v9w/1000011088/1847/0
+2026-05-13 23:20:00.524 | INFO | webdriverConfig:_load_cookies | 准备从 D:\desktop\工具\auto-zhihuishu\tools\edgedriver_win64\cookies.json 加载 Cookie，目标域：https://onlineweb.zhihuishu.com/
+2026-05-13 23:20:16.426 | INFO | webdriverConfig:_load_cookies | 已加载 11/11 条 Cookie，刷新页面以应用登录态。
+2026-05-13 23:20:18.347 | INFO | DeepSeek:__init__ | DeepSeek 初始化完成，模型：deepseek-chat
+2026-05-13 23:20:24.011 | INFO | WebEdgeService:run_exam | 已打开答题网址: https://onlineexamh5new.zhihuishu.com/stuExamWeb.html#/webExamList/dohomework/409078/wnkY1axr/eGrB8v9w/1000011088/1847/0
+2026-05-13 23:20:26.016 | INFO | WebEdgeService:_handle_login | 已登录，继续。
+2026-05-13 23:20:29.017 | INFO | WebEdgeService:run_exam | 开始答题流程...
+2026-05-13 23:20:29.023 | INFO | WebEdgeService:run_exam | --- 第 1 题 ---
+2026-05-13 23:20:31.211 | DEBUG | SolutionService:ocr_text | OCR提取1行
+2026-05-13 23:20:31.212 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 对
+2026-05-13 23:20:31.212 | INFO | DeepSeek:answer_question | 问题：对
+2026-05-13 23:20:32.516 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='f90787d3-fa7a-461a-9691-979deab3ab5e', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685634, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=148, total_tokens=155, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=0), prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=148))
+2026-05-13 23:20:32.516 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:20:32.517 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:32.517 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:32.524 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:20:32.603 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:20:32.603 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:20:32.603 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:20:32.659 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:20:34.165 | INFO | WebEdgeService:run_exam | --- 第 2 题 ---
+2026-05-13 23:20:35.764 | DEBUG | SolutionService:ocr_text | OCR提取1行
+2026-05-13 23:20:35.765 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 对
+2026-05-13 23:20:35.765 | INFO | DeepSeek:answer_question | 问题：对
+2026-05-13 23:20:36.355 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='ce0267cd-a40e-4457-9e8e-91be7de520bc', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685638, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=148, total_tokens=155, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=20))
+2026-05-13 23:20:36.356 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:20:36.356 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:36.356 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:36.375 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:20:36.467 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:20:36.468 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:20:36.468 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:20:36.521 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:20:38.026 | INFO | WebEdgeService:run_exam | --- 第 3 题 ---
+2026-05-13 23:20:39.702 | DEBUG | SolutionService:ocr_text | OCR提取1行
+2026-05-13 23:20:39.702 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 对
+2026-05-13 23:20:39.703 | INFO | DeepSeek:answer_question | 问题：对
+2026-05-13 23:20:40.274 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='5234b808-d0a2-4297-9b4b-eab25a5440c2', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685642, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=148, total_tokens=155, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=20))
+2026-05-13 23:20:40.274 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:20:40.274 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:40.274 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:40.282 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:20:40.353 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:20:40.353 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:20:40.353 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:20:40.402 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:20:41.908 | INFO | WebEdgeService:run_exam | --- 第 4 题 ---
+2026-05-13 23:20:43.176 | DEBUG | SolutionService:ocr_text | OCR提取1行
+2026-05-13 23:20:43.176 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 对
+2026-05-13 23:20:43.177 | INFO | DeepSeek:answer_question | 问题：对
+2026-05-13 23:20:44.090 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='a57efa5a-fd53-475a-87ec-0212f8676eb3', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685645, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=148, total_tokens=155, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=0), prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=148))
+2026-05-13 23:20:44.091 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:20:44.091 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:44.091 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:44.099 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:20:44.160 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:20:44.161 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:20:44.161 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:20:44.209 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:20:45.715 | INFO | WebEdgeService:run_exam | --- 第 5 题 ---
+2026-05-13 23:20:46.993 | DEBUG | SolutionService:ocr_text | OCR提取1行
+2026-05-13 23:20:46.994 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 对
+2026-05-13 23:20:46.994 | INFO | DeepSeek:answer_question | 问题：对
+2026-05-13 23:20:47.849 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='a166fe1f-4d64-4a54-8766-940c08ee7f75', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["错"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685649, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=148, total_tokens=155, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=20))
+2026-05-13 23:20:47.849 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["错"]}
+2026-05-13 23:20:47.850 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-13 23:20:47.850 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-13 23:20:47.856 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['错']
+2026-05-13 23:20:47.924 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:20:47.924 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '错' 到任何选项。
+2026-05-13 23:20:47.925 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:20:47.969 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:20:49.473 | INFO | WebEdgeService:run_exam | --- 第 6 题 ---
+2026-05-13 23:20:50.718 | DEBUG | SolutionService:ocr_text | OCR提取1行
+2026-05-13 23:20:50.718 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 对
+2026-05-13 23:20:50.718 | INFO | DeepSeek:answer_question | 问题：对
+2026-05-13 23:20:51.624 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='a3252c08-9d79-44ef-a8ca-27f4d4ae5df3', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685653, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=148, total_tokens=155, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=20))
+2026-05-13 23:20:51.624 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:20:51.625 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:51.625 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:51.633 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:20:51.697 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:20:51.697 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:20:51.697 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:20:51.754 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:20:53.258 | INFO | WebEdgeService:run_exam | --- 第 7 题 ---
+2026-05-13 23:20:54.515 | DEBUG | SolutionService:ocr_text | OCR提取1行
+2026-05-13 23:20:54.515 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 对
+2026-05-13 23:20:54.515 | INFO | DeepSeek:answer_question | 问题：对
+2026-05-13 23:20:55.457 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='6096ebef-123b-42ba-a0df-880bb9c42642', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685656, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=148, total_tokens=155, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=20))
+2026-05-13 23:20:55.457 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:20:55.457 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:55.458 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:55.464 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:20:55.526 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:20:55.527 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:20:55.527 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:20:55.588 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:20:57.095 | INFO | WebEdgeService:run_exam | --- 第 8 题 ---
+2026-05-13 23:20:58.362 | DEBUG | SolutionService:ocr_text | OCR提取1行
+2026-05-13 23:20:58.362 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 对
+2026-05-13 23:20:58.362 | INFO | DeepSeek:answer_question | 问题：对
+2026-05-13 23:20:59.272 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='57a79e0e-008a-4383-9592-c2bb088905d6', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685660, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=148, total_tokens=155, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=20))
+2026-05-13 23:20:59.272 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:20:59.273 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:59.273 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:20:59.281 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:20:59.359 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:20:59.359 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:20:59.359 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:20:59.404 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:21:00.910 | INFO | WebEdgeService:run_exam | --- 第 9 题 ---
+2026-05-13 23:21:04.178 | DEBUG | SolutionService:ocr_text | OCR提取5行
+2026-05-13 23:21:04.179 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 小题达~O70
+2026-05-13 23:21:04.179 | INFO | DeepSeek:answer_question | 问题：小题达~O70
+2026-05-13 23:21:05.320 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='1d0c01f3-8e49-4546-8589-09da3e3c751a', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='抱歉，我无法理解您的问题“小题达~O70”，这不是一个完整的题目和选项格式。请提供完整的题目和答案选项，我将按您要求的JSON格式返回答案。', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685666, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=39, prompt_tokens=152, total_tokens=191, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=24))
+2026-05-13 23:21:05.320 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：抱歉，我无法理解您的问题“小题达~O70”，这不是一个完整的题目和选项格式。请提供完整的题目和答案选项，我将按您要求的JSON格式返回答案。
+2026-05-13 23:21:05.321 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': [], 'raw': '抱歉，我无法理解您的问题“小题达~O70”，这不是一个完整的题目和选项格式。请提供完整的题目和答案选项，我将按您要求的JSON格式返回答案。'}
+2026-05-13 23:21:05.321 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': [], 'raw': '抱歉，我无法理解您的问题“小题达~O70”，这不是一个完整的题目和选项格式。请提供完整的题目和答案选项，我将按您要求的JSON格式返回答案。'}
+2026-05-13 23:21:05.321 | WARNING | SolutionService:solve_exam_question | LLM 未返回有效答案，尝试选第一个选项。
+2026-05-13 23:21:05.329 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['A']
+2026-05-13 23:21:05.397 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:21:05.401 | INFO | SolutionService:_click_exam_options | 点击选项 A（索引 0）
+2026-05-13 23:21:05.439 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:21:06.944 | INFO | WebEdgeService:run_exam | --- 第 10 题 ---
+2026-05-13 23:21:09.530 | DEBUG | SolutionService:ocr_text | OCR提取5行
+2026-05-13 23:21:09.530 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 小题达~O70
+2026-05-13 23:21:09.531 | INFO | DeepSeek:answer_question | 问题：小题达~O70
+2026-05-13 23:21:10.324 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='3ac2471f-c84e-4745-a07f-0df6fb9a7320', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685672, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=152, total_tokens=159, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=24))
+2026-05-13 23:21:10.325 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:21:10.325 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:10.326 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:10.332 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:21:10.402 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:21:10.402 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:21:10.403 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:21:10.455 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:21:11.959 | INFO | WebEdgeService:run_exam | --- 第 11 题 ---
+2026-05-13 23:21:14.507 | DEBUG | SolutionService:ocr_text | OCR提取7行
+2026-05-13 23:21:14.507 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 提示题选坊4行对京项内名
+2026-05-13 23:21:14.507 | INFO | DeepSeek:answer_question | 问题：提示题选坊4行对京项内名
+2026-05-13 23:21:15.283 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='99d74f96-537c-402f-a610-fac6e2264629', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685677, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=158, total_tokens=165, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=30))
+2026-05-13 23:21:15.283 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:21:15.284 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:15.284 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:15.293 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:21:15.360 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:21:15.361 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:21:15.361 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:21:15.410 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:21:16.913 | INFO | WebEdgeService:run_exam | --- 第 12 题 ---
+2026-05-13 23:21:19.437 | DEBUG | SolutionService:ocr_text | OCR提取7行
+2026-05-13 23:21:19.438 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 提示题选坊4行对京项内名
+2026-05-13 23:21:19.439 | INFO | DeepSeek:answer_question | 问题：提示题选坊4行对京项内名
+2026-05-13 23:21:19.997 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='9fc3b149-ad08-4edd-bbd2-9ea9976c343f', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685681, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=158, total_tokens=165, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=30))
+2026-05-13 23:21:19.997 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:21:19.997 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:21:19.998 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:21:20.003 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['A']
+2026-05-13 23:21:20.062 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:21:20.065 | INFO | SolutionService:_click_exam_options | 点击选项 A（索引 0）
+2026-05-13 23:21:20.098 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:21:21.602 | INFO | WebEdgeService:run_exam | --- 第 13 题 ---
+2026-05-13 23:21:24.227 | DEBUG | SolutionService:ocr_text | OCR提取7行
+2026-05-13 23:21:24.228 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: 提示题选坊4行对京项内名
+2026-05-13 23:21:24.228 | INFO | DeepSeek:answer_question | 问题：提示题选坊4行对京项内名
+2026-05-13 23:21:25.370 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='f4cd7c3b-a577-457b-9645-b75c0b45557b', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["错"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685686, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=158, total_tokens=165, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=30))
+2026-05-13 23:21:25.371 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["错"]}
+2026-05-13 23:21:25.371 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-13 23:21:25.371 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-13 23:21:25.380 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['错']
+2026-05-13 23:21:25.466 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:21:25.467 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '错' 到任何选项。
+2026-05-13 23:21:25.467 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:21:25.523 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:21:27.029 | INFO | WebEdgeService:run_exam | --- 第 14 题 ---
+2026-05-13 23:21:31.215 | DEBUG | SolutionService:ocr_text | OCR提取3行
+2026-05-13 23:21:31.216 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: PIE对1
+2026-05-13 23:21:31.216 | INFO | DeepSeek:answer_question | 问题：PIE对1
+2026-05-13 23:21:31.910 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='7fefc444-3ece-4166-a3da-ea3496766d66', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685693, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=151, total_tokens=158, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=23))
+2026-05-13 23:21:31.910 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:21:31.911 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:31.911 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:31.916 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:21:32.009 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:21:32.010 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:21:32.010 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:21:32.057 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:21:33.561 | INFO | WebEdgeService:run_exam | --- 第 15 题 ---
+2026-05-13 23:21:37.004 | DEBUG | SolutionService:ocr_text | OCR提取3行
+2026-05-13 23:21:37.004 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: PIE对1
+2026-05-13 23:21:37.005 | INFO | DeepSeek:answer_question | 问题：PIE对1
+2026-05-13 23:21:37.547 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='8087c63d-ab08-4bda-9ada-8a993e4ec50c', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685699, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=151, total_tokens=158, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=23))
+2026-05-13 23:21:37.548 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:21:37.548 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:37.548 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:37.557 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:21:37.639 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:21:37.640 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:21:37.640 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:21:37.690 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:21:39.196 | INFO | WebEdgeService:run_exam | --- 第 16 题 ---
+2026-05-13 23:21:42.618 | DEBUG | SolutionService:ocr_text | OCR提取3行
+2026-05-13 23:21:42.619 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: PIE对1
+2026-05-13 23:21:42.619 | INFO | DeepSeek:answer_question | 问题：PIE对1
+2026-05-13 23:21:43.282 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='e38e1c1d-1c40-4d7c-b780-c4840ba4276d', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685705, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=151, total_tokens=158, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=23))
+2026-05-13 23:21:43.283 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:21:43.283 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:43.284 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:43.289 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:21:43.373 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:21:43.373 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:21:43.374 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:21:43.430 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:21:44.937 | INFO | WebEdgeService:run_exam | --- 第 17 题 ---
+2026-05-13 23:21:48.157 | DEBUG | SolutionService:ocr_text | OCR提取3行
+2026-05-13 23:21:48.161 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: PIE对1
+2026-05-13 23:21:48.163 | INFO | DeepSeek:answer_question | 问题：PIE对1
+2026-05-13 23:21:48.741 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='981ce27a-2a55-4705-a662-13f817b6588a', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685710, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=151, total_tokens=158, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=23))
+2026-05-13 23:21:48.742 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:21:48.742 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:48.742 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:21:48.748 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:21:48.813 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:21:48.813 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:21:48.813 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:21:48.860 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:21:50.366 | INFO | WebEdgeService:run_exam | --- 第 18 题 ---
+2026-05-13 23:21:53.477 | DEBUG | SolutionService:ocr_text | OCR提取3行
+2026-05-13 23:21:53.477 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: PIE对1
+2026-05-13 23:21:53.478 | INFO | DeepSeek:answer_question | 问题：PIE对1
+2026-05-13 23:21:54.233 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='1211e712-58f0-4531-8064-733147e0dc6e', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["A"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685716, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=151, total_tokens=158, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=23))
+2026-05-13 23:21:54.234 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["A"]}
+2026-05-13 23:21:54.234 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:21:54.235 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['A'], 'raw': '{"selected": ["A"]}'}
+2026-05-13 23:21:54.244 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['A']
+2026-05-13 23:21:54.306 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:21:54.309 | INFO | SolutionService:_click_exam_options | 点击选项 A（索引 0）
+2026-05-13 23:21:54.346 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:21:55.853 | INFO | WebEdgeService:run_exam | --- 第 19 题 ---
+2026-05-13 23:21:58.916 | DEBUG | SolutionService:ocr_text | OCR提取3行
+2026-05-13 23:21:58.917 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: PIE对1
+2026-05-13 23:21:58.917 | INFO | DeepSeek:answer_question | 问题：PIE对1
+2026-05-13 23:22:00.033 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='3adc24a9-3420-4eb3-8823-44f0103402f6', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["错"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685721, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=151, total_tokens=158, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=23))
+2026-05-13 23:22:00.033 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["错"]}
+2026-05-13 23:22:00.035 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-13 23:22:00.035 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-13 23:22:00.040 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['错']
+2026-05-13 23:22:00.112 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:22:00.112 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '错' 到任何选项。
+2026-05-13 23:22:00.113 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:22:00.157 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:22:01.661 | INFO | WebEdgeService:run_exam | --- 第 20 题 ---
+2026-05-13 23:22:04.656 | DEBUG | SolutionService:ocr_text | OCR提取3行
+2026-05-13 23:22:04.657 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: PIE对1
+2026-05-13 23:22:04.657 | INFO | DeepSeek:answer_question | 问题：PIE对1
+2026-05-13 23:22:05.463 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='13be4e35-ab14-42a3-90b4-097ad157444b', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685727, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=151, total_tokens=158, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=23))
+2026-05-13 23:22:05.463 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:22:05.464 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:22:05.464 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:22:05.472 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:22:05.532 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:22:05.534 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:22:05.534 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:22:05.576 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:22:07.082 | INFO | WebEdgeService:run_exam | --- 第 21 题 ---
+2026-05-13 23:22:10.090 | DEBUG | SolutionService:ocr_text | OCR提取3行
+2026-05-13 23:22:10.091 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: PIE对1
+2026-05-13 23:22:10.091 | INFO | DeepSeek:answer_question | 问题：PIE对1
+2026-05-13 23:22:10.805 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='7e5f7efa-9b92-4b1b-89a5-d8bd3da75fc9', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685732, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=151, total_tokens=158, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=23))
+2026-05-13 23:22:10.806 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:22:10.806 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:22:10.806 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:22:10.812 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:22:10.874 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:22:10.875 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:22:10.875 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:22:10.917 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:22:12.422 | INFO | WebEdgeService:run_exam | --- 第 22 题 ---
+2026-05-13 23:22:15.632 | DEBUG | SolutionService:ocr_text | OCR提取3行
+2026-05-13 23:22:15.633 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: PIE对1
+2026-05-13 23:22:15.633 | INFO | DeepSeek:answer_question | 问题：PIE对1
+2026-05-13 23:22:16.333 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='22a07a82-91d4-41bb-ac60-ac29e281efb6', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["对"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685738, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=151, total_tokens=158, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=23))
+2026-05-13 23:22:16.334 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["对"]}
+2026-05-13 23:22:16.334 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:22:16.335 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['对'], 'raw': '{"selected": ["对"]}'}
+2026-05-13 23:22:16.342 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['对']
+2026-05-13 23:22:16.403 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:22:16.404 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '对' 到任何选项。
+2026-05-13 23:22:16.404 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:22:16.448 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:22:17.952 | INFO | WebEdgeService:run_exam | --- 第 23 题 ---
+2026-05-13 23:22:21.049 | DEBUG | SolutionService:ocr_text | OCR提取3行
+2026-05-13 23:22:21.050 | DEBUG | SolutionService:solve_exam_question | OCR 提取文本: PIE对1
+2026-05-13 23:22:21.050 | INFO | DeepSeek:answer_question | 问题：PIE对1
+2026-05-13 23:22:21.570 | INFO | DeepSeek:answer_question | DeepSeek 原始回复：ChatCompletion(id='4618ecf9-d6ea-4376-8801-908306c985e0', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{"selected": ["错"]}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1778685743, model='deepseek-v4-flash', object='chat.completion', service_tier=None, system_fingerprint='fp_8b330d02d0_prod0820_fp8_kvcache_20260402', usage=CompletionUsage(completion_tokens=7, prompt_tokens=151, total_tokens=158, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cached_tokens=128), prompt_cache_hit_tokens=128, prompt_cache_miss_tokens=23))
+2026-05-13 23:22:21.570 | INFO | DeepSeek:answer_question | DeepSeek 回复内容：{"selected": ["错"]}
+2026-05-13 23:22:21.570 | DEBUG | DeepSeek:parse_content | DeepSeek.parse_content: result={'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-13 23:22:21.571 | DEBUG | SolutionService:solve_exam_question | LLM 返回: {'selected': ['错'], 'raw': '{"selected": ["错"]}'}
+2026-05-13 23:22:21.580 | INFO | SolutionService:_click_exam_options | 找到 22 个选项元素，目标答案: ['错']
+2026-05-13 23:22:21.645 | DEBUG | SolutionService:_click_exam_options | 选项文本: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-05-13 23:22:21.645 | WARNING | SolutionService:_click_exam_options | 未能匹配答案 '错' 到任何选项。
+2026-05-13 23:22:21.645 | WARNING | SolutionService:_click_exam_options | 无任何选项被点击，默认选第一个。
+2026-05-13 23:22:21.683 | INFO | WebEdgeService:_go_next_question | 已点击下一题。
+2026-05-13 23:22:22.287 | INFO | WebEdgeService:shutdown | 触发服务关闭：准备先保存 Cookie
+2026-05-13 23:22:34.538 | ERROR | WebEdgeService:_save_cookies | 保存 Cookie 失败: HTTPConnectionPool(host='localhost', port=46937): Max retries exceeded with url: /session/dd0de197f8ab83d519f4de156aa40cf0/cookie (Caused by NewConnectionError("HTTPConnection(host='localhost', port=46937): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-05-13 23:22:50.821 | INFO | WebEdgeService:shutdown | 浏览器已关闭，退出程序。
