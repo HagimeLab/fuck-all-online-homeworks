@@ -28,3 +28,15 @@ logs/
 .idea/
 .DS_Store
 Thumbs.db
+
+# 代码图谱索引
+.codegraph/
+
+# Cookie 文件（含敏感凭据）
+cookies.json
+
+# 调试输出
+debug/
+
+# Claude 配置
+.claude/
