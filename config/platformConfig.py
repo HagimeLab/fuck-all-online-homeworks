@@ -131,7 +131,8 @@ class ZhiHuishuConfig(PlatformConfig):
         "[class*='stem']", "[class*='exam']", ".el-card__body",
     ]
     NEXT_BTN_KNOWN_CLASSES = [
-        ".Topicswitchingbtn", ".Nextbtndiv span", "[class*='Topic']span",
+        ".Topicswitchingbtn", ".Topicswitchingbtn-gray",
+        ".Nextbtndiv span", "[class*='Topic']span",
         ".next-btn", ".nextBtn", ".next-question",
     ]
     QR_LOGIN_TAB_KEYWORDS = ["二维码", "扫码"]

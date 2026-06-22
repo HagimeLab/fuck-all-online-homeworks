@@ -338,7 +338,9 @@ class WebEdgeService:
 
         logger.info("=" * 50)
 
-        # 第三步：轮询检测前端 HTML 是否发生较大变化（用户扫码后页面结构会改变）
+        # 第三步：轮询检测登录状态
+        # 方式1（优先）: URL 不再包含登录域名 → 已跳转离开登录页
+        # 方式2（备选）: HTML 变化 > 40% → 页面大规模变动
         logger.info("等待用户扫码登录...")
         try:
             initial_html = driver.execute_script(
@@ -353,18 +355,27 @@ class WebEdgeService:
         for _ in range(login_wait_seconds):
             sleep(1)
             try:
+                # 优先检查 URL 是否已离开登录域（智慧树扫码后会跳转）
+                try:
+                    current_url = driver.current_url
+                    if self.cfg.LOGIN_DOMAIN_HINT and self.cfg.LOGIN_DOMAIN_HINT not in current_url:
+                        logger.info("检测到页面已离开登录域，登录成功。")
+                        login_detected = True
+                        break
+                except Exception:
+                    pass
+
+                # 备选：检查 HTML 变化比例（学习通等页面结构变化大的平台）
                 current_html = driver.execute_script(
                     "return document.documentElement.outerHTML;"
                 ) or ""
                 current_len = len(current_html)
 
-                # 计算 HTML 变化比例
                 if initial_len > 0:
                     len_diff = abs(current_len - initial_len) / initial_len
                 else:
                     len_diff = 1.0 if current_len > 0 else 0.0
 
-                # 变化超过 40% 判定为页面大规模变动
                 if len_diff > 0.4:
                     logger.info(f"检测到前端页面大规模变动（变化率 {len_diff:.0%}），登录成功。")
                     login_detected = True
@@ -457,53 +468,96 @@ class WebEdgeService:
 
         logger.info("开始答题流程...")
 
-        # 学习通 tab 模式：先统计总题数，再点击第一题
-        total_questions = 0
-        if getattr(self.cfg, 'NAV_MODE', 'button') == 'tab':
+        # ---- 学习通：预统计题数，按题号表翻题 ----
+        nav_mode = getattr(self.cfg, 'NAV_MODE', 'button')
+        if nav_mode == 'tab':
             total_questions = self._count_total_questions()
             logger.info(f"检测到共 {total_questions} 道题目。")
             self._click_first_tab()
             sleep(2)
-        else:
-            total_questions = 200  # 智慧树用按钮翻题，设上限
 
-        question_index = 0
+            question_index = 0
+            while question_index < total_questions:
+                question_index += 1
+                logger.info(f"========== 第 {question_index}/{total_questions} 题 ==========")
 
-        while question_index < total_questions:
-            question_index += 1
-            logger.info(f"========== 第 {question_index}/{total_questions} 题 ==========")
+                self._wait_for_question_ready()
+                sleep(0.5)
 
-            # 等待当前题渲染完成
-            self._wait_for_question_ready()
-            sleep(0.5)
+                is_last = (question_index >= total_questions)
+                self.solution._use_last_h3 = is_last
+                success = self._solve_current_question()
+                if not success:
+                    logger.warning(f"第 {question_index} 题解答失败。")
 
-            # 最后一题页面不滚动，用视口底部 h3 识别
-            is_last = (question_index >= total_questions)
-            self.solution._use_last_h3 = is_last
-            success = self._solve_current_question()
-            if not success:
-                logger.warning(f"第 {question_index} 题解答失败。")
+                sleep(1)
 
-            sleep(1)
+                if question_index >= total_questions:
+                    break
 
-            # 最后一题答完就结束
-            if question_index >= total_questions:
-                break
-
-            # 翻到下一题
-            if getattr(self.cfg, 'NAV_MODE', 'button') == 'tab':
                 if self._goto_next_question_tab() is None:
                     break
-            elif getattr(self.cfg, 'NAV_MODE', 'button') == 'scroll':
+                sleep(2)
+
+            logger.info(f"答题流程结束，共处理 {question_index}/{total_questions} 题。答题完成！")
+
+        elif nav_mode == 'scroll':
+            # 学习通滚动模式
+            question_index = 0
+            max_q = 200
+            while question_index < max_q:
+                question_index += 1
+                logger.info(f"========== 第 {question_index} 题 ==========")
+
+                self._wait_for_question_ready()
+                sleep(0.5)
+
+                success = self._solve_current_question()
+                if not success:
+                    logger.warning(f"第 {question_index} 题解答失败。")
+
+                sleep(1)
+
+                if self._detect_exam_finished():
+                    logger.info("检测到考试已完成。")
+                    break
+
                 if self._goto_next_question_scroll() is None:
                     break
-            else:
-                if self._go_next_question() is None:
+                sleep(2)
+
+            logger.info(f"答题流程结束，共处理 {question_index} 题。")
+
+        else:
+            # ---- 智慧树：直接循环，答→点下一题→能点就继续，点不了就停 ----
+            question_index = 0
+            while True:
+                question_index += 1
+                logger.info(f"========== 第 {question_index} 题 ==========")
+
+                self._wait_for_question_ready()
+                sleep(0.5)
+
+                success = self._solve_current_question()
+                if not success:
+                    logger.warning(f"第 {question_index} 题解答失败。")
+
+                sleep(1)
+
+                next_result = self._go_next_question()
+                if next_result is True:
+                    sleep(2)
+                elif next_result is False:
+                    logger.info("已交卷，考试完成。")
+                    break
+                else:
+                    if self._detect_exam_finished():
+                        logger.info("检测到考试已完成。")
+                    else:
+                        logger.warning("无法翻到下一题，停止答题。")
                     break
 
-            sleep(2)
-
-        logger.info(f"答题流程结束，共处理 {question_index}/{total_questions} 题。答题完成！")
+            logger.info(f"答题流程结束，共处理 {question_index} 题。答题完成！")
         print("\n" + "=" * 60)
         print("  答题已完成！请自行查看答题结果。")
         print("  确认无误后，请手动关闭浏览器窗口。")
@@ -831,6 +885,21 @@ class WebEdgeService:
                     return rect.width > 0 || rect.height > 0 || el.offsetParent !== null;
                 }}
 
+                function isDisabled(el) {{
+                    // 检查元素或其祖先是否有 disabled 属性/样式
+                    var cur = el;
+                    for (var u = 0; u < 4 && cur; u++) {{
+                        if (cur.disabled === true) return true;
+                        if (cur.getAttribute('disabled') !== null) return true;
+                        if (cur.getAttribute('aria-disabled') === 'true') return true;
+                        var cls = (cur.className || '').toString();
+                        if (cls.indexOf('disabled') >= 0 || cls.indexOf('is-disabled') >= 0) return true;
+                        if (cls.indexOf('-gray') >= 0 || cls.indexOf('gray') >= 0) return true;
+                        cur = cur.parentElement;
+                    }}
+                    return false;
+                }}
+
                 var nextKeywords = {next_kw};
                 var knownSelectors = {known_sel};
 
@@ -842,6 +911,7 @@ class WebEdgeService:
                             var t = (els[k].innerText || els[k].textContent || '').trim();
                             for (var n = 0; n < nextKeywords.length; n++) {{
                                 if ((t === nextKeywords[n] || t.indexOf(nextKeywords[n]) >= 0) && isVisible(els[k])) {{
+                                    if (isDisabled(els[k])) return 'disabled';
                                     singleClick(els[k]);
                                     return 'known:' + knownSelectors[s];
                                 }}
@@ -857,6 +927,7 @@ class WebEdgeService:
                     for (var n = 0; n < nextKeywords.length; n++) {{
                         if (txt === nextKeywords[n] || txt.indexOf(nextKeywords[n]) >= 0) {{
                             if (isVisible(all[i])) {{
+                                if (isDisabled(all[i])) return 'disabled';
                                 singleClick(all[i]);
                                 return 'text';
                             }}
@@ -879,6 +950,7 @@ class WebEdgeService:
                             var t2 = (els2[k2].innerText || els2[k2].textContent || '').trim();
                             for (var n2 = 0; n2 < nextKeywords.length; n2++) {{
                                 if ((t2 === nextKeywords[n2] || t2.indexOf(nextKeywords[n2]) >= 0) && isVisible(els2[k2])) {{
+                                    if (isDisabled(els2[k2])) return 'disabled';
                                     singleClick(els2[k2]);
                                     return 'selector:' + selectors2[j];
                                 }}
@@ -896,6 +968,7 @@ class WebEdgeService:
                         var bt = (btns[b].innerText || btns[b].textContent || '').trim();
                         for (var n3 = 0; n3 < nextKeywords.length; n3++) {{
                             if (bt === nextKeywords[n3] || bt.indexOf(nextKeywords[n3]) >= 0) {{
+                                if (isDisabled(btns[b])) return 'disabled';
                                 singleClick(btns[b]);
                                 return 'footer';
                             }}
@@ -905,6 +978,29 @@ class WebEdgeService:
 
                 return false;
             """)
+
+            if next_clicked == 'disabled':
+                logger.info("「下一题」按钮已禁用（最后一题），查找交卷按钮...")
+                has_submit = driver.execute_script(f"""
+                    var submitKeywords = {sub_kw};
+                    var all = document.querySelectorAll('button, span, div, a');
+                    for (var i = 0; i < all.length; i++) {{
+                        var txt = (all[i].innerText || all[i].textContent || '').trim();
+                        for (var s = 0; s < submitKeywords.length; s++) {{
+                            if (txt === submitKeywords[s] || txt.indexOf(submitKeywords[s]) >= 0) {{
+                                if (all[i].offsetParent !== null) {{
+                                    try {{ all[i].click(); }} catch(e) {{}}
+                                    return true;
+                                }}
+                            }}
+                        }}
+                    }}
+                    return false;
+                """)
+                if has_submit:
+                    logger.info("已点击交卷按钮。")
+                    sleep(5)
+                return False
 
             if next_clicked:
                 logger.info(f"已触发下一题按钮({next_clicked})，等待页面切换...")
@@ -953,7 +1049,7 @@ class WebEdgeService:
 
     # ---------- 统计总题数 ----------
     def _count_total_questions(self) -> int:
-        """统计所有 ul.topicNumber_list 下 li 的数量。"""
+        """统计所有 ul.topicNumber_list 下 li 的数量（学习通用）。"""
         driver = self.driver
         try:
             total = driver.execute_script("""
@@ -1008,38 +1104,74 @@ class WebEdgeService:
 
     # ---------- 等待当前题渲染 ----------
     def _wait_for_question_ready(self, timeout: int = 10):
-        """等待视口内出现有内容的 h3 + 选项。"""
+        """等待当前题目渲染完成（根据平台使用不同检测策略）。"""
         driver = self.driver
-        try:
-            WebDriverWait(driver, timeout, poll_frequency=0.5).until(
-                lambda d: d.execute_script(r"""
-                    var vh = window.innerHeight;
-                    var h3s = document.querySelectorAll('h3.mark_name, h3[class*="mark_name"]');
-                    for (var i = 0; i < h3s.length; i++) {
-                        var r = h3s[i].getBoundingClientRect();
-                        if (r.top >= -10 && r.top < vh && h3s[i].offsetParent !== null) {
-                            var txt = (h3s[i].innerText || h3s[i].textContent || '').trim();
-                            if (txt.length > 10) {
-                                // 再检查后面有 stem_answer 且含选项
-                                var next = h3s[i].nextElementSibling;
-                                while (next) {
-                                    if (next.classList && next.classList.contains('stem_answer')) {
-                                        var opts = next.querySelectorAll("div[role='radio'], div[role='checkbox']");
-                                        for (var o = 0; o < opts.length; o++) {
-                                            if (opts[o].offsetParent !== null) return true;
+
+        if getattr(self.cfg, 'NAV_MODE', 'button') == 'button':
+            # 智慧树：等待 .el-radio / .option-item 等选项元素出现
+            try:
+                WebDriverWait(driver, timeout, poll_frequency=0.5).until(
+                    lambda d: d.execute_script("""
+                        var selectors = [
+                            '.el-radio', '.el-checkbox', '.option-item',
+                            '[class*="option-item"]', '.radio-item', '.check-item',
+                            '.topic-option', '.answer-item', 'li[class*="option"]',
+                            '.choice-item', '[class*="option-box"]', '.radio-wrap'
+                        ];
+                        var vis = 0;
+                        for (var s = 0; s < selectors.length; s++) {
+                            try {
+                                var els = document.querySelectorAll(selectors[s]);
+                                for (var e = 0; e < els.length; e++) {
+                                    if (els[e].offsetParent !== null) vis++;
+                                }
+                            } catch(e) {}
+                        }
+                        if (vis >= 2) return true;
+                        // 兜底：A/B/C/D开头的可见元素
+                        var all = document.querySelectorAll('div, li, span, label');
+                        var cnt = 0;
+                        for (var a = 0; a < all.length; a++) {
+                            var t = (all[a].innerText || all[a].textContent || '').trim();
+                            if (/^[A-Z][.、)）]/.test(t) && all[a].offsetParent !== null) cnt++;
+                        }
+                        return cnt >= 2;
+                    """)
+                )
+                logger.debug("智慧树：当前题已渲染就绪。")
+            except TimeoutException:
+                logger.warning("等待当前题渲染超时，尝试继续。")
+        else:
+            # 学习通：等待视口内出现有内容的 h3 + stem_answer
+            try:
+                WebDriverWait(driver, timeout, poll_frequency=0.5).until(
+                    lambda d: d.execute_script(r"""
+                        var vh = window.innerHeight;
+                        var h3s = document.querySelectorAll('h3.mark_name, h3[class*="mark_name"]');
+                        for (var i = 0; i < h3s.length; i++) {
+                            var r = h3s[i].getBoundingClientRect();
+                            if (r.top >= -10 && r.top < vh && h3s[i].offsetParent !== null) {
+                                var txt = (h3s[i].innerText || h3s[i].textContent || '').trim();
+                                if (txt.length > 10) {
+                                    var next = h3s[i].nextElementSibling;
+                                    while (next) {
+                                        if (next.classList && next.classList.contains('stem_answer')) {
+                                            var opts = next.querySelectorAll("div[role='radio'], div[role='checkbox']");
+                                            for (var o = 0; o < opts.length; o++) {
+                                                if (opts[o].offsetParent !== null) return true;
+                                            }
                                         }
+                                        next = next.nextElementSibling;
                                     }
-                                    next = next.nextElementSibling;
                                 }
                             }
                         }
-                    }
-                    return false;
-                """)
-            )
-            logger.debug("当前题已渲染就绪。")
-        except TimeoutException:
-            logger.warning("等待当前题渲染超时，尝试继续。")
+                        return false;
+                    """)
+                )
+                logger.debug("学习通：当前题已渲染就绪。")
+            except TimeoutException:
+                logger.warning("等待当前题渲染超时，尝试继续。")
 
     # ---------- 滚动翻题（学习通模式）----------
     def _goto_next_question_scroll(self) -> Optional[bool]:

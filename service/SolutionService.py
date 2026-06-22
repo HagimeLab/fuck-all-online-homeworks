@@ -146,6 +146,11 @@ class SolutionService:
         else:
             cfg = {}
 
+        # 智慧树：纯截图 OCR + 智慧树选择器点击
+        if self.platform == "zhihuishu":
+            return self._solve_zhihuishu(driver)
+
+        # 以下为学习通（chaoxing）的 DOM + tab 翻题逻辑
         card_selectors = cfg.get("card_selectors", [])
         option_selectors = cfg.get("option_selectors", [])
 
@@ -272,38 +277,14 @@ class SolutionService:
         logger.debug(f"DOM 原始文本({len(dom_text)}字): {dom_text[:200]}")
         logger.debug(f"DOM 清洗后({len(dom_clean)}字): {dom_clean[:200]}")
 
-        # 学习通 DOM 文本已足够精准，跳过 OCR；智慧树才需要 OCR 做双路径
-        if self.platform == "chaoxing":
-            qa_text = dom_clean
-            if not qa_text or len(qa_text) < 15:
-                qa_text = self._screenshot_question_card(driver)
-                qa_text = self._clean_qa_text(qa_text) if qa_text else ""
-                logger.info("DOM 文本不足，回退到 OCR。")
-            else:
-                logger.info("使用 DOM 文本。")
+        # 学习通：DOM 文本为主，截图 OCR 为备
+        qa_text = dom_clean
+        if not qa_text or len(qa_text) < 15:
+            qa_text = self._screenshot_question_card(driver)
+            qa_text = self._clean_qa_text(qa_text) if qa_text else ""
+            logger.info("DOM 文本不足，回退到截图 OCR。")
         else:
-            # ---- OCR 双路径（智慧树）----
-            ocr_text = self._screenshot_question_card(driver)
-            ocr_clean = self._clean_qa_text(ocr_text) if ocr_text else ""
-            logger.debug(f"OCR 原始文本({len(ocr_text)}字): {ocr_text[:200]}")
-            logger.debug(f"OCR 清洗后({len(ocr_clean)}字): {ocr_clean[:200]}")
-
-            dom_has_real = self._has_real_question(dom_clean)
-            ocr_has_real = self._has_real_question(ocr_clean)
-
-            if ocr_has_real and dom_has_real:
-                qa_text = ocr_clean if len(ocr_clean) > len(dom_clean) * 1.3 else dom_clean
-                logger.info("DOM+OCR 均有内容，择优使用。")
-            elif ocr_has_real:
-                qa_text = ocr_clean
-            elif dom_has_real:
-                qa_text = dom_clean
-            elif dom_clean and len(dom_clean) >= 15:
-                qa_text = dom_clean
-            elif ocr_clean and len(ocr_clean) >= 15:
-                qa_text = ocr_clean
-            else:
-                qa_text = dom_clean or ocr_clean or ""
+            logger.info("使用 DOM 文本。")
         if len(qa_text) < 5:
                 qa_text = self._dom_text_fallback(driver)
                 qa_text = self._clean_qa_text(qa_text)
@@ -693,6 +674,349 @@ class SolutionService:
         if not clicked and options:
             fallback_mouse_click(options[0])
         return True
+
+    # ===== 智慧树：纯截图 OCR 答题 =====
+    def _solve_zhihuishu(self, driver: Any) -> bool:
+        """智慧树：截图 OCR → LLM → 点击选项（不使用 h3/stem_answer 结构）"""
+        # 1. 截图 OCR
+        ocr_text = self._screenshot_zhihuishu_card(driver)
+        ocr_clean = self._clean_qa_text(ocr_text) if ocr_text else ""
+        logger.debug(f"OCR 原始({len(ocr_text or '')}字): {(ocr_text or '')[:200]}")
+        logger.debug(f"OCR 清洗后({len(ocr_clean)}字): {ocr_clean[:200]}")
+
+        # 2. DOM body 文本备选
+        dom_text = driver.execute_script(
+            "return (document.body.innerText || document.body.textContent || '');"
+        ) or ""
+        dom_clean = self._clean_qa_text(dom_text)
+
+        # 3. 选择质量更好的文本
+        ocr_has = self._has_real_question(ocr_clean)
+        dom_has = self._has_real_question(dom_clean)
+
+        if ocr_has and dom_has:
+            qa_text = ocr_clean if len(ocr_clean) > len(dom_clean) * 1.3 else dom_clean
+            logger.info("DOM+OCR 均有内容，择优使用。")
+        elif ocr_has:
+            qa_text = ocr_clean
+        elif dom_has:
+            qa_text = dom_clean
+        elif dom_clean and len(dom_clean) >= 15:
+            qa_text = dom_clean
+        elif ocr_clean and len(ocr_clean) >= 15:
+            qa_text = ocr_clean
+        else:
+            qa_text = dom_clean or ocr_clean or ""
+
+        if not qa_text or len(qa_text.strip()) < 5:
+            logger.error("无法获取题目文本。")
+            return False
+
+        logger.info(f"题目文本({len(qa_text)}字): {qa_text[:300]}")
+
+        # 4. 保存调试
+        try:
+            from pathlib import Path
+            import datetime
+            debug_dir = Path("debug")
+            debug_dir.mkdir(exist_ok=True)
+            ts = datetime.datetime.now().strftime("%H%M%S")
+            (debug_dir / f"qa_{ts}.txt").write_text(qa_text, encoding="utf-8")
+        except Exception:
+            pass
+
+        # 5. LLM
+        selected: List[str] = []
+        try:
+            result = self.llm.answer_question(qa_text)
+            if isinstance(result, dict):
+                sel = result.get("selected")
+                if isinstance(sel, list):
+                    selected = [str(s).strip() for s in sel]
+        except Exception as e:
+            logger.error(f"LLM 异常: {e}")
+            return False
+
+        if not selected:
+            selected = ["A"]
+        logger.info(f"LLM 答案: {selected}")
+
+        # 6. 点击选项（智慧树风格）
+        return self._click_zhihuishu_options(driver, selected)
+
+    def _screenshot_zhihuishu_card(self, driver: Any) -> str:
+        """智慧树：截取当前题目卡片区域（不使用 h3/stem_answer）"""
+        try:
+            from PIL import Image
+            from io import BytesIO
+
+            png = driver.get_screenshot_as_png()
+            full = Image.open(BytesIO(png)).convert("RGB")
+
+            crop_rect = driver.execute_script("""
+                var selectors = [
+                    '.question-card', '.exam-card', '.topic-card',
+                    '[class*="question"]', '[class*="topic-detail"]',
+                    '.el-card', '.paper-item', '.exam-item',
+                    '.topic-item', '.topic-box', '.subject-box',
+                    '.ques-card-box', '.ques-item', '[class*="ques"]',
+                    '[class*="exam-area"]', '.el-dialog__body'
+                ];
+                for (var s = 0; s < selectors.length; s++) {
+                    try {
+                        var el = document.querySelector(selectors[s]);
+                        if (el && el.offsetParent !== null) {
+                            var r = el.getBoundingClientRect();
+                            if (r.width > 200 && r.height > 100) {
+                                var sx = window.scrollX || window.pageXOffset;
+                                var sy = window.scrollY || window.pageYOffset;
+                                return {
+                                    left: r.left + sx,
+                                    top: r.top + sy,
+                                    right: r.right + sx,
+                                    bottom: r.bottom + sy
+                                };
+                            }
+                        }
+                    } catch(e) {}
+                }
+                return null;
+            """)
+
+            if crop_rect:
+                l = max(0, int(crop_rect["left"]))
+                t = max(0, int(crop_rect["top"]))
+                r = max(l + 10, min(int(crop_rect["right"]), full.width))
+                b = max(t + 10, min(int(crop_rect["bottom"]), full.height))
+                crop = full.crop((l, t, r, b))
+            else:
+                # 回退：截整个视口
+                si = driver.execute_script("""return {
+                    sx: window.scrollX || window.pageXOffset,
+                    sy: window.scrollY || window.pageYOffset,
+                    w: window.innerWidth,
+                    h: window.innerHeight
+                };""")
+                sx, sy, vw, vh = int(si["sx"]), int(si["sy"]), int(si["w"]), int(si["h"])
+                crop = full.crop((sx, sy, min(sx + vw, full.width), min(sy + vh, full.height)))
+
+            # 调试保存
+            try:
+                from pathlib import Path
+                import datetime
+                debug_dir = Path("debug")
+                debug_dir.mkdir(exist_ok=True)
+                ts = datetime.datetime.now().strftime("%H%M%S")
+                crop.save(str(debug_dir / f"ocr_{ts}.png"))
+                logger.debug(f"OCR 截图已保存到 debug/ocr_{ts}.png")
+            except Exception:
+                pass
+
+            raw = self.ocr_text(crop)
+            if raw and len(raw.strip()) > 10:
+                logger.debug(f"OCR 题目截图成功，{len(raw)} 字")
+            return raw
+        except Exception as e:
+            logger.error(f"截图 OCR 失败: {e}")
+            return ""
+
+    def _click_zhihuishu_options(self, driver: Any, selected: List[str]) -> bool:
+        """智慧树：查找选项并点击。多选时分步点击（每条答案间隔 400~700ms）。"""
+        import json as _json
+        import random
+
+        selected_upper = [str(s).strip().upper() for s in selected]
+        if not selected_upper:
+            selected_upper = ["A"]
+
+        # ---- 收集候选选项（单次 JS 查询） ----
+        candidates = driver.execute_script("""
+            function getText(el) {
+                return (el.innerText || el.textContent || '').replace(/\\s+/g, ' ').trim();
+            }
+
+            var candidates = [];
+            var seen = [];
+            var selectors = [
+                '.el-radio', '.el-checkbox',
+                'label.el-radio', 'label.el-checkbox',
+                '.radio-item', '.check-item', '.radio-wrap',
+                '.option-item', '[class*="option-item"]',
+                'li[class*="option"]', '.choice-item',
+                '.answer-item', '[class*="answer-item"]',
+                '.topic-option', '[class*="option-box"]',
+                '[class*="option-wrap"]'
+            ];
+            for (var s = 0; s < selectors.length; s++) {
+                try {
+                    var els = document.querySelectorAll(selectors[s]);
+                    for (var e = 0; e < els.length; e++) {
+                        if (els[e].offsetParent === null) continue;
+                        var txt = getText(els[e]);
+                        if (!txt || txt.length === 0) continue;
+                        var dup = false;
+                        for (var d = 0; d < seen.length; d++) {
+                            if (seen[d] === els[e]) { dup = true; break; }
+                            if (seen[d].contains(els[e])) { dup = true; break; }
+                            if (els[e].contains(seen[d])) {
+                                seen[d] = els[e]; dup = true; break;
+                            }
+                        }
+                        if (!dup) {
+                            seen.push(els[e]);
+                            var m = txt.match(/^([A-Z])[.、)）\\s]/);
+                            candidates.push({
+                                idx: candidates.length,
+                                text: txt,
+                                letter: m ? m[1].toUpperCase() : ''
+                            });
+                        }
+                    }
+                } catch(e) {}
+            }
+
+            // 兜底：裸 input
+            if (candidates.length === 0) {
+                var inputs = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+                for (var i = 0; i < inputs.length; i++) {
+                    if (inputs[i].offsetParent === null) continue;
+                    var p = inputs[i].closest('label') || inputs[i].parentElement;
+                    if (!p) continue;
+                    var t = getText(p);
+                    if (!t) continue;
+                    var m2 = t.match(/^([A-Z])[.、)）\\s]/);
+                    candidates.push({
+                        idx: candidates.length,
+                        text: t,
+                        letter: m2 ? m2[1].toUpperCase() : ''
+                    });
+                }
+            }
+            return candidates;
+        """)
+
+        if not candidates:
+            logger.warning("未找到智慧树选项，使用通用回退。")
+            return self._click_options_fallback(driver, selected_upper)
+
+        logger.info(f"共 {len(candidates)} 个选项，目标: {selected_upper}")
+        for c in candidates:
+            logger.debug(f"  选项[{c['idx']}]: [{c['letter']}] {c['text'][:80]}")
+
+        # ---- 逐个点击（多选需分步，让 Vue 有时间处理每次状态变更） ----
+        clicked = set()
+        for ans in selected_upper:
+            if not ans:
+                continue
+
+            # 多选需要延迟，给 Vue 响应式系统处理时间
+            if len(clicked) > 0:
+                delay = 0.4 + random.random() * 0.4  # 400~800ms
+                sleep(delay)
+
+            hit_idx = -1
+            # 字母匹配
+            for c in candidates:
+                if c["idx"] in clicked:
+                    continue
+                if c["letter"] == ans:
+                    hit_idx = c["idx"]
+                    break
+
+            # 文本包含匹配
+            if hit_idx < 0:
+                for c in candidates:
+                    if c["idx"] in clicked:
+                        continue
+                    if ans in c["text"].upper():
+                        hit_idx = c["idx"]
+                        break
+
+            if hit_idx >= 0:
+                ok = self._fire_click_zhihuishu_by_idx(driver, hit_idx)
+                if ok:
+                    clicked.add(hit_idx)
+                    logger.info(f"点击 {'[多选]' if len(clicked) > 1 else ''} [{candidates[hit_idx]['letter']}] {candidates[hit_idx]['text'][:50]}")
+                else:
+                    logger.warning(f"点击失败 [{candidates[hit_idx]['letter']}]")
+            else:
+                logger.warning(f"未匹配答案 '{ans}'")
+
+        if not clicked and candidates:
+            logger.warning("默认点击第一个选项")
+            self._fire_click_zhihuishu_by_idx(driver, 0)
+
+        return len(clicked) > 0
+
+    def _fire_click_zhihuishu_by_idx(self, driver: Any, idx: int) -> bool:
+        """点击智慧树第 idx 个选项（单次 JS 执行，独立于收集阶段）。"""
+        ok = driver.execute_script(f"""
+            var selectors = [
+                '.el-radio', '.el-checkbox',
+                'label.el-radio', 'label.el-checkbox',
+                '.radio-item', '.check-item', '.radio-wrap',
+                '.option-item', '[class*="option-item"]',
+                'li[class*="option"]', '.choice-item',
+                '.answer-item', '[class*="answer-item"]',
+                '.topic-option', '[class*="option-box"]',
+                '[class*="option-wrap"]'
+            ];
+
+            var found = [];
+            var seen = [];
+            for (var s = 0; s < selectors.length; s++) {{
+                try {{
+                    var els = document.querySelectorAll(selectors[s]);
+                    for (var e = 0; e < els.length; e++) {{
+                        if (els[e].offsetParent === null) continue;
+                        var dup = false;
+                        for (var d = 0; d < seen.length; d++) {{
+                            if (seen[d] === els[e]) {{ dup = true; break; }}
+                            if (seen[d].contains(els[e])) {{ dup = true; break; }}
+                        }}
+                        if (!dup) {{ seen.push(els[e]); found.push(els[e]); }}
+                    }}
+                }} catch(e) {{}}
+            }}
+
+            if (found.length === 0) {{
+                var inputs = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+                for (var i = 0; i < inputs.length; i++) {{
+                    if (inputs[i].offsetParent !== null) found.push(inputs[i]);
+                }}
+            }}
+
+            if ({idx} < 0 || {idx} >= found.length) return false;
+
+            var el = found[{idx}];
+
+            // 找内部的 input（Vue 的 v-model 绑定在此）
+            var input = el.querySelector('input[type="radio"], input[type="checkbox"]');
+            var target = input || el;
+
+            var r = target.getBoundingClientRect();
+            var cx = r.left + r.width / 2;
+            var cy = r.top + r.height / 2;
+            var o = {{bubbles: true, cancelable: true, view: window, clientX: cx, clientY: cy}};
+
+            try {{ target.dispatchEvent(new MouseEvent('mouseover', o)); }} catch(e) {{}}
+            try {{ target.dispatchEvent(new MouseEvent('mousedown', o)); }} catch(e) {{}}
+            try {{ target.dispatchEvent(new MouseEvent('mouseup', o)); }} catch(e) {{}}
+            try {{ target.click(); }} catch(e) {{}}
+            try {{ target.dispatchEvent(new MouseEvent('click', o)); }} catch(e) {{}}
+            try {{ target.dispatchEvent(new Event('change', {{bubbles: true}})); }} catch(e) {{}}
+            try {{ target.dispatchEvent(new Event('input', {{bubbles: true}})); }} catch(e) {{}}
+
+            // 也点一下外层 Element UI 组件
+            if (input && target !== el) {{
+                try {{ el.dispatchEvent(new MouseEvent('mousedown', o)); }} catch(e) {{}}
+                try {{ el.dispatchEvent(new MouseEvent('mouseup', o)); }} catch(e) {{}}
+                try {{ el.click(); }} catch(e) {{}}
+            }}
+
+            return true;
+        """)
+        return bool(ok)
 
     # ===== 已废弃的方法（智慧树原版）保留以备兼容 =====
     def solve_answers_from_image(self, element: Any = None, save_crop_path: Optional[str] = None, driver: Any = None) -> bool:
